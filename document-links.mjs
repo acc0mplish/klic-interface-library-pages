@@ -2,7 +2,7 @@ import {SITE_ORIGIN} from './site-metadata.mjs';
 /** Raw documents open beside the library; explicit downloads keep native behavior. */
 export function isDocumentLink(href){
  if(typeof href!=='string'||!href.trim()||/^(?:#|javascript:|data:|blob:|mailto:|tel:)/i.test(href.trim()))return false;
- try{const url=new URL(href.replaceAll('&amp;','&'),SITE_ORIGIN+'https://design.klic.co.kr/');return ['http:','https:'].includes(url.protocol)&&/\.(?:txt|json|md|xml|ya?ml|csv|tsv|log|pdf|m?js|css|tsx?|jsx|svg)$/i.test(url.pathname);}catch{return false;}
+ try{const url=new URL(href.replaceAll('&amp;','&'),SITE_ORIGIN+'/klic-interface-library-pages/');return ['http:','https:'].includes(url.protocol)&&/\.(?:txt|json|md|xml|ya?ml|csv|tsv|log|pdf|m?js|css|tsx?|jsx|svg)$/i.test(url.pathname);}catch{return false;}
 }
 const attribute=(tag,name)=>tag.match(new RegExp('(?:^|\\s)'+name+'\\s*=\\s*(?:"([^"]*)"|\'([^\']*)\'|([^\\s>]+))','i'));
 const hasDownload=tag=>/\sdownload(?:\s|=|\/?>)/i.test(tag);

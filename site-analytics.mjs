@@ -4,21 +4,21 @@ export function analyticsPage(href){
  let url;try{url=new URL(href);}catch{return null;}
  if(url.origin!==origin||url.searchParams.get('embed')==='1')return null;
  const p=url.pathname;
- if(!(p==='https://design.klic.co.kr/'||p==='https://design.klic.co.kr/index.html'||['https://design.klic.co.kr/start','https://design.klic.co.kr/about','https://design.klic.co.kr/solutions/dashboards','https://design.klic.co.kr/solutions/admin','https://design.klic.co.kr/solutions/diagrams'].includes(p)||/^\/share\/(?:component|block)\/[a-z0-9-]+$/.test(p)||/^\/(?:guides|collections)\/[a-z0-9-]+$/.test(p)))return null;
- const page=new URL(p==='https://design.klic.co.kr/index.html'?'https://design.klic.co.kr/':p,origin);if(url.searchParams.get('lang')==='en')page.searchParams.set('lang','en');
+ if(!(p==='/klic-interface-library-pages/'||p==='https://design.klic.co.kr/index.html'||['https://design.klic.co.kr/start','https://design.klic.co.kr/about','https://design.klic.co.kr/solutions/dashboards','https://design.klic.co.kr/solutions/admin','https://design.klic.co.kr/solutions/diagrams'].includes(p)||/^\/share\/(?:component|block)\/[a-z0-9-]+$/.test(p)||/^\/(?:guides|collections)\/[a-z0-9-]+$/.test(p)))return null;
+ const page=new URL(p==='https://design.klic.co.kr/index.html'?'/klic-interface-library-pages/':p,origin);if(url.searchParams.get('lang')==='en')page.searchParams.set('lang','en');
  const hash=url.hash.slice(1);if(/^(?:blocks|component|components|fonts|tokens|docs|settings|lab|playground|agents|releases|favorites|home)(?:\/[a-z0-9-]+){0,3}$/.test(hash))page.hash=hash;
- return {page_location:page.href,page_title:'KLIC'+(page.hash?' · '+page.hash.slice(1):p!=='https://design.klic.co.kr/'?' · '+p.slice(1):'')};
+ return {page_location:page.href,page_title:'KLIC'+(page.hash?' · '+page.hash.slice(1):p!=='/klic-interface-library-pages/'?' · '+p.slice(1):'')};
 }
 export function discoveryAttribution(href,referrer=''){
  const sources={'chatgpt.com':'chatgpt','chat.openai.com':'chatgpt','perplexity.ai':'perplexity','claude.ai':'claude','gemini.google.com':'gemini','copilot.microsoft.com':'copilot','google.com':'google','bing.com':'bing','search.naver.com':'naver'};
- let page_referrer='',source='';try{const u=new URL(referrer),host=u.hostname.replace(/^www\./,'');if(u.protocol==='https:'&&Object.hasOwn(sources,host)){page_referrer=u.origin+'https://design.klic.co.kr/';source=sources[host];}}catch{}
+ let page_referrer='',source='';try{const u=new URL(referrer),host=u.hostname.replace(/^www\./,'');if(u.protocol==='https:'&&Object.hasOwn(sources,host)){page_referrer=u.origin+'/klic-interface-library-pages/';source=sources[host];}}catch{}
  try{const u=new URL(href),tag=(u.searchParams.get('utm_source')||'').toLowerCase();source=(Object.hasOwn(sources,tag)?sources[tag]:'')||Object.values(sources).find(x=>x===tag)||source;}catch{}
  return {page_referrer,discovery_source:source||'direct_or_unknown'};
 }
 export function sessionAttribution(href,referrer='',storage,now=Date.now()){
  let current=discoveryAttribution(href,referrer),internal=!referrer;try{internal=new URL(referrer).origin===origin;}catch{}
  try{
-  if(current.discovery_source==='direct_or_unknown'&&internal){const prior=JSON.parse(storage?.getItem('klic-discovery-v1')||'null');if(prior&&prior.expiresAt>now&&prior.expiresAt<=now+1800000){const clean=discoveryAttribution(origin+'https://design.klic.co.kr/?utm_source='+encodeURIComponent(prior.discovery_source),prior.page_referrer);if(clean.discovery_source===prior.discovery_source&&clean.page_referrer===prior.page_referrer)current=clean;}}
+  if(current.discovery_source==='direct_or_unknown'&&internal){const prior=JSON.parse(storage?.getItem('klic-discovery-v1')||'null');if(prior&&prior.expiresAt>now&&prior.expiresAt<=now+1800000){const clean=discoveryAttribution(origin+'/klic-interface-library-pages/?utm_source='+encodeURIComponent(prior.discovery_source),prior.page_referrer);if(clean.discovery_source===prior.discovery_source&&clean.page_referrer===prior.page_referrer)current=clean;}}
   storage?.setItem('klic-discovery-v1',JSON.stringify({...current,expiresAt:now+1800000}));
  }catch{}
  return current;

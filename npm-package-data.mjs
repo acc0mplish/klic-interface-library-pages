@@ -5,7 +5,7 @@ export const NPM_PACKAGE = {
   "published": false,
   "status": "source-ready",
   "registry": "https://registry.npmjs.org/",
-  "runtime": "Node.js 22+ or Bun 1.4.2",
+  "runtime": "Bun 1.4.2 preferred; Node.js 22+ supported",
   "exports": [
     "tokens",
     "theme",

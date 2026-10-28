@@ -66,7 +66,7 @@ export function navigationGroups(model,mode,scope='all',query='',favoriteIds=nul
  return (model[mode]||[]).map(group=>({...group,items:group.items.filter(item=>(!favoriteIds||favoriteIds.has(item.id))&&(scope==='all'||item.scope===scope)&&(!needle||item.search.includes(needle)))})).filter(group=>group.items.length);
 }
 export function navigationSelection(model,route,state){
- const parts=Array.isArray(route)?route:String(route||'').replace(/^#/,'').split('https://design.klic.co.kr/');
+ const parts=Array.isArray(route)?route:String(route||'').replace(/^#/,'').split('/klic-interface-library-pages/');
  let mode=state.mode,scope=state.scopes[mode],id=null,groupId=null;
  if(parts[0]==='components'){mode='components';scope=['all','input','display','feedback','navigation'].includes(parts[1])?parts[1]:'all';}
  if(parts[0]==='component'){mode='components';scope=state.scopes.components;for(const group of model.components){const item=group.items.find(item=>item.id===parts[1]);if(item){id=item.id;groupId=group.id;scope=item.scope;break;}}}
@@ -82,7 +82,7 @@ let catalogPromise;
 export function loadNavigationBlocks(){if(!catalogPromise)catalogPromise=fetch('./blocks-data.json').then(r=>{if(!r.ok)throw new Error('blocks');return r.json();}).catch(error=>{catalogPromise=null;throw error;});return catalogPromise;}
 export function initLibraryNavigation(root,{components,categories,icons=()=>{}}){
  const state=readStored();state.queries={components:'',blocks:''};
- let model=createNavigationModel(components),currentRoute=(location.hash.slice(1)||'components').split('https://design.klic.co.kr/'),selected=null,blocksReady=false,loadFailed=false,lastApplied='',pendingMode=null;
+ let model=createNavigationModel(components),currentRoute=(location.hash.slice(1)||'components').split('/klic-interface-library-pages/'),selected=null,blocksReady=false,loadFailed=false,lastApplied='',pendingMode=null;
  root.innerHTML='<div class="library-tabs" role="tablist" aria-label="라이브러리 전환">'+MODES.map(mode=>'<button type="button" role="tab" id="library-tab-'+mode+'" aria-selected="'+(mode===state.mode)+'" aria-controls="library-navigation" tabindex="'+(mode===state.mode?'0':'-1')+'" data-library-mode="'+mode+'">'+(mode==='components'?'컴포넌트':'블록')+'</button>').join('')+'</div><div id="library-navigation" class="library-navigation" role="tabpanel" aria-labelledby="library-tab-'+state.mode+'"><div class="library-controls"><label class="library-scope"><span class="sr-only">라이브러리 유형</span>'+icon('grid-2x2')+'<select id="library-scope" aria-label="라이브러리 유형"></select>'+icon('chevron-down')+'</label><div class="library-category-heading"><span>카테고리</span><span id="library-search-count" role="status" aria-live="polite"></span><button type="button" class="library-fold" data-library-action="fold" aria-label="카테고리 모두 접기">'+icon('list-collapse')+'</button></div></div><div class="library-tree-scroll" id="library-tree-scroll"><div id="library-tree" class="library-tree"></div><div class="library-tree-footer"></div></div></div>';
  const tree=root.querySelector('#library-tree'),scroll=root.querySelector('#library-tree-scroll'),scopeSelect=root.querySelector('#library-scope'),footer=root.querySelector('.library-tree-footer'),fold=root.querySelector('[data-library-action=fold]');
  const favoritesView=document.createElement('div');favoritesView.className='library-favorites-view';favoritesView.setAttribute('role','group');favoritesView.setAttribute('aria-label','블록 보기');favoritesView.innerHTML='<button type="button" data-library-view="all" aria-pressed="true">전체 블록</button><button type="button" data-library-view="favorites" aria-pressed="false">'+icon('star')+'즐겨찾기 <span data-library-favorites-count>0</span></button>';root.querySelector('.library-controls').prepend(favoritesView);
@@ -134,7 +134,7 @@ export function initLibraryNavigation(root,{components,categories,icons=()=>{}})
  }
  function sync(route,{force=false}={}){
   currentRoute=route;
-  const key=route.join('https://design.klic.co.kr/'),previousScope=state.scopes[state.mode],focusedItem=root.contains(document.activeElement)&&document.activeElement.matches('[data-library-item]');
+  const key=route.join('/klic-interface-library-pages/'),previousScope=state.scopes[state.mode],focusedItem=root.contains(document.activeElement)&&document.activeElement.matches('[data-library-item]');
   const next=navigationSelection(model,route,state);
   if(pendingMode&&next.mode!==pendingMode)return;
   pendingMode=null;state.mode=next.mode;state.scopes[next.mode]=next.scope;selected=next;
@@ -151,7 +151,7 @@ export function initLibraryNavigation(root,{components,categories,icons=()=>{}})
   try{const data=await loadNavigationBlocks();model=createNavigationModel(components,data);blocksReady=true;sync(currentRoute,{force:true});}
   catch{loadFailed=true;if(state.mode==='blocks')renderTree();}
  }
- function navigate(href){if(location.hash!==href)location.hash=href;else sync((href.slice(1)||'components').split('https://design.klic.co.kr/'),{force:true});}
+ function navigate(href){if(location.hash!==href)location.hash=href;else sync((href.slice(1)||'components').split('/klic-interface-library-pages/'),{force:true});}
  root.addEventListener('click',event=>{
   const favorite=event.target.closest('[data-library-favorite]');
   if(favorite){event.preventDefault();const id=favorite.dataset.libraryFavorite;(state.mode==='blocks'?toggleBlockFavorite:toggleComponentFavorite)(id);tree.querySelector('[data-library-favorite="'+id+'"]')?.focus({preventScroll:true});return;}

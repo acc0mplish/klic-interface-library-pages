@@ -4,17 +4,17 @@
   "images": [
     {
       "file": "dashboard.png",
-      "source": "/block-thumbnails/dashboard-exec-revenue",
+      "source": "https://design.klic.co.kr/block-thumbnails/dashboard-exec-revenue",
       "blockId": "dashboard-exec-revenue"
     },
     {
       "file": "admin.png",
-      "source": "/block-thumbnails/support-tickets",
+      "source": "https://design.klic.co.kr/block-thumbnails/support-tickets",
       "blockId": "support-tickets"
     },
     {
       "file": "diagrams.png",
-      "source": "/block-thumbnails/flow-connector-interaction",
+      "source": "https://design.klic.co.kr/block-thumbnails/flow-connector-interaction",
       "blockId": "flow-connector-interaction"
     }
   ]

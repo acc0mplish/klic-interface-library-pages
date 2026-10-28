@@ -20,7 +20,7 @@ function renderThemeCard(id,p){
 }
 export function themeHandoff(p={}){
  const id=getColorTheme(p.colorTheme).id,profile=getBrandProfile(p.brandProfile).id,material=normalizeMaterial(p.material),preferred=p.themePreference||p.theme||'system',mode=['system','light','dark'].includes(preferred)?preferred:'system';
- return {id,profile,material,mode,command:`node klic.mjs theme add ${id} --profile ${profile} --material ${material} --mode ${mode} --out ./klic-theme-${id}`,urls:{cli:'/klic-interface-library-pages/integrations/klic.mjs',themes:'/klic-interface-library-pages/api/v1/themes.json',theme:`https://design.klic.co.kr/api/v1/themes/${id}.json`,plan:`https://design.klic.co.kr/api/v1/theme-plan/${id}?profile=${profile}&material=${material}&mode=${mode}`}};
+ return {id,profile,material,mode,command:`bun klic.mjs theme add ${id} --profile ${profile} --material ${material} --mode ${mode} --out ./klic-theme-${id}`,urls:{cli:'/klic-interface-library-pages/integrations/klic.mjs',themes:'/klic-interface-library-pages/api/v1/themes.json',theme:`https://design.klic.co.kr/api/v1/themes/${id}.json`,plan:`https://design.klic.co.kr/api/v1/theme-plan/${id}?profile=${profile}&material=${material}&mode=${mode}`}};
 }
 export function renderThemeHandoff(p={}){
  const handoff=themeHandoff(p),link=(key,label)=>`<a class="text-link" href="${esc(handoff.urls[key])}" data-theme-link="${key}" target="_blank" rel="noopener noreferrer">${label} ${icon('arrow-up-right')}</a>`;

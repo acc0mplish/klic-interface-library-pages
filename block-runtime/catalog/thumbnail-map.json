@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "sourceFile": "/workspace/scratch/bb4bb088628d/block-source/src/data/componentsData.ts",
-  "adaptedDataFile": "/workspace/sites/klic-interface-lab/block-runtime/src/data/componentsData.ts",
+  "sourceFile": "https://design.klic.co.kr/workspace/scratch/bb4bb088628d/block-source/src/data/componentsData.ts",
+  "adaptedDataFile": "https://design.klic.co.kr/workspace/sites/klic-interface-lab/block-runtime/src/data/componentsData.ts",
   "count": 24,
   "notes": "Exact original thumbnail URL responses downloaded unchanged. Runtime data mapping is applied separately.",
   "items": [

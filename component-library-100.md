@@ -16,7 +16,7 @@
 - 갤러리와 상세 미리보기에서 기본형 + 추가형 4개를 동시에 비교합니다. 기존 136개 사용 가이드는 사용 예제 탭에 별도로 보존했습니다.
 - 생성 프로필, 기존 로컬 상품·교육 이미지, 회사 블루와 Customize 설정을 사용합니다.
 - 폼·파일·명령·알림은 브라우저 안의 시연입니다. 서버 저장, 실제 업로드, 메시지·알림 전송, 인증은 수행하지 않습니다.
-- 코드 복사 결과는 역할 토큰·스타일·상호작용 모듈에 의존합니다. `node klic.mjs get component button`의 `variants`에서 형태를 찾고 `source component button --variant <id>`로 HTML을 읽을 수 있습니다. `add component button --out ./button-demo`는 전체 실행 소스를 새 폴더에 가져옵니다. 토큰·테마·CLI의 npm 패키지와 컴포넌트 참고 소스 제공은 구분합니다. 실제 레지스트리 발행 상태는 공통 제공 계약에서 확인합니다.
+- 코드 복사 결과는 역할 토큰·스타일·상호작용 모듈에 의존합니다. `bun klic.mjs get component button`의 `variants`에서 형태를 찾고 `source component button --variant <id>`로 HTML을 읽을 수 있습니다. `add component button --out ./button-demo`는 전체 실행 소스를 새 폴더에 가져옵니다. 토큰·테마·CLI의 npm 패키지와 컴포넌트 참고 소스 제공은 구분합니다. 실제 레지스트리 발행 상태는 공통 제공 계약에서 확인합니다.
 
 ## 전체 목록
 

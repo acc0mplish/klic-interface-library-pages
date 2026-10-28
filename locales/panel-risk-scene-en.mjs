@@ -132,7 +132,7 @@ export const panelRiskSceneMessages = {
  '취소':'Cancel',
  '변경 저장':'Save changes',
  '완화 조치':'Mitigation plan',
- 'https://design.klic.co.kr/ 4 완료':'https://design.klic.co.kr/ 4 done',
+ '/ 4 완료':'/ 4 done',
  '완화 조치 진행률':'Mitigation progress',
  '연관 자료':'Linked resources',
  'QC-04 계약 조건':'QC-04 qualification',

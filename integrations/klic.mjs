@@ -27,7 +27,7 @@ export const SITE_METADATA = {
     "registry": "https://registry.npmjs.org/"
   },
   "versions": {
-    "toolkit": "1.2.0",
+    "toolkit": "0.0.1",
     "api": "1.0.0",
     "registrySchema": "1.0",
     "designSystemSchema": "1.0",
@@ -108,7 +108,7 @@ export const SITE_METADATA = {
       "delivery": "Use the published source exports and verified CLI bundles."
     },
     "versioning": {
-      "toolkit": "Integration runtime version",
+      "toolkit": "CLI and shared integration runtime version; initial value tracks the package release",
       "schema": "Response format version",
       "release": "Registry publication hash",
       "revision": "Design criteria hash"
@@ -119,7 +119,7 @@ export const SITE_METADATA = {
     "licenses": "/klic-interface-library-pages/licenses/README.md",
     "figma": "/klic-interface-library-pages/design-contract/materials/figma-migration.md",
     "designSystem": "/klic-interface-library-pages/api/v1/design-system.json",
-    "designDocs": "https://design.klic.co.kr/#docs/architecture",
+    "designDocs": "/klic-interface-library-pages/#docs/architecture",
     "themes": "/klic-interface-library-pages/api/v1/themes.json",
     "themeGuide": "https://design.klic.co.kr/resources/cli#themes",
     "docs": "https://design.klic.co.kr/resources",
@@ -134,7 +134,7 @@ export const SITE_METADATA = {
   }
 };
 export const SITE_ORIGIN = SITE_METADATA.site.origin;
-export const MCP_URL = new URL(SITE_METADATA.routes.mcp, SITE_ORIGIN+'https://design.klic.co.kr/').href;
+export const MCP_URL = new URL(SITE_METADATA.routes.mcp, SITE_ORIGIN+'/klic-interface-library-pages/').href;
 export const INTEGRATION_VERSION = SITE_METADATA.versions.toolkit;
 export const PROTOCOL_VERSIONS = SITE_METADATA.versions.mcpProtocols;
 // END GENERATED PUBLIC METADATA
@@ -196,7 +196,7 @@ export function getDeliveryPlan(registry, input) {
   const {item}=getRegistryItem(registry,input);
   if(item.status!=='ready'||!item.install?.manifest)throw new RegistryError('SOURCE_UNAVAILABLE','This item has no source bundle.');
   return {schemaVersion:SITE_METADATA.versions.registrySchema,...systemFields(registry),release:registry.release,kind:item.kind,id:item.id,manifest:item.install.manifest,
-    commands:{plan:`node klic.mjs plan ${item.kind} ${item.id}`,add:`node klic.mjs add ${item.kind} ${item.id} --out ./klic-${item.id}`},
+    commands:{plan:`bun klic.mjs plan ${item.kind} ${item.id}`,add:`bun klic.mjs add ${item.kind} ${item.id} --out ./klic-${item.id}`},
     policy:'Creates a new standalone workspace. Includes shared runtime and source notices. Does not run npm, shell commands, or overwrite existing paths.'};
 }
 const THEME_PROFILES = ['core','studio','data'];
@@ -237,7 +237,7 @@ function themeItem(registry,id) {
   return {catalog,theme};
 }
 function themeUsage(id,profile='core',material='flat',mode='system',directory=`./klic-theme-${id}`) {
-  return {cssImport:`import '${directory}/theme.css';`,apply:`import { applyTheme } from '${directory}/apply-theme.mjs';\nconst theme = applyTheme(document.documentElement);`,attributes:{'data-klic-theme':id,'data-color-theme':id,'data-brand-profile':profile,'data-material':material,...(mode==='system'?{}:{'data-theme':mode})},mode:mode==='system'?'Omit data-theme for system mode, or set it to light or dark.':`Use data-theme="${mode}" for explicit ${mode} mode.`,plan:`node klic.mjs theme plan ${id}`};
+  return {cssImport:`import '${directory}/theme.css';`,apply:`import { applyTheme } from '${directory}/apply-theme.mjs';\nconst theme = applyTheme(document.documentElement);`,attributes:{'data-klic-theme':id,'data-color-theme':id,'data-brand-profile':profile,'data-material':material,...(mode==='system'?{}:{'data-theme':mode})},mode:mode==='system'?'Omit data-theme for system mode, or set it to light or dark.':`Use data-theme="${mode}" for explicit ${mode} mode.`,plan:`bun klic.mjs theme plan ${id}`};
 }
 export function listThemes(registry,input={}) {
   const query=themeQuery(input),catalog=themeCatalog(registry);
@@ -251,19 +251,19 @@ export function getTheme(registry,input={}) {
 export function getThemeDeliveryPlan(registry,input={}) {
   const {id,profile,material,mode}=themeSelection(input);themeItem(registry,id);
   const options=`${id} --profile ${profile} --material ${material} --mode ${mode}`,apiBasePath=registry.capabilities?.api?.basePath?.replace(/\/$/,'')||API_BASE_PATH;
-  return {schemaVersion:SITE_METADATA.versions.themeSchema,...systemFields(registry),release:registry.release,kind:'theme',id,profile,material,mode,manifest:`${apiBasePath}/theme-bundles/${id}/${profile}/${material}/${mode}.json`,commands:{plan:`node klic.mjs theme plan ${options}`,add:`node klic.mjs theme add ${options} --out ./klic-theme-${id}`},policy:'Creates a new standalone theme kit folder after integrity verification. Import its CSS and apply it in your app. Does not edit an existing app, run npm or shell commands, or overwrite existing paths.'};
+  return {schemaVersion:SITE_METADATA.versions.themeSchema,...systemFields(registry),release:registry.release,kind:'theme',id,profile,material,mode,manifest:`${apiBasePath}/theme-bundles/${id}/${profile}/${material}/${mode}.json`,commands:{plan:`bun klic.mjs theme plan ${options}`,add:`bun klic.mjs theme add ${options} --out ./klic-theme-${id}`},policy:'Creates a new standalone theme kit folder after integrity verification. Import its CSS and apply it in your app. Does not edit an existing app, run npm or shell commands, or overwrite existing paths.'};
 }
 export async function installBundle(bundle, destination, fetchBytes, {dryRun=false}={}) {
   if(bundle?.schemaVersion!==SITE_METADATA.versions.bundleSchema||!Array.isArray(bundle.files)||!bundle.files.length||bundle.files.length>4096)invalid('Invalid bundle manifest.');
   // Ampersands are valid literal filename/URL path characters; query/fragment and traversal syntax remain rejected.
-  const safePath=p=>typeof p==='string'&&p.split('https://design.klic.co.kr/').every(v=>/^[a-zA-Z0-9_][a-zA-Z0-9_.&-]*$/.test(v));
+  const safePath=p=>typeof p==='string'&&p.split('/klic-interface-library-pages/').every(v=>/^[a-zA-Z0-9_][a-zA-Z0-9_.&-]*$/.test(v));
   const paths=new Set();let total=0;
   for(const file of bundle.files){
-    if(!safePath(file.path)||paths.has(file.path)||typeof file.url!=='string'||!file.url.startsWith('https://design.klic.co.kr/')||file.url.startsWith('//')||!safePath(file.url.slice(1))||!Number.isSafeInteger(file.bytes)||file.bytes<0||file.bytes>20000000||!/^[a-f0-9]{64}$/.test(file.sha256))invalid('Unsafe or invalid bundle file.');
+    if(!safePath(file.path)||paths.has(file.path)||typeof file.url!=='string'||!file.url.startsWith('/klic-interface-library-pages/')||file.url.startsWith('//')||!safePath(file.url.slice(1))||!Number.isSafeInteger(file.bytes)||file.bytes<0||file.bytes>20000000||!/^[a-f0-9]{64}$/.test(file.sha256))invalid('Unsafe or invalid bundle file.');
     paths.add(file.path);total+=file.bytes;
   }
   if(total>100000000)invalid('Bundle exceeds 100 MB.');
-  for(const p of paths){let prefix='';for(const part of p.split('https://design.klic.co.kr/').slice(0,-1)){prefix=prefix?prefix+'https://design.klic.co.kr/'+part:part;if(paths.has(prefix))invalid('Conflicting file and directory paths.');}}
+  for(const p of paths){let prefix='';for(const part of p.split('/klic-interface-library-pages/').slice(0,-1)){prefix=prefix?prefix+'/klic-interface-library-pages/'+part:part;if(paths.has(prefix))invalid('Conflicting file and directory paths.');}}
   const fs=await import('node:fs/promises'),path=await import('node:path'),{createHash}=await import('node:crypto');
   if(typeof destination!=='string'||!destination.trim())invalid('Provide --out with a new directory.');
   const target=path.resolve(destination),parent=path.dirname(target);
@@ -320,7 +320,7 @@ export function errorBody(error) { return {error:{code:error instanceof Registry
 export function safeBaseURL(value = SITE_ORIGIN) {
   let url;try { url = new URL(value); } catch { invalid('base must be an absolute HTTPS URL.'); }
   if (url.username || url.password || (url.protocol !== 'https:' && !(url.protocol === 'http:' && ['localhost','127.0.0.1','[::1]'].includes(url.hostname)))) invalid('Use HTTPS, or HTTP on localhost for development.');
-  url.hash='';url.search='';if (!url.pathname.endsWith('https://design.klic.co.kr/')) url.pathname+='https://design.klic.co.kr/';return url;
+  url.hash='';url.search='';if (!url.pathname.endsWith('/klic-interface-library-pages/')) url.pathname+='/klic-interface-library-pages/';return url;
 }
 function safeRequestHeaders(input) {
   let headers;try { headers=new Headers(input); }catch { invalid('Invalid request headers.'); }
@@ -398,7 +398,7 @@ export async function runCLI(argv, io = {}) {
   const args=[...argv], command=args.shift()||'help', positional=[], flags={};
   try {
     for(let i=0;i<args.length;i++) { const arg=args[i];if(arg.startsWith('--')) { const name=arg.slice(2);if(!['base','kind','status','limit','cursor','local','out','dry-run','token','group','query','profile','material','mode','variant'].includes(name)) invalid(`Unknown option: ${arg.split('=')[0]}`);if(Object.hasOwn(flags,name))invalid(`Duplicate option: --${name}`);if(name==='local'||name==='dry-run') flags[name]=true;else {if(!args[i+1]||args[i+1].startsWith('--'))invalid(`Missing value for ${arg}`);flags[name]=args[++i];}}else positional.push(arg); }
-    if(command==='help'||command==='--help') { stdout.write(`KLIC Toolkit ${INTEGRATION_VERSION} — Node.js ${SITE_METADATA.toolchain.nodeMinimum}+\n\nnode klic.mjs list [--kind component|block] [--status ready|planned|all]\nnode klic.mjs search "query" [--limit 20] [--cursor 0] [--token klic.component] [--group actions]\nnode klic.mjs get component button\nnode klic.mjs source block course-catalog\nnode klic.mjs source component button --variant default\nnode klic.mjs contract\nnode klic.mjs plan block course-catalog\nnode klic.mjs add block course-catalog --out ./course-demo [--dry-run]\nnode klic.mjs theme list [--query "paper"]\nnode klic.mjs theme get klic\nnode klic.mjs theme plan klic [--profile core|studio|data] [--material flat|glass|solid-glass|liquid-glass] [--mode system|light|dark]\nnode klic.mjs theme add klic --out ./klic-theme-klic [--profile core] [--material flat] [--mode system] [--dry-run]\nnode klic.mjs mcp\n\n--base HTTPS_ORIGIN   Read a compatible registry (default: KLIC public site).\n--local              Read ./dist/api/v1/registry.json and bundle assets from a source checkout.\nKLIC_API_KEY         Optional environment variable for authorized server access; never pass it as a URL or command argument.\n429                  Stops without retrying; reports the server Retry-After delay.\n\nRead contract first: designSystem contains implementation responsibilities, preset boundaries and conflict resolution. Compare its revision with item.design.system.revision. After add, read DESIGN.md and KLIC-DESIGN-SYSTEM.json; theme kits document the same policy in README.md. Refresh the CLI and local registry and restart stdio sessions after policy updates.\n\nOnly HTTP downloads consume server request quota; offline and in-memory stdio tool calls do not.\nReads public design assets. add creates a new workspace; theme add creates a new theme kit folder. Both verify integrity and refuse overwrite; no shell execution.\n`);return 0; }
+    if(command==='help'||command==='--help') { stdout.write(`KLIC Toolkit ${INTEGRATION_VERSION} — Bun ${SITE_METADATA.toolchain.bun} preferred; Node.js ${SITE_METADATA.toolchain.nodeMinimum}+ supported for npm/npx consumers\n\nbun klic.mjs list [--kind component|block] [--status ready|planned|all]\nbun klic.mjs search "query" [--limit 20] [--cursor 0] [--token klic.component] [--group actions]\nbun klic.mjs get component button\nbun klic.mjs source block course-catalog\nbun klic.mjs source component button --variant default\nbun klic.mjs contract\nbun klic.mjs plan block course-catalog\nbun klic.mjs add block course-catalog --out ./course-demo [--dry-run]\nbun klic.mjs theme list [--query "paper"]\nbun klic.mjs theme get klic\nbun klic.mjs theme plan klic [--profile core|studio|data] [--material flat|glass|solid-glass|liquid-glass] [--mode system|light|dark]\nbun klic.mjs theme add klic --out ./klic-theme-klic [--profile core] [--material flat] [--mode system] [--dry-run]\nbun klic.mjs mcp\n\n--base HTTPS_ORIGIN   Read a compatible registry (default: KLIC public site).\n--local              Read ./dist/api/v1/registry.json and bundle assets from a source checkout.\nKLIC_API_KEY         Optional environment variable for authorized server access; never pass it as a URL or command argument.\n429                  Stops without retrying; reports the server Retry-After delay.\n\nRead contract first: designSystem contains implementation responsibilities, preset boundaries and conflict resolution. Compare its revision with item.design.system.revision. After add, read DESIGN.md and KLIC-DESIGN-SYSTEM.json; theme kits document the same policy in README.md. Refresh the CLI and local registry and restart stdio sessions after policy updates.\n\nOnly HTTP downloads consume server request quota; offline and in-memory stdio tool calls do not.\nReads public design assets. add creates a new workspace; theme add creates a new theme kit folder. Both verify integrity and refuse overwrite; no shell execution.\n`);return 0; }
     if(!Object.hasOwn(CLI_OPTIONS,command))invalid(`Unknown command: ${command}`);
     for(const name of Object.keys(flags))if(!['local','base',...CLI_OPTIONS[command]].includes(name))invalid(`Option --${name} is not supported by ${command}.`);
     if(flags.local&&flags.base)invalid('Choose --local or --base, not both.');
@@ -458,7 +458,7 @@ export async function runCLI(argv, io = {}) {
     if(command==='mcp') { if(positional.length)invalid('mcp takes no positional arguments.');const {createInterface}=await import('node:readline');const input=io.stdin||process.stdin,session=createMCPSession();for await(const line of createInterface({input,crlfDelay:Infinity})) {let response;try {if(Buffer.byteLength(line)>1048576)throw new Error('Message too large');response=handleMCPRequest(registry,JSON.parse(line),session);}catch {response={jsonrpc:'2.0',id:null,error:{code:-32700,message:'Parse error'}};}if(response)stdout.write(JSON.stringify(response)+'\n');}return 0; }
     if(command==='list'||command==='search') {if(positional.length>(command==='search'?1:0))invalid('Unexpected positional argument.');write(searchRegistry(registry,{query:command==='search'?(positional[0]||''):'',...(flags.kind?{kind:flags.kind}:{}),...(flags.status?{status:flags.status}:{}),...(flags.limit?{limit:Number(flags.limit)}:{}),...(flags.cursor?{cursor:flags.cursor}:{}),...(flags.token?{token:flags.token}:{}),...(flags.group?{group:flags.group}:{})}));}
     else if(command==='contract') {if(positional.length)invalid('contract takes no arguments.');write(getContract(registry));}
-    else {if(positional.length!==2)invalid(`${command} requires kind and id.`);const result=getRegistryItem(registry,{kind:positional[0],id:positional[1]});if(command==='get')write(result);else {const variant=flags.variant!==undefined?result.item.variants?.find(form=>form.id===flags.variant):null;if(flags.variant!==undefined&&!variant)throw new RegistryError('NOT_FOUND','No component form named '+flags.variant+'. Use get to list variants.');const source=variant?variant.source:result.item.source;if(!source?.path)throw new RegistryError('SOURCE_UNAVAILABLE','This planned item has no source export.');if(!/^\/(?:api\/v1\/sources\/|block-sources\/)[a-zA-Z0-9_./-]+$/.test(source.path)||source.path.split('https://design.klic.co.kr/').includes('..'))throw new RegistryError('INVALID_REGISTRY','Unsafe source reference.');if(flags.local)stdout.write(await fs.readFile('dist'+source.path,'utf8'));else {const response=await fetchRegistryResource(flags.base,source.path,fetcher,requestHeaders);stdout.write(await response.text());}}}
+    else {if(positional.length!==2)invalid(`${command} requires kind and id.`);const result=getRegistryItem(registry,{kind:positional[0],id:positional[1]});if(command==='get')write(result);else {const variant=flags.variant!==undefined?result.item.variants?.find(form=>form.id===flags.variant):null;if(flags.variant!==undefined&&!variant)throw new RegistryError('NOT_FOUND','No component form named '+flags.variant+'. Use get to list variants.');const source=variant?variant.source:result.item.source;if(!source?.path)throw new RegistryError('SOURCE_UNAVAILABLE','This planned item has no source export.');if(!/^\/(?:api\/v1\/sources\/|block-sources\/)[a-zA-Z0-9_./-]+$/.test(source.path)||source.path.split('/klic-interface-library-pages/').includes('..'))throw new RegistryError('INVALID_REGISTRY','Unsafe source reference.');if(flags.local)stdout.write(await fs.readFile('dist'+source.path,'utf8'));else {const response=await fetchRegistryResource(flags.base,source.path,fetcher,requestHeaders);stdout.write(await response.text());}}}
     return 0;
   } catch(error) {stderr.write(JSON.stringify(errorBody(error))+'\n');return 1;}
 }

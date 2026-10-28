@@ -128,7 +128,7 @@ CSS recipe의 구조 조건과 컴파일러가 출력한 최종 literal은 원�
 | 도구 | 읽는 방법 |
 | --- | --- |
 | JSON API | [design-system.json](./api/v1/design-system.json), capabilities·검색·항목·설치 계획·테마 응답의 `designSystem` |
-| CLI | `node klic.mjs contract`, `get`, `plan`, `theme get/plan` 등의 JSON 응답 |
+| CLI | `bun klic.mjs contract`, `get`, `plan`, `theme get/plan` 등의 JSON 응답 |
 | MCP·WebMCP | `klic_get_contract`, `klic_get_item` 등 공통 도구 결과의 `designSystem` |
 | 소스·테마 키트 | 동봉된 `KLIC-DESIGN-SYSTEM.json`; 항목 `DESIGN.md`의 공통 규칙과 리비전 |
 
@@ -605,7 +605,7 @@ KLIC 검증 계획의 기준 화면 폭은 320·768·1280 CSS px이며 실제 br
 
 | 표기 | 의미 |
 | --- | --- |
-| Toolkit | 연동 도구 런타임의 버전. KLIC npm 컴포넌트 패키지의 배포 버전이 아니다. |
+| Toolkit | CLI·공유 연동 런타임 식별자. 신규 배포는 `0.0.1`에서 시작하며 현재 npm 패키지와 같은 값을 사용한다. |
 | schemaVersion | API 응답 형식의 버전. v1에서 추가 필드를 허용한다. |
 | release | 레지스트리 배포를 구분하는 해시. 다른 배포의 페이지 결과를 혼합하지 않는다. |
 | designSystem.revision | 디자인 기준 정의의 해시. 문구·UI 수정만으로 기준 자체를 개정했다고 표시하지 않는다. |
@@ -653,7 +653,7 @@ AI도 기존 원본과 계약을 먼저 읽고 변경 범위·수용 조건을 �
 
 ## 가져올 코드를 확인한다
 
-[공통 기준 API](./api/v1/design-system.json) 또는 `klic_get_contract`·`node klic.mjs contract`에서 기준을 읽고 항목별 계약과 리비전이 같은지 확인한다. 7 디멘션마다 토큰과 DOM·CSS recipe·상태 처리의 책임을 나눈다. 프리셋은 실제 API의 허용 키만 묶고 데이터·상태·권한은 별도 입력으로 둔다. 충돌 시 정보·조작·접근성을 보존한 뒤 구조 재배치, 승인된 표현 조정, 제약 기록 순서로 판단한다.
+[공통 기준 API](./api/v1/design-system.json) 또는 `klic_get_contract`·`bun klic.mjs contract`에서 기준을 읽고 항목별 계약과 리비전이 같은지 확인한다. 7 디멘션마다 토큰과 DOM·CSS recipe·상태 처리의 책임을 나눈다. 프리셋은 실제 API의 허용 키만 묶고 데이터·상태·권한은 별도 입력으로 둔다. 충돌 시 정보·조작·접근성을 보존한 뒤 구조 재배치, 승인된 표현 조정, 제약 기록 순서로 판단한다.
 
 소스 묶음은 `DESIGN.md`·`KLIC-DESIGN-SYSTEM.json`, 테마 키트는 `README.md`·`DESIGN-GUIDE.md`·`KLIC-DESIGN-SYSTEM.json`을 함께 읽는다. 기존 CLI·로컬 레지스트리를 갱신하고 stdio 세션은 다시 시작하며 WebMCP는 페이지를 다시 연다.
 

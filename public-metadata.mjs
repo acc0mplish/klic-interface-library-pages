@@ -24,7 +24,7 @@ export const PUBLIC_METADATA={
     "published": false,
     "status": "source-ready",
     "registry": "https://registry.npmjs.org/",
-    "runtime": "Node.js 22+ or Bun 1.4.2",
+    "runtime": "Bun 1.4.2 preferred; Node.js 22+ supported",
     "exports": [
       "tokens",
       "theme",
@@ -35,7 +35,7 @@ export const PUBLIC_METADATA={
     "buildCommand": "bun run pack:npm"
   },
   "versions": {
-    "toolkit": "1.2.0",
+    "toolkit": "0.0.1",
     "api": "1.0.0",
     "registrySchema": "1.0",
     "designSystemSchema": "1.0",
@@ -116,7 +116,7 @@ export const PUBLIC_METADATA={
       "delivery": "Use the published source exports and verified CLI bundles."
     },
     "versioning": {
-      "toolkit": "Integration runtime version",
+      "toolkit": "CLI and shared integration runtime version; initial value tracks the package release",
       "schema": "Response format version",
       "release": "Registry publication hash",
       "revision": "Design criteria hash"
@@ -127,7 +127,7 @@ export const PUBLIC_METADATA={
     "licenses": "/klic-interface-library-pages/licenses/README.md",
     "figma": "/klic-interface-library-pages/design-contract/materials/figma-migration.md",
     "designSystem": "/klic-interface-library-pages/api/v1/design-system.json",
-    "designDocs": "https://design.klic.co.kr/#docs/architecture",
+    "designDocs": "/klic-interface-library-pages/#docs/architecture",
     "themes": "/klic-interface-library-pages/api/v1/themes.json",
     "themeGuide": "https://design.klic.co.kr/resources/cli#themes",
     "docs": "https://design.klic.co.kr/resources",
@@ -150,7 +150,7 @@ export const PUBLIC_METADATA={
     "blockModules": 59,
     "total": 415
   },
-  "release": "e5b5754f2799841f",
+  "release": "5a90ebb246ea5c10",
   "designSystem": {
     "schemaVersion": "1.0",
     "revision": "ed3d6f98ee9de632d172e6d76605b692fb839bbbadb5ef6e342bc3287d7553ef"

@@ -21,7 +21,7 @@ export function buildBreadcrumbs(route=[],{components=[],categories={},blocks={}
   if(id==='collection')return [first,...(tab&&tab!=='all'?[leaf(collectionLabels[tab]||tab,'#blocks/collection/'+tab)]:[]),...(category?[leaf(blocks.categories?.find(c=>c.id===category)?.name||category)]:[])];
   if(!id)return [first];
   const b=blocks.blocks?.find(x=>x.id===id);if(!b)return [first,leaf(id)];
-  return [first,leaf(collectionLabels[b.collection]||b.collection,'#blocks/collection/'+b.collection),leaf(b.categoryName,'#blocks/collection/'+b.collection+'https://design.klic.co.kr/'+b.categoryId),leaf(b.catalogTitle||b.title,'#blocks/'+b.id),leaf(blockTabs[tab]||blockTabs.preview)];
+  return [first,leaf(collectionLabels[b.collection]||b.collection,'#blocks/collection/'+b.collection),leaf(b.categoryName,'#blocks/collection/'+b.collection+'/klic-interface-library-pages/'+b.categoryId),leaf(b.catalogTitle||b.title,'#blocks/'+b.id),leaf(blockTabs[tab]||blockTabs.preview)];
  }
  if(section==='fonts'){
   const first=leaf('폰트','#fonts'),f=fonts.families?.find(f=>f.id===id);
@@ -52,7 +52,7 @@ export async function updateWorkspaceBreadcrumbs(element,route,context={}){
 }
 export const SHORTCUTS=[
  {keys:['⌘ / Ctrl','K'],label:'라이브러리 검색'},
- {keys:['https://design.klic.co.kr/'],label:'검색 열기'},
+ {keys:['/klic-interface-library-pages/'],label:'검색 열기'},
  {keys:['?'],label:'도움말 · 키보드 단축키'},
  {keys:['G','C'],label:'컴포넌트'},
  {keys:['G','B'],label:'블록 스튜디오'},
@@ -68,7 +68,7 @@ const destinations={c:'#components',b:'#blocks',d:'#docs/overview',t:'#tokens',f
 export function workspaceShortcut(key,{editable=false,dialogOpen=false,composing=false,modified=false,pendingG=false}={}){
  if(editable||dialogOpen||composing||modified)return null;
  if(key==='?')return {action:'help'};
- if(key==='https://design.klic.co.kr/')return {action:'search'};
+ if(key==='/klic-interface-library-pages/')return {action:'search'};
  if(pendingG&&destinations[key.toLowerCase()])return {action:'navigate',href:destinations[key.toLowerCase()]};
  if(key.toLowerCase()==='g')return {action:'prefix'};
  return null;

@@ -270,7 +270,7 @@ export const DESIGN_SYSTEM = {
   "links": {
     "definition": "/klic-interface-library-pages/api/v1/design-system.json",
     "architecture": "/klic-interface-library-pages/design/architecture.json",
-    "docs": "https://design.klic.co.kr/#docs/architecture",
+    "docs": "/klic-interface-library-pages/#docs/architecture",
     "requirements": "/klic-interface-library-pages/design/requirements-v1.1.json"
   },
   "revision": "ed3d6f98ee9de632d172e6d76605b692fb839bbbadb5ef6e342bc3287d7553ef"

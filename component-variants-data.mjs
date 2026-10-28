@@ -323,8 +323,8 @@ v('stacked','구성 누적 막대','하나의 총량을 이루는 작업 상태�
 ]);
 add('line-chart',[
 v('trend','주간 방문 추세','수치 레이블과 추세선을 함께 보여주는 분석 카드입니다.',u=>`${metric('주간 방문자','8,921','지난주 대비 +12.8%')}${spark([46,40,27,33,19,24,10,5])}${row('월','일')}`),
-v('comparison','두 기간 비교','현재와 이전 기간을 서로 다른 선 스타일로 비교합니다.',u=>`${head('이번 주와 지난주','실선: 이번 주 · 점선: 지난주')}<svg class="kv-spark" viewBox="0 0 180 70" role="img" aria-label="이번 주 40에서 82, 지난주 35에서62로 증가"><polyline points="0,55 30,45 60,50 90,25 120,30 150,18 180,8" fill="none" stroke="currentColor" stroke-width="3"https://design.klic.co.kr/><polyline points="0,60 30,55 60,40 90,45 120,35 150,38 180,27" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4" opacity=".5"/></svg>${row('이번 주 8,921','지난주 7,908')}`),
-v('area','누적 추이','선 아래 영역을 채워 기간별 누적 사용량을 표현합니다.',u=>`${head('누적 저장 용량','현재 42 GB / 100 GB')}<svg class="kv-spark" viewBox="0 0 180 70" role="img" aria-label="저장 용량이 12GB에서42GB로 증가"><path d="M0 55 L30 52 L60 45 L90 36 L120 32 L150 22 L180 12 L180 70 L0 70Z" fill="currentColor" opacity=".12"https://design.klic.co.kr/><path d="M0 55 L30 52 L60 45 L90 36 L120 32 L150 22 L180 12" fill="none" stroke="currentColor" stroke-width="3"/></svg>${progress(42,'저장 공간')}`),
+v('comparison','두 기간 비교','현재와 이전 기간을 서로 다른 선 스타일로 비교합니다.',u=>`${head('이번 주와 지난주','실선: 이번 주 · 점선: 지난주')}<svg class="kv-spark" viewBox="0 0 180 70" role="img" aria-label="이번 주 40에서 82, 지난주 35에서62로 증가"><polyline points="0,55 30,45 60,50 90,25 120,30 150,18 180,8" fill="none" stroke="currentColor" stroke-width="3"/><polyline points="0,60 30,55 60,40 90,45 120,35 150,38 180,27" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4" opacity=".5"/></svg>${row('이번 주 8,921','지난주 7,908')}`),
+v('area','누적 추이','선 아래 영역을 채워 기간별 누적 사용량을 표현합니다.',u=>`${head('누적 저장 용량','현재 42 GB / 100 GB')}<svg class="kv-spark" viewBox="0 0 180 70" role="img" aria-label="저장 용량이 12GB에서42GB로 증가"><path d="M0 55 L30 52 L60 45 L90 36 L120 32 L150 22 L180 12 L180 70 L0 70Z" fill="currentColor" opacity=".12"/><path d="M0 55 L30 52 L60 45 L90 36 L120 32 L150 22 L180 12" fill="none" stroke="currentColor" stroke-width="3"/></svg>${progress(42,'저장 공간')}`),
 v('period-tabs','기간별 분석','기간 탭에 따라 수치와 추세가 함께 바뀝니다.',u=>tabs(u,['7일','30일'],[`${metric('활성 사용자','1,248','지난 7일')}${spark()}`,`${metric('활성 사용자','4,602','지난 30일')}${spark([42,46,37,27,34,19,16,8])}`]))
 ]);
 add('donut-chart',[
@@ -337,7 +337,7 @@ add('sparkline',[
 v('revenue','매출 추세 지표','핵심 수치 옆의 작은 추세선으로 변화를 설명합니다.',u=>`${row(metric('이번 주 매출','₩124만','+8.2% 증가'),spark())}${muted('최근 7일의 일별 매출 추이')}`),
 v('comparison','지표 목록','서로 다른 두 지표를 작은 선과 수치로 비교합니다.',u=>`${row(metric('신규 사용자','248'),spark([48,32,41,28,18,24,11,8]))}${row(metric('활성 세션','1,920'),spark([21,33,25,39,27,17,23,12]))}`),
 v('table-trends','표 안 추세','표의 수치와 작은 추세선을 같은 행에서 확인합니다.',u=>table(['프로젝트','방문','추이'],[['KLIC','1,248',spark()],['Atlas','896',spark([22,31,25,38,21,18,23,12])]])),
-v('threshold','기준선 추세','목표 기준을 점선으로 표시해 변화를 해석합니다.',u=>`${head('응답 시간','목표 200ms 이하')}<svg class="kv-spark" viewBox="0 0 180 60" role="img" aria-label="응답 시간 추이: 최근170ms, 목표200ms"><path d="M0 25H180" stroke="currentColor" stroke-dasharray="4 4" opacity=".4"https://design.klic.co.kr/><polyline points="0,15 25,20 50,31 75,27 100,38 125,33 150,41 180,44" stroke="currentColor" fill="none" stroke-width="3"/></svg>${row('최근 170ms',badge('목표 충족'))}`)
+v('threshold','기준선 추세','목표 기준을 점선으로 표시해 변화를 해석합니다.',u=>`${head('응답 시간','목표 200ms 이하')}<svg class="kv-spark" viewBox="0 0 180 60" role="img" aria-label="응답 시간 추이: 최근170ms, 목표200ms"><path d="M0 25H180" stroke="currentColor" stroke-dasharray="4 4" opacity=".4"/><polyline points="0,15 25,20 50,31 75,27 100,38 125,33 150,41 180,44" stroke="currentColor" fill="none" stroke-width="3"/></svg>${row('최근 170ms',badge('목표 충족'))}`)
 ]);
 add('statistic',[
 v('comparison','전기 대비 지표','핵심 수치와 비교 기간의 변화량을 함께 표시합니다.',u=>`${metric('월간 활성 사용자','12,840','지난달 대비 +14.2%')}${spark()}`),

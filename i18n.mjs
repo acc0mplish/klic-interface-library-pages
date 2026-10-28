@@ -35,7 +35,7 @@ export function initialLocale({search='',stored}={}){
  const query=new URLSearchParams(search).get('lang');
  return normalizeLocale(SUPPORTED_LOCALES.includes(query)?query:stored);
 }
-export function authoritativeLocale(pathname,search,stored){return initialLocale({search,stored:pathname.startsWith('https://design.klic.co.kr/share/')||pathname==='https://design.klic.co.kr/'||pathname==='https://design.klic.co.kr/index.html'?null:stored});}
+export function authoritativeLocale(pathname,search,stored){return initialLocale({search,stored:pathname.startsWith('https://design.klic.co.kr/share/')||pathname==='/klic-interface-library-pages/'||pathname==='https://design.klic.co.kr/index.html'?null:stored});}
 const replaceKnown=value=>own(ENGLISH_MESSAGES,value)?ENGLISH_MESSAGES[value]:value;
 const patterns=[
  [/^실행 (\d+) · 준비 (\d+)$/,(_,ready,planned)=>`${ready} working · ${planned} planned`],
@@ -173,8 +173,8 @@ export function initI18n({root=globalThis.document,switches=true}={}){
  function translateNodeTitle(node){const record=rememberText(node),next=translateText(record.source,locale);if(node.nodeValue!==next)node.nodeValue=next;record.last=next;}
  function schedule(){if(scheduled||destroyed)return;scheduled=true;win.queueMicrotask(refresh);}
  function broadcast(){for(const frame of doc.querySelectorAll('iframe')){try{if(new URL(frame.src,win.location.href).origin===win.location.origin)frame.contentWindow?.postMessage({type:'klic:locale',locale},win.location.origin);}catch{}}}
- function setLocale(value,{persist=true,broadcastChange=true}={}){locale=win.location.pathname.startsWith('https://design.klic.co.kr/share/')||win.location.pathname==='https://design.klic.co.kr/'||win.location.pathname==='https://design.klic.co.kr/index.html'?authoritativeLocale(win.location.pathname,win.location.search,null):normalizeLocale(value);if(persist)try{win.localStorage.setItem(LOCALE_STORAGE_KEY,locale);}catch{}refresh();if(broadcastChange)broadcast();doc.dispatchEvent(new win.CustomEvent('klic:locale-changed',{detail:{locale}}));}
- function change(e){if(e.target?.matches?.('[data-klic-language]')){if(win.location.pathname.startsWith('https://design.klic.co.kr/share/')||win.location.pathname==='https://design.klic.co.kr/'||win.location.pathname==='https://design.klic.co.kr/index.html'){win.location.assign(win.location.pathname+(e.target.value==='en'?'?lang=en':'')+win.location.hash);return;}setLocale(e.target.value);}}
+ function setLocale(value,{persist=true,broadcastChange=true}={}){locale=win.location.pathname.startsWith('https://design.klic.co.kr/share/')||win.location.pathname==='/klic-interface-library-pages/'||win.location.pathname==='https://design.klic.co.kr/index.html'?authoritativeLocale(win.location.pathname,win.location.search,null):normalizeLocale(value);if(persist)try{win.localStorage.setItem(LOCALE_STORAGE_KEY,locale);}catch{}refresh();if(broadcastChange)broadcast();doc.dispatchEvent(new win.CustomEvent('klic:locale-changed',{detail:{locale}}));}
+ function change(e){if(e.target?.matches?.('[data-klic-language]')){if(win.location.pathname.startsWith('https://design.klic.co.kr/share/')||win.location.pathname==='/klic-interface-library-pages/'||win.location.pathname==='https://design.klic.co.kr/index.html'){win.location.assign(win.location.pathname+(e.target.value==='en'?'?lang=en':'')+win.location.hash);return;}setLocale(e.target.value);}}
  function storage(e){if(e.key===LOCALE_STORAGE_KEY)setLocale(e.newValue,{persist:false,broadcastChange:false});}
  function message(e){if(e.origin!==win.location.origin||e.source!==win.parent||e.data?.type!=='klic:locale'||!SUPPORTED_LOCALES.includes(e.data.locale))return;setLocale(e.data.locale,{persist:false,broadcastChange:false});}
  function load(e){if(e.target?.tagName==='IFRAME')broadcast();}

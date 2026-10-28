@@ -104,7 +104,7 @@ function chart(id){
  if(id==='donut-chart')return '<div class="x-donut" role="img" aria-label="디자인 50%, 개발 30%, 기획 20%"><strong>100<small>전체 작업</small></strong></div><ul class="x-legend"><li>디자인 <b>50%</b></li><li>개발 <b>30%</b></li><li>기획 <b>20%</b></li></ul>';
  if(id==='bar-chart')return '<div class="x-bar-chart" role="img" aria-label="주간 완료 작업: 월42 화68 수51 목86 금72 토94">'+values.map((v,i)=>'<div><span style="height:'+v+'%"></span><small>'+labels[i]+'</small></div>').join('')+'</div><p class="x-hint">완료 작업 · 42 / 68 / 51 / 86 / 72 / 94건</p>';
  const spark=id==='sparkline';
- return '<svg class="x-line-chart" viewBox="0 0 260 100" role="img" aria-label="주간 작업 추세: 42, 68, 51, 86, 72, 94건"><path class="x-chart-grid" d="M10 25H250M10 50H250M10 75H250"https://design.klic.co.kr/><path class="x-chart-area" d="M10 75L58 49L106 66L154 31L202 45L250 23V90H10Z"https://design.klic.co.kr/><path class="x-chart-line" d="M10 75L58 49L106 66L154 31L202 45L250 23"https://design.klic.co.kr/></svg><p class="x-hint">'+(spark?'주간 완료 42 → 94건 · 증가 추세':'월 42 · 화 68 · 수 51 · 목 86 · 금 72 · 토 94건')+'</p>';
+ return '<svg class="x-line-chart" viewBox="0 0 260 100" role="img" aria-label="주간 작업 추세: 42, 68, 51, 86, 72, 94건"><path class="x-chart-grid" d="M10 25H250M10 50H250M10 75H250"/><path class="x-chart-area" d="M10 75L58 49L106 66L154 31L202 45L250 23V90H10Z"/><path class="x-chart-line" d="M10 75L58 49L106 66L154 31L202 45L250 23"/></svg><p class="x-hint">'+(spark?'주간 완료 42 → 94건 · 증가 추세':'월 42 · 화 68 · 수 51 · 목 86 · 금 72 · 토 94건')+'</p>';
 }
 export function expandedSpecimen(id,uid='expanded'){
  const x=s=>uid+'-'+s,field=(s,t,a,h='')=>'<div class="x-field">'+label(x(s),t,input(x(s),a),h)+'</div>',names=['디자인 시스템','브랜드 리뉴얼','모바일 앱'];

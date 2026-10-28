@@ -25,7 +25,7 @@ export const SITE_METADATA = {
     "registry": "https://registry.npmjs.org/"
   },
   "versions": {
-    "toolkit": "1.2.0",
+    "toolkit": "0.0.1",
     "api": "1.0.0",
     "registrySchema": "1.0",
     "designSystemSchema": "1.0",
@@ -106,7 +106,7 @@ export const SITE_METADATA = {
       "delivery": "Use the published source exports and verified CLI bundles."
     },
     "versioning": {
-      "toolkit": "Integration runtime version",
+      "toolkit": "CLI and shared integration runtime version; initial value tracks the package release",
       "schema": "Response format version",
       "release": "Registry publication hash",
       "revision": "Design criteria hash"
@@ -117,7 +117,7 @@ export const SITE_METADATA = {
     "licenses": "/klic-interface-library-pages/licenses/README.md",
     "figma": "/klic-interface-library-pages/design-contract/materials/figma-migration.md",
     "designSystem": "/klic-interface-library-pages/api/v1/design-system.json",
-    "designDocs": "https://design.klic.co.kr/#docs/architecture",
+    "designDocs": "/klic-interface-library-pages/#docs/architecture",
     "themes": "/klic-interface-library-pages/api/v1/themes.json",
     "themeGuide": "https://design.klic.co.kr/resources/cli#themes",
     "docs": "https://design.klic.co.kr/resources",
@@ -132,7 +132,7 @@ export const SITE_METADATA = {
   }
 };
 export const SITE_ORIGIN = SITE_METADATA.site.origin;
-export const MCP_URL = new URL(SITE_METADATA.routes.mcp, SITE_ORIGIN+'https://design.klic.co.kr/').href;
+export const MCP_URL = new URL(SITE_METADATA.routes.mcp, SITE_ORIGIN+'/klic-interface-library-pages/').href;
 export const INTEGRATION_VERSION = SITE_METADATA.versions.toolkit;
 export const PROTOCOL_VERSIONS = SITE_METADATA.versions.mcpProtocols;
 export const RATE_LIMIT_DEFAULTS = Object.freeze({...SITE_METADATA.rateLimit.limits,windowSeconds:SITE_METADATA.rateLimit.windowSeconds});

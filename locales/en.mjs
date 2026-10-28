@@ -684,7 +684,7 @@ Figma Foundations · 문서 타이포그래피와 간격	Figma Foundations · do
 사이트의 Registry v1을 읽고 CLI·MCP와 같은 검증 함수로 검색합니다.	Read this site's Registry v1 and search with the same validation functions used by CLI and MCP.
 실행하면 응답 수, 버전과 실제 항목을 확인할 수 있습니다.	Run a query to inspect the result count, version, and actual items.
 터미널에서 탐색하고 소스 참조를 읽습니다.	Browse and read source references from your terminal.
-Node.js 22+ · 단일 파일	Node.js 22+ · single file
+Bun 권장 · Node.js 호환 · 단일 파일	Bun preferred · Node.js compatible · single file
 에이전트가 같은 카탈로그를 도구로 조회합니다.	Agents query the same catalog through tools.
 원격 HTTP + 로컬 stdio · 읽기 도구 4개	Remote HTTP + local stdio · 4 read tools
 열린 탭의 카탈로그를 읽고 프리뷰를 엽니다.	Read the open tab's catalog and open previews.
@@ -698,7 +698,7 @@ POST /mcp · Sites에서 접근 인증 · 공개 디자인 자료 조회	POST /m
 를 모든 채널에서 공유합니다. 기본 검색에는 실행 항목만 나오며 준비 항목의 소스·프리뷰를 생성하지 않습니다.	is shared across all channels. Searches show runnable items by default. Planned items do not generate source code or previews.
 향후 쓰기는 읽기와 분리한 scope, 서버 입력 검증, idempotency key와 감사 로그를 먼저 연결합니다. 서버 도구는 읽기 전용입니다. CLI add는 사용자가 지정한 새 폴더에 검증된 파일만 저장합니다.	Future writes require scopes separate from reads, server input validation, idempotency keys, and audit logs. Server tools are read-only. CLI add saves only verified files into a new folder specified by the user.
 소스의 라이선스 헤더, 공용 모듈과 스타일 의존성을 유지합니다. 공개 카탈로그는 원본 코드의 라이선스를 변경하지 않습니다.	Preserve source license headers, shared modules, and style dependencies. The public catalog does not change the original code licenses.
-다운로드형 CLI는 Node.js 22 이상에서 실행하는 단일 파일입니다. npm 패키지의 klic 실행 파일과 별도로 제공하며, 로컬 체크아웃에서는	The downloadable CLI is a single file for Node.js 22 or later, separate from the npm package executable. A local checkout can use
+다운로드형 단일 파일 CLI는 Bun 실행을 기본으로 합니다. Node.js는 npm/npx 호환 소비 경로로 지원합니다. 로컬 체크아웃에서는	The downloadable single-file CLI prefers Bun. Node.js remains supported for npm/npx consumers. A local checkout can use
 을 사용할 수 있습니다.	.
 Terminal · 공개 레지스트리	Terminal · public registry
 은 저장 없이 파일 목록·용량·의존성을 확인합니다.	inspects the file list, size, and dependencies without saving.
@@ -729,7 +729,7 @@ Cursor 등 원격 HTTP MCP 설정 예시	Example remote HTTP MCP configuration f
 버전·기능·범위 조회	Read version, capabilities, and scope
 실제 입력 스키마 열기 ↗	Open the actual input schema ↗
 후	after downloading, run
-로 실행합니다. 클라이언트의 command는 node, args는 파일 절대 경로와 mcp로 지정합니다. 로컬 체크아웃에서는 --local을 추가할 수 있습니다.	. Set the client command to node and its args to the absolute file path and mcp. Add --local when using a local checkout.
+로 실행합니다. stdio의 command는 bun, args는 파일 절대 경로와 mcp로 지정합니다. Node.js 실행은 npm/npx 호환 소비 경로로 유지합니다. 로컬 체크아웃에서는 --local을 추가할 수 있습니다.	. Set command to bun and args to the absolute file path and mcp. Node.js remains available for npm/npx compatibility. Add --local when using a local checkout.
 원격 전송은 JSON 응답을 사용하는 stateless HTTP입니다. 2026-07-28 요청별 메타데이터를 지원하며, 2025-11-25 호환 클라이언트는 initialize 이후 MCP-Protocol-Version 헤더를 전송합니다. 도메인 오류는 isError: true, 프로토콜 오류는 JSON-RPC error로 반환합니다. 요청 본문은 1 MiB로 제한합니다.	Remote transport uses stateless HTTP with JSON responses. It supports per-request metadata for 2026-07-28; compatible 2025-11-25 clients send the MCP-Protocol-Version header after initialize. Domain errors return isError: true and protocol errors use JSON-RPC error. Request bodies are limited to 1 MiB.
 WebMCP는 열린 브라우저 페이지의 동작을 에이전트에게 설명합니다. 페이지를 닫아도 동작하는 원격 MCP 서버와 수명이 다릅니다. 지원 API를 확인한 뒤 현재 탭에만 등록합니다.	WebMCP describes the open browser page's actions to agents. Its lifetime differs from a remote MCP server that continues running after the page closes. Tools register only in the current tab after checking API support.
 WebMCP는 실험 단계의 브라우저 API입니다. 현재 공식 imperative 인터페이스인	WebMCP is an experimental browser API. It uses the current official imperative interface,
