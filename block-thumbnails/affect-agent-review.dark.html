@@ -1,0 +1,922 @@
+<!doctype html>
+<html lang="ko" class="dark" data-theme="dark" data-brand="a" data-density="normal" data-font="paperlogy">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; base-uri 'self'; form-action 'none'">
+<base href="../block-runtime/">
+<title>에이전트 검토 워크스페이스 · KLIC 정적 미리보기</title>
+<link rel="stylesheet" href="./assets/index-Dj8yNlzo.css">
+<link rel="stylesheet" href="./assets/AffectShowcaseBlock-CcGf16h_.css">
+<link rel="stylesheet" href="./assets/FlowConnectorBlock-JXuI1Eqb.css">
+<link rel="stylesheet" href="./assets/LiveTimelineBlock-p_yjcPI0.css">
+<link rel="stylesheet" href="./assets/PersonAvatar-Cbq_Pnpf.css">
+<link rel="stylesheet" href="./assets/RightSidePanelBlock-BoZqsHrt.css">
+<style>
+@font-face{font-family:KlicPaperlogy;src:url("../fonts/paperlogy-regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:KlicPaperlogy;src:url("../fonts/paperlogy-semibold.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:KlicPaperlogy;src:url("../fonts/paperlogy-bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+:root{--klic-brand-dimension-control-height-md:2rem;--klic-brand-dimension-control-height-sm:1.75rem;--klic-brand-dimension-control-height-lg:2.25rem;--klic-brand-spacing-md:1rem;--klic-brand-spacing-sm:0.5rem;--klic-brand-icon-size-md:1rem;--klic-brand-radius-md:0.5rem;--klic-brand-typography-scale-body-font-size:1rem;--klic-brand-typography-scale-label-font-size:0.75rem;--klic-brand-color-accent:#91b6ff;--klic-brand-color-accent-hover:#afcbff;--klic-brand-color-accent-active:#719def;--klic-brand-color-surface:#101722;--klic-brand-color-panel:#172132;--klic-brand-color-text:#e8eef8;--klic-brand-color-muted:#a8b6cc;--klic-brand-color-border:#31425c;--klic-brand-color-surface-soft:#1d2b40;--klic-brand-color-surface-selected:#20365c;--klic-brand-color-control-border:#7185a1;--klic-brand-color-focus:#91b6ff;--klic-brand-color-on-accent:#132c46;--klic-brand-color-success:#91b6ff;--klic-brand-color-success-surface:#20365c;--klic-brand-color-warning:#f1cc87;--klic-brand-color-warning-surface:#332b1d;--klic-brand-color-danger:#ffa4aa;--klic-brand-color-danger-surface:#38252b;--klic-semantic-size-action-default:2rem;--klic-semantic-size-input-default:2rem;--klic-semantic-size-action-sm:1.75rem;--klic-semantic-size-action-lg:2.25rem;--klic-semantic-space-container-default:1rem;--klic-semantic-space-field-internal:0.5rem;--klic-semantic-size-icon-default:1rem;--klic-semantic-radius-container-default:0.5rem;--klic-semantic-typography-body-font-size:1rem;--klic-semantic-typography-label-font-size:0.75rem;--klic-semantic-color-accent:#91b6ff;--klic-semantic-color-accent-hover:#afcbff;--klic-semantic-color-accent-active:#719def;--klic-semantic-color-surface:#101722;--klic-semantic-color-panel:#172132;--klic-semantic-color-text:#e8eef8;--klic-semantic-color-muted:#a8b6cc;--klic-semantic-color-border:#31425c;--klic-semantic-color-surface-soft:#1d2b40;--klic-semantic-color-surface-selected:#20365c;--klic-semantic-color-control-border:#7185a1;--klic-semantic-color-focus:#91b6ff;--klic-semantic-color-on-accent:#132c46;--klic-semantic-color-success:#91b6ff;--klic-semantic-color-success-surface:#20365c;--klic-semantic-color-warning:#f1cc87;--klic-semantic-color-warning-surface:#332b1d;--klic-semantic-color-danger:#ffa4aa;--klic-semantic-color-danger-surface:#38252b;--klic-component-button-size-default-height:2rem;--klic-component-button-size-sm-height:1.75rem;--klic-component-button-size-lg-height:2.25rem;--klic-component-input-size-default-height:2rem;--klic-component-card-radius-default:0.5rem;--klic-component-card-spacing-default:1rem;--klic-component-field-spacing-internal:0.5rem;--klic-component-button-icon-size:1rem;--klic-component-text-body-font-size:1rem;--klic-component-button-background-default:#91b6ff;--klic-component-button-background-hover:#afcbff;--klic-component-button-background-active:#719def;--klic-component-input-border-default:#7185a1;--klic-component-card-background-default:#172132;--klic-brand-dimension-content-width-wide:80rem;--klic-brand-spacing-section:1.5rem;--klic-semantic-size-layout-content-max:80rem;--klic-semantic-space-layout-section:1.5rem;--klic-component-block-content-max-width:80rem;--klic-component-block-section-gap:1.5rem;--klic-component-block-container-padding:1rem;--klic-component-block-control-height:2rem;--klic-component-block-surface-radius:0.5rem;--klic-component-block-icon-size:1rem;--klic-component-block-typography-body-font-size:1rem;--klic-component-block-typography-label-font-size:0.75rem;--klic-brand-dimension-panel-width-default:32rem;--klic-semantic-size-panel-width-default:32rem;--klic-component-block-right-panel-width-default:32rem;--klic-brand-dimension-panel-width-wide:44rem;--klic-semantic-size-panel-width-wide:44rem;--klic-component-block-right-panel-width-wide:44rem;--klic-component-block-color-surface:#101722;--klic-component-block-color-panel:#172132;--klic-component-block-color-soft:#1d2b40;--klic-component-block-color-selected:#20365c;--klic-component-block-color-text:#e8eef8;--klic-component-block-color-muted:#a8b6cc;--klic-component-block-color-border:#31425c;--klic-component-block-color-control-border:#7185a1;--klic-component-block-color-accent:#91b6ff;--klic-component-block-color-accent-hover:#afcbff;--klic-component-block-color-on-accent:#132c46;--klic-component-block-color-success:#91b6ff;--klic-component-block-color-success-surface:#20365c;--klic-component-block-color-warning:#f1cc87;--klic-component-block-color-warning-surface:#332b1d;--klic-component-block-color-danger:#ffa4aa;--klic-component-block-color-danger-surface:#38252b;--klic-brand-chart-series-1:#91b6ff;--klic-semantic-chart-series-1:#91b6ff;--klic-component-block-chart-series-1:#91b6ff;--klic-brand-chart-series-2:#afcbff;--klic-semantic-chart-series-2:#afcbff;--klic-component-block-chart-series-2:#afcbff;--klic-brand-chart-series-3:#719def;--klic-semantic-chart-series-3:#719def;--klic-component-block-chart-series-3:#719def;--klic-brand-chart-series-4:#c0d5ff;--klic-semantic-chart-series-4:#c0d5ff;--klic-component-block-chart-series-4:#c0d5ff;--klic-brand-chart-series-5:#7a9bc9;--klic-semantic-chart-series-5:#7a9bc9;--klic-component-block-chart-series-5:#7a9bc9;--klic-brand-chart-series-6:#b6c1d2;--klic-semantic-chart-series-6:#b6c1d2;--klic-component-block-chart-series-6:#b6c1d2;--klic-brand-color-identity:#a9b8ff;--klic-semantic-color-identity:#a9b8ff;--klic-component-wordmark-color:#a9b8ff;--klic-brand-color-navigation:#a9b8ff;--klic-semantic-color-navigation:#a9b8ff;--klic-component-navigation-color-selected:#a9b8ff;--klic-brand-typography-scale-title-font-size:2rem;--klic-semantic-typography-title-font-size:2rem;--klic-component-heading-title-font-size:2rem;--klic-brand-typography-scale-section-font-size:1.5rem;--klic-semantic-typography-section-font-size:1.5rem;--klic-component-heading-section-font-size:1.5rem;--klic-brand-typography-family-body:KlicPaperlogy;--klic-semantic-typography-body-font-family:KlicPaperlogy;--klic-component-text-body-font-family:KlicPaperlogy;--klic-brand-typography-family-heading:KlicPaperlogy;--klic-semantic-typography-heading-font-family:KlicPaperlogy;--klic-component-heading-font-family:KlicPaperlogy;--klic-brand-typography-weight-heading:600;--klic-semantic-typography-heading-font-weight:600;--klic-component-heading-font-weight:600;--klic-brand-color-showcase-ink:#e8eef8;--klic-semantic-color-showcase-ink:#e8eef8;--klic-component-showcase-color-ink:#e8eef8;--klic-brand-color-showcase-muted:#a8b6cc;--klic-semantic-color-showcase-muted:#a8b6cc;--klic-component-showcase-color-muted:#a8b6cc;--klic-brand-color-showcase-accent:#91b6ff;--klic-semantic-color-showcase-accent:#91b6ff;--klic-component-showcase-color-accent:#91b6ff;--klic-brand-color-showcase-canvas:#101722;--klic-semantic-color-showcase-canvas:#101722;--klic-component-showcase-color-canvas:#101722;--klic-brand-color-showcase-surface:#1d2b40;--klic-semantic-color-showcase-surface:#1d2b40;--klic-component-showcase-color-surface:#1d2b40;--klic-brand-color-showcase-border:#31425c;--klic-semantic-color-showcase-border:#31425c;--klic-component-showcase-color-border:#31425c;--klic-brand-color-showcase-night:#132c46;--klic-semantic-color-showcase-night:#132c46;--klic-component-showcase-color-night:#132c46;--klic-brand-color-secondary:#a9b8ff;--klic-semantic-color-secondary:#a9b8ff;--klic-component-block-color-secondary:#a9b8ff;--klic-brand-color-on-secondary:#132c46;--klic-semantic-color-on-secondary:#132c46;--klic-component-block-color-on-secondary:#132c46;--klic-brand-color-secondary-surface:#20365c;--klic-semantic-color-secondary-surface:#20365c;--klic-component-block-color-secondary-surface:#20365c;--klic-brand-material-flat-card-background:#172132;--klic-semantic-material-flat-card-background:#172132;--klic-brand-material-flat-card-fallback:#172132;--klic-semantic-material-flat-card-fallback:#172132;--klic-brand-material-flat-card-border:#31425c;--klic-semantic-material-flat-card-border:#31425c;--klic-brand-material-flat-card-rim:rgb(232 238 248 / 0);--klic-semantic-material-flat-card-rim:rgb(232 238 248 / 0);--klic-brand-material-flat-card-shadow:rgb(16 23 34 / 0);--klic-semantic-material-flat-card-shadow:rgb(16 23 34 / 0);--klic-brand-material-flat-card-blur:0rem;--klic-semantic-material-flat-card-blur:0rem;--klic-brand-material-flat-card-shadow-y:0rem;--klic-semantic-material-flat-card-shadow-y:0rem;--klic-brand-material-flat-card-shadow-blur:0rem;--klic-semantic-material-flat-card-shadow-blur:0rem;--klic-brand-material-flat-chrome-background:#101722;--klic-semantic-material-flat-chrome-background:#101722;--klic-brand-material-flat-chrome-fallback:#101722;--klic-semantic-material-flat-chrome-fallback:#101722;--klic-brand-material-flat-chrome-border:#31425c;--klic-semantic-material-flat-chrome-border:#31425c;--klic-brand-material-flat-chrome-rim:rgb(232 238 248 / 0);--klic-semantic-material-flat-chrome-rim:rgb(232 238 248 / 0);--klic-brand-material-flat-chrome-shadow:rgb(16 23 34 / 0);--klic-semantic-material-flat-chrome-shadow:rgb(16 23 34 / 0);--klic-brand-material-flat-chrome-blur:0rem;--klic-semantic-material-flat-chrome-blur:0rem;--klic-brand-material-flat-chrome-shadow-y:0rem;--klic-semantic-material-flat-chrome-shadow-y:0rem;--klic-brand-material-flat-chrome-shadow-blur:0rem;--klic-semantic-material-flat-chrome-shadow-blur:0rem;--klic-brand-material-flat-overlay-background:#172132;--klic-semantic-material-flat-overlay-background:#172132;--klic-brand-material-flat-overlay-fallback:#172132;--klic-semantic-material-flat-overlay-fallback:#172132;--klic-brand-material-flat-overlay-border:#31425c;--klic-semantic-material-flat-overlay-border:#31425c;--klic-brand-material-flat-overlay-rim:rgb(232 238 248 / 0);--klic-semantic-material-flat-overlay-rim:rgb(232 238 248 / 0);--klic-brand-material-flat-overlay-shadow:rgb(16 23 34 / 0);--klic-semantic-material-flat-overlay-shadow:rgb(16 23 34 / 0);--klic-brand-material-flat-overlay-blur:0rem;--klic-semantic-material-flat-overlay-blur:0rem;--klic-brand-material-flat-overlay-shadow-y:0rem;--klic-semantic-material-flat-overlay-shadow-y:0rem;--klic-brand-material-flat-overlay-shadow-blur:0rem;--klic-semantic-material-flat-overlay-shadow-blur:0rem;--klic-brand-material-flat-field-background:#172132;--klic-semantic-material-flat-field-background:#172132;--klic-brand-material-flat-field-fallback:#172132;--klic-semantic-material-flat-field-fallback:#172132;--klic-brand-material-flat-field-border:#7185a1;--klic-semantic-material-flat-field-border:#7185a1;--klic-brand-material-flat-field-rim:rgb(232 238 248 / 0);--klic-semantic-material-flat-field-rim:rgb(232 238 248 / 0);--klic-brand-material-flat-field-shadow:rgb(16 23 34 / 0);--klic-semantic-material-flat-field-shadow:rgb(16 23 34 / 0);--klic-brand-material-flat-field-blur:0rem;--klic-semantic-material-flat-field-blur:0rem;--klic-brand-material-flat-field-shadow-y:0rem;--klic-semantic-material-flat-field-shadow-y:0rem;--klic-brand-material-flat-field-shadow-blur:0rem;--klic-semantic-material-flat-field-shadow-blur:0rem;--klic-brand-material-flat-dense-background:#172132;--klic-semantic-material-flat-dense-background:#172132;--klic-brand-material-flat-dense-fallback:#172132;--klic-semantic-material-flat-dense-fallback:#172132;--klic-brand-material-flat-dense-border:#31425c;--klic-semantic-material-flat-dense-border:#31425c;--klic-brand-material-flat-dense-rim:rgb(232 238 248 / 0);--klic-semantic-material-flat-dense-rim:rgb(232 238 248 / 0);--klic-brand-material-flat-dense-shadow:rgb(16 23 34 / 0);--klic-semantic-material-flat-dense-shadow:rgb(16 23 34 / 0);--klic-brand-material-flat-dense-blur:0rem;--klic-semantic-material-flat-dense-blur:0rem;--klic-brand-material-flat-dense-shadow-y:0rem;--klic-semantic-material-flat-dense-shadow-y:0rem;--klic-brand-material-flat-dense-shadow-blur:0rem;--klic-semantic-material-flat-dense-shadow-blur:0rem;--klic-brand-material-flat-control-background:#172132;--klic-semantic-material-flat-control-background:#172132;--klic-brand-material-flat-control-fallback:#172132;--klic-semantic-material-flat-control-fallback:#172132;--klic-brand-material-flat-control-border:#7185a1;--klic-semantic-material-flat-control-border:#7185a1;--klic-brand-material-flat-control-rim:rgb(232 238 248 / 0);--klic-semantic-material-flat-control-rim:rgb(232 238 248 / 0);--klic-brand-material-flat-control-shadow:rgb(16 23 34 / 0);--klic-semantic-material-flat-control-shadow:rgb(16 23 34 / 0);--klic-brand-material-flat-control-blur:0rem;--klic-semantic-material-flat-control-blur:0rem;--klic-brand-material-flat-control-shadow-y:0rem;--klic-semantic-material-flat-control-shadow-y:0rem;--klic-brand-material-flat-control-shadow-blur:0rem;--klic-semantic-material-flat-control-shadow-blur:0rem;--klic-brand-material-glass-card-background:rgb(23 33 50 / 0.72);--klic-semantic-material-glass-card-background:rgb(23 33 50 / 0.72);--klic-brand-material-glass-card-fallback:#172132;--klic-semantic-material-glass-card-fallback:#172132;--klic-brand-material-glass-card-border:#31425c;--klic-semantic-material-glass-card-border:#31425c;--klic-brand-material-glass-card-rim:rgb(232 238 248 / 0.36);--klic-semantic-material-glass-card-rim:rgb(232 238 248 / 0.36);--klic-brand-material-glass-card-shadow:rgb(16 23 34 / 0.1);--klic-semantic-material-glass-card-shadow:rgb(16 23 34 / 0.1);--klic-brand-material-glass-card-blur:1rem;--klic-semantic-material-glass-card-blur:1rem;--klic-brand-material-glass-card-shadow-y:0.25rem;--klic-semantic-material-glass-card-shadow-y:0.25rem;--klic-brand-material-glass-card-shadow-blur:1rem;--klic-semantic-material-glass-card-shadow-blur:1rem;--klic-brand-material-glass-chrome-background:rgb(16 23 34 / 0.72);--klic-semantic-material-glass-chrome-background:rgb(16 23 34 / 0.72);--klic-brand-material-glass-chrome-fallback:#101722;--klic-semantic-material-glass-chrome-fallback:#101722;--klic-brand-material-glass-chrome-border:#31425c;--klic-semantic-material-glass-chrome-border:#31425c;--klic-brand-material-glass-chrome-rim:rgb(232 238 248 / 0.36);--klic-semantic-material-glass-chrome-rim:rgb(232 238 248 / 0.36);--klic-brand-material-glass-chrome-shadow:rgb(16 23 34 / 0.1);--klic-semantic-material-glass-chrome-shadow:rgb(16 23 34 / 0.1);--klic-brand-material-glass-chrome-blur:1rem;--klic-semantic-material-glass-chrome-blur:1rem;--klic-brand-material-glass-chrome-shadow-y:0.25rem;--klic-semantic-material-glass-chrome-shadow-y:0.25rem;--klic-brand-material-glass-chrome-shadow-blur:1rem;--klic-semantic-material-glass-chrome-shadow-blur:1rem;--klic-brand-material-glass-overlay-background:rgb(23 33 50 / 0.96);--klic-semantic-material-glass-overlay-background:rgb(23 33 50 / 0.96);--klic-brand-material-glass-overlay-fallback:#172132;--klic-semantic-material-glass-overlay-fallback:#172132;--klic-brand-material-glass-overlay-border:#31425c;--klic-semantic-material-glass-overlay-border:#31425c;--klic-brand-material-glass-overlay-rim:rgb(232 238 248 / 0.36);--klic-semantic-material-glass-overlay-rim:rgb(232 238 248 / 0.36);--klic-brand-material-glass-overlay-shadow:rgb(16 23 34 / 0.1);--klic-semantic-material-glass-overlay-shadow:rgb(16 23 34 / 0.1);--klic-brand-material-glass-overlay-blur:1rem;--klic-semantic-material-glass-overlay-blur:1rem;--klic-brand-material-glass-overlay-shadow-y:0.25rem;--klic-semantic-material-glass-overlay-shadow-y:0.25rem;--klic-brand-material-glass-overlay-shadow-blur:1rem;--klic-semantic-material-glass-overlay-shadow-blur:1rem;--klic-brand-material-glass-field-background:rgb(23 33 50 / 0.92);--klic-semantic-material-glass-field-background:rgb(23 33 50 / 0.92);--klic-brand-material-glass-field-fallback:#172132;--klic-semantic-material-glass-field-fallback:#172132;--klic-brand-material-glass-field-border:#7185a1;--klic-semantic-material-glass-field-border:#7185a1;--klic-brand-material-glass-field-rim:rgb(232 238 248 / 0.36);--klic-semantic-material-glass-field-rim:rgb(232 238 248 / 0.36);--klic-brand-material-glass-field-shadow:rgb(16 23 34 / 0.1);--klic-semantic-material-glass-field-shadow:rgb(16 23 34 / 0.1);--klic-brand-material-glass-field-blur:1rem;--klic-semantic-material-glass-field-blur:1rem;--klic-brand-material-glass-field-shadow-y:0.25rem;--klic-semantic-material-glass-field-shadow-y:0.25rem;--klic-brand-material-glass-field-shadow-blur:1rem;--klic-semantic-material-glass-field-shadow-blur:1rem;--klic-brand-material-glass-dense-background:#172132;--klic-semantic-material-glass-dense-background:#172132;--klic-brand-material-glass-dense-fallback:#172132;--klic-semantic-material-glass-dense-fallback:#172132;--klic-brand-material-glass-dense-border:#31425c;--klic-semantic-material-glass-dense-border:#31425c;--klic-brand-material-glass-dense-rim:rgb(232 238 248 / 0);--klic-semantic-material-glass-dense-rim:rgb(232 238 248 / 0);--klic-brand-material-glass-dense-shadow:rgb(16 23 34 / 0);--klic-semantic-material-glass-dense-shadow:rgb(16 23 34 / 0);--klic-brand-material-glass-dense-blur:0rem;--klic-semantic-material-glass-dense-blur:0rem;--klic-brand-material-glass-dense-shadow-y:0rem;--klic-semantic-material-glass-dense-shadow-y:0rem;--klic-brand-material-glass-dense-shadow-blur:0rem;--klic-semantic-material-glass-dense-shadow-blur:0rem;--klic-brand-material-glass-control-background:rgb(23 33 50 / 0.72);--klic-semantic-material-glass-control-background:rgb(23 33 50 / 0.72);--klic-brand-material-glass-control-fallback:#172132;--klic-semantic-material-glass-control-fallback:#172132;--klic-brand-material-glass-control-border:#7185a1;--klic-semantic-material-glass-control-border:#7185a1;--klic-brand-material-glass-control-rim:rgb(232 238 248 / 0.36);--klic-semantic-material-glass-control-rim:rgb(232 238 248 / 0.36);--klic-brand-material-glass-control-shadow:rgb(16 23 34 / 0.1);--klic-semantic-material-glass-control-shadow:rgb(16 23 34 / 0.1);--klic-brand-material-glass-control-blur:1rem;--klic-semantic-material-glass-control-blur:1rem;--klic-brand-material-glass-control-shadow-y:0.25rem;--klic-semantic-material-glass-control-shadow-y:0.25rem;--klic-brand-material-glass-control-shadow-blur:1rem;--klic-semantic-material-glass-control-shadow-blur:1rem;--klic-brand-material-solid-glass-card-background:rgb(23 33 50 / 0.92);--klic-semantic-material-solid-glass-card-background:rgb(23 33 50 / 0.92);--klic-brand-material-solid-glass-card-fallback:#172132;--klic-semantic-material-solid-glass-card-fallback:#172132;--klic-brand-material-solid-glass-card-border:#31425c;--klic-semantic-material-solid-glass-card-border:#31425c;--klic-brand-material-solid-glass-card-rim:rgb(232 238 248 / 0.52);--klic-semantic-material-solid-glass-card-rim:rgb(232 238 248 / 0.52);--klic-brand-material-solid-glass-card-shadow:rgb(16 23 34 / 0.14);--klic-semantic-material-solid-glass-card-shadow:rgb(16 23 34 / 0.14);--klic-brand-material-solid-glass-card-blur:0.75rem;--klic-semantic-material-solid-glass-card-blur:0.75rem;--klic-brand-material-solid-glass-card-shadow-y:0.375rem;--klic-semantic-material-solid-glass-card-shadow-y:0.375rem;--klic-brand-material-solid-glass-card-shadow-blur:1.25rem;--klic-semantic-material-solid-glass-card-shadow-blur:1.25rem;--klic-brand-material-solid-glass-chrome-background:rgb(16 23 34 / 0.92);--klic-semantic-material-solid-glass-chrome-background:rgb(16 23 34 / 0.92);--klic-brand-material-solid-glass-chrome-fallback:#101722;--klic-semantic-material-solid-glass-chrome-fallback:#101722;--klic-brand-material-solid-glass-chrome-border:#31425c;--klic-semantic-material-solid-glass-chrome-border:#31425c;--klic-brand-material-solid-glass-chrome-rim:rgb(232 238 248 / 0.52);--klic-semantic-material-solid-glass-chrome-rim:rgb(232 238 248 / 0.52);--klic-brand-material-solid-glass-chrome-shadow:rgb(16 23 34 / 0.14);--klic-semantic-material-solid-glass-chrome-shadow:rgb(16 23 34 / 0.14);--klic-brand-material-solid-glass-chrome-blur:0.75rem;--klic-semantic-material-solid-glass-chrome-blur:0.75rem;--klic-brand-material-solid-glass-chrome-shadow-y:0.375rem;--klic-semantic-material-solid-glass-chrome-shadow-y:0.375rem;--klic-brand-material-solid-glass-chrome-shadow-blur:1.25rem;--klic-semantic-material-solid-glass-chrome-shadow-blur:1.25rem;--klic-brand-material-solid-glass-overlay-background:rgb(23 33 50 / 0.96);--klic-semantic-material-solid-glass-overlay-background:rgb(23 33 50 / 0.96);--klic-brand-material-solid-glass-overlay-fallback:#172132;--klic-semantic-material-solid-glass-overlay-fallback:#172132;--klic-brand-material-solid-glass-overlay-border:#31425c;--klic-semantic-material-solid-glass-overlay-border:#31425c;--klic-brand-material-solid-glass-overlay-rim:rgb(232 238 248 / 0.52);--klic-semantic-material-solid-glass-overlay-rim:rgb(232 238 248 / 0.52);--klic-brand-material-solid-glass-overlay-shadow:rgb(16 23 34 / 0.14);--klic-semantic-material-solid-glass-overlay-shadow:rgb(16 23 34 / 0.14);--klic-brand-material-solid-glass-overlay-blur:0.75rem;--klic-semantic-material-solid-glass-overlay-blur:0.75rem;--klic-brand-material-solid-glass-overlay-shadow-y:0.375rem;--klic-semantic-material-solid-glass-overlay-shadow-y:0.375rem;--klic-brand-material-solid-glass-overlay-shadow-blur:1.25rem;--klic-semantic-material-solid-glass-overlay-shadow-blur:1.25rem;--klic-brand-material-solid-glass-field-background:rgb(23 33 50 / 0.92);--klic-semantic-material-solid-glass-field-background:rgb(23 33 50 / 0.92);--klic-brand-material-solid-glass-field-fallback:#172132;--klic-semantic-material-solid-glass-field-fallback:#172132;--klic-brand-material-solid-glass-field-border:#7185a1;--klic-semantic-material-solid-glass-field-border:#7185a1;--klic-brand-material-solid-glass-field-rim:rgb(232 238 248 / 0.52);--klic-semantic-material-solid-glass-field-rim:rgb(232 238 248 / 0.52);--klic-brand-material-solid-glass-field-shadow:rgb(16 23 34 / 0.14);--klic-semantic-material-solid-glass-field-shadow:rgb(16 23 34 / 0.14);--klic-brand-material-solid-glass-field-blur:0.75rem;--klic-semantic-material-solid-glass-field-blur:0.75rem;--klic-brand-material-solid-glass-field-shadow-y:0.375rem;--klic-semantic-material-solid-glass-field-shadow-y:0.375rem;--klic-brand-material-solid-glass-field-shadow-blur:1.25rem;--klic-semantic-material-solid-glass-field-shadow-blur:1.25rem;--klic-brand-material-solid-glass-dense-background:#172132;--klic-semantic-material-solid-glass-dense-background:#172132;--klic-brand-material-solid-glass-dense-fallback:#172132;--klic-semantic-material-solid-glass-dense-fallback:#172132;--klic-brand-material-solid-glass-dense-border:#31425c;--klic-semantic-material-solid-glass-dense-border:#31425c;--klic-brand-material-solid-glass-dense-rim:rgb(232 238 248 / 0);--klic-semantic-material-solid-glass-dense-rim:rgb(232 238 248 / 0);--klic-brand-material-solid-glass-dense-shadow:rgb(16 23 34 / 0);--klic-semantic-material-solid-glass-dense-shadow:rgb(16 23 34 / 0);--klic-brand-material-solid-glass-dense-blur:0rem;--klic-semantic-material-solid-glass-dense-blur:0rem;--klic-brand-material-solid-glass-dense-shadow-y:0rem;--klic-semantic-material-solid-glass-dense-shadow-y:0rem;--klic-brand-material-solid-glass-dense-shadow-blur:0rem;--klic-semantic-material-solid-glass-dense-shadow-blur:0rem;--klic-brand-material-solid-glass-control-background:rgb(23 33 50 / 0.92);--klic-semantic-material-solid-glass-control-background:rgb(23 33 50 / 0.92);--klic-brand-material-solid-glass-control-fallback:#172132;--klic-semantic-material-solid-glass-control-fallback:#172132;--klic-brand-material-solid-glass-control-border:#7185a1;--klic-semantic-material-solid-glass-control-border:#7185a1;--klic-brand-material-solid-glass-control-rim:rgb(232 238 248 / 0.52);--klic-semantic-material-solid-glass-control-rim:rgb(232 238 248 / 0.52);--klic-brand-material-solid-glass-control-shadow:rgb(16 23 34 / 0.14);--klic-semantic-material-solid-glass-control-shadow:rgb(16 23 34 / 0.14);--klic-brand-material-solid-glass-control-blur:0.75rem;--klic-semantic-material-solid-glass-control-blur:0.75rem;--klic-brand-material-solid-glass-control-shadow-y:0.375rem;--klic-semantic-material-solid-glass-control-shadow-y:0.375rem;--klic-brand-material-solid-glass-control-shadow-blur:1.25rem;--klic-semantic-material-solid-glass-control-shadow-blur:1.25rem;--klic-brand-material-liquid-glass-card-background:rgb(23 33 50 / 0.64);--klic-semantic-material-liquid-glass-card-background:rgb(23 33 50 / 0.64);--klic-brand-material-liquid-glass-card-fallback:#172132;--klic-semantic-material-liquid-glass-card-fallback:#172132;--klic-brand-material-liquid-glass-card-border:#31425c;--klic-semantic-material-liquid-glass-card-border:#31425c;--klic-brand-material-liquid-glass-card-rim:rgb(232 238 248 / 0.72);--klic-semantic-material-liquid-glass-card-rim:rgb(232 238 248 / 0.72);--klic-brand-material-liquid-glass-card-shadow:rgb(16 23 34 / 0.18);--klic-semantic-material-liquid-glass-card-shadow:rgb(16 23 34 / 0.18);--klic-brand-material-liquid-glass-card-blur:1.5rem;--klic-semantic-material-liquid-glass-card-blur:1.5rem;--klic-brand-material-liquid-glass-card-shadow-y:0.5rem;--klic-semantic-material-liquid-glass-card-shadow-y:0.5rem;--klic-brand-material-liquid-glass-card-shadow-blur:1.75rem;--klic-semantic-material-liquid-glass-card-shadow-blur:1.75rem;--klic-brand-material-liquid-glass-chrome-background:rgb(16 23 34 / 0.64);--klic-semantic-material-liquid-glass-chrome-background:rgb(16 23 34 / 0.64);--klic-brand-material-liquid-glass-chrome-fallback:#101722;--klic-semantic-material-liquid-glass-chrome-fallback:#101722;--klic-brand-material-liquid-glass-chrome-border:#31425c;--klic-semantic-material-liquid-glass-chrome-border:#31425c;--klic-brand-material-liquid-glass-chrome-rim:rgb(232 238 248 / 0.72);--klic-semantic-material-liquid-glass-chrome-rim:rgb(232 238 248 / 0.72);--klic-brand-material-liquid-glass-chrome-shadow:rgb(16 23 34 / 0.18);--klic-semantic-material-liquid-glass-chrome-shadow:rgb(16 23 34 / 0.18);--klic-brand-material-liquid-glass-chrome-blur:1.5rem;--klic-semantic-material-liquid-glass-chrome-blur:1.5rem;--klic-brand-material-liquid-glass-chrome-shadow-y:0.5rem;--klic-semantic-material-liquid-glass-chrome-shadow-y:0.5rem;--klic-brand-material-liquid-glass-chrome-shadow-blur:1.75rem;--klic-semantic-material-liquid-glass-chrome-shadow-blur:1.75rem;--klic-brand-material-liquid-glass-overlay-background:rgb(23 33 50 / 0.96);--klic-semantic-material-liquid-glass-overlay-background:rgb(23 33 50 / 0.96);--klic-brand-material-liquid-glass-overlay-fallback:#172132;--klic-semantic-material-liquid-glass-overlay-fallback:#172132;--klic-brand-material-liquid-glass-overlay-border:#31425c;--klic-semantic-material-liquid-glass-overlay-border:#31425c;--klic-brand-material-liquid-glass-overlay-rim:rgb(232 238 248 / 0.72);--klic-semantic-material-liquid-glass-overlay-rim:rgb(232 238 248 / 0.72);--klic-brand-material-liquid-glass-overlay-shadow:rgb(16 23 34 / 0.18);--klic-semantic-material-liquid-glass-overlay-shadow:rgb(16 23 34 / 0.18);--klic-brand-material-liquid-glass-overlay-blur:1.5rem;--klic-semantic-material-liquid-glass-overlay-blur:1.5rem;--klic-brand-material-liquid-glass-overlay-shadow-y:0.5rem;--klic-semantic-material-liquid-glass-overlay-shadow-y:0.5rem;--klic-brand-material-liquid-glass-overlay-shadow-blur:1.75rem;--klic-semantic-material-liquid-glass-overlay-shadow-blur:1.75rem;--klic-brand-material-liquid-glass-field-background:rgb(23 33 50 / 0.92);--klic-semantic-material-liquid-glass-field-background:rgb(23 33 50 / 0.92);--klic-brand-material-liquid-glass-field-fallback:#172132;--klic-semantic-material-liquid-glass-field-fallback:#172132;--klic-brand-material-liquid-glass-field-border:#7185a1;--klic-semantic-material-liquid-glass-field-border:#7185a1;--klic-brand-material-liquid-glass-field-rim:rgb(232 238 248 / 0.72);--klic-semantic-material-liquid-glass-field-rim:rgb(232 238 248 / 0.72);--klic-brand-material-liquid-glass-field-shadow:rgb(16 23 34 / 0.18);--klic-semantic-material-liquid-glass-field-shadow:rgb(16 23 34 / 0.18);--klic-brand-material-liquid-glass-field-blur:1.5rem;--klic-semantic-material-liquid-glass-field-blur:1.5rem;--klic-brand-material-liquid-glass-field-shadow-y:0.5rem;--klic-semantic-material-liquid-glass-field-shadow-y:0.5rem;--klic-brand-material-liquid-glass-field-shadow-blur:1.75rem;--klic-semantic-material-liquid-glass-field-shadow-blur:1.75rem;--klic-brand-material-liquid-glass-dense-background:#172132;--klic-semantic-material-liquid-glass-dense-background:#172132;--klic-brand-material-liquid-glass-dense-fallback:#172132;--klic-semantic-material-liquid-glass-dense-fallback:#172132;--klic-brand-material-liquid-glass-dense-border:#31425c;--klic-semantic-material-liquid-glass-dense-border:#31425c;--klic-brand-material-liquid-glass-dense-rim:rgb(232 238 248 / 0);--klic-semantic-material-liquid-glass-dense-rim:rgb(232 238 248 / 0);--klic-brand-material-liquid-glass-dense-shadow:rgb(16 23 34 / 0);--klic-semantic-material-liquid-glass-dense-shadow:rgb(16 23 34 / 0);--klic-brand-material-liquid-glass-dense-blur:0rem;--klic-semantic-material-liquid-glass-dense-blur:0rem;--klic-brand-material-liquid-glass-dense-shadow-y:0rem;--klic-semantic-material-liquid-glass-dense-shadow-y:0rem;--klic-brand-material-liquid-glass-dense-shadow-blur:0rem;--klic-semantic-material-liquid-glass-dense-shadow-blur:0rem;--klic-brand-material-liquid-glass-control-background:rgb(23 33 50 / 0.64);--klic-semantic-material-liquid-glass-control-background:rgb(23 33 50 / 0.64);--klic-brand-material-liquid-glass-control-fallback:#172132;--klic-semantic-material-liquid-glass-control-fallback:#172132;--klic-brand-material-liquid-glass-control-border:#7185a1;--klic-semantic-material-liquid-glass-control-border:#7185a1;--klic-brand-material-liquid-glass-control-rim:rgb(232 238 248 / 0.72);--klic-semantic-material-liquid-glass-control-rim:rgb(232 238 248 / 0.72);--klic-brand-material-liquid-glass-control-shadow:rgb(16 23 34 / 0.18);--klic-semantic-material-liquid-glass-control-shadow:rgb(16 23 34 / 0.18);--klic-brand-material-liquid-glass-control-blur:1.5rem;--klic-semantic-material-liquid-glass-control-blur:1.5rem;--klic-brand-material-liquid-glass-control-shadow-y:0.5rem;--klic-semantic-material-liquid-glass-control-shadow-y:0.5rem;--klic-brand-material-liquid-glass-control-shadow-blur:1.75rem;--klic-semantic-material-liquid-glass-control-shadow-blur:1.75rem;--klic-component-surface-card-background:#172132;--klic-component-surface-card-fallback:#172132;--klic-component-surface-card-border:#31425c;--klic-component-surface-card-rim:rgb(232 238 248 / 0);--klic-component-surface-card-shadow:rgb(16 23 34 / 0);--klic-component-surface-card-blur:0rem;--klic-component-surface-card-shadow-y:0rem;--klic-component-surface-card-shadow-blur:0rem;--klic-component-surface-chrome-background:#101722;--klic-component-surface-chrome-fallback:#101722;--klic-component-surface-chrome-border:#31425c;--klic-component-surface-chrome-rim:rgb(232 238 248 / 0);--klic-component-surface-chrome-shadow:rgb(16 23 34 / 0);--klic-component-surface-chrome-blur:0rem;--klic-component-surface-chrome-shadow-y:0rem;--klic-component-surface-chrome-shadow-blur:0rem;--klic-component-surface-overlay-background:#172132;--klic-component-surface-overlay-fallback:#172132;--klic-component-surface-overlay-border:#31425c;--klic-component-surface-overlay-rim:rgb(232 238 248 / 0);--klic-component-surface-overlay-shadow:rgb(16 23 34 / 0);--klic-component-surface-overlay-blur:0rem;--klic-component-surface-overlay-shadow-y:0rem;--klic-component-surface-overlay-shadow-blur:0rem;--klic-component-surface-field-background:#172132;--klic-component-surface-field-fallback:#172132;--klic-component-surface-field-border:#7185a1;--klic-component-surface-field-rim:rgb(232 238 248 / 0);--klic-component-surface-field-shadow:rgb(16 23 34 / 0);--klic-component-surface-field-blur:0rem;--klic-component-surface-field-shadow-y:0rem;--klic-component-surface-field-shadow-blur:0rem;--klic-component-surface-dense-background:#172132;--klic-component-surface-dense-fallback:#172132;--klic-component-surface-dense-border:#31425c;--klic-component-surface-dense-rim:rgb(232 238 248 / 0);--klic-component-surface-dense-shadow:rgb(16 23 34 / 0);--klic-component-surface-dense-blur:0rem;--klic-component-surface-dense-shadow-y:0rem;--klic-component-surface-dense-shadow-blur:0rem;--klic-component-surface-control-background:#172132;--klic-component-surface-control-fallback:#172132;--klic-component-surface-control-border:#7185a1;--klic-component-surface-control-rim:rgb(232 238 248 / 0);--klic-component-surface-control-shadow:rgb(16 23 34 / 0);--klic-component-surface-control-blur:0rem;--klic-component-surface-control-shadow-y:0rem;--klic-component-surface-control-shadow-blur:0rem;--klic-component-interaction-focus-color:#91b6ff;--runtime-font:KlicPaperlogy,system-ui,sans-serif;color-scheme:dark}
+html,body{width:1200px;min-width:1200px;height:800px;margin:0;overflow:hidden}
+body{pointer-events:none;user-select:none}
+*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important;caret-color:transparent!important}
+.runtime-surface{width:1200px;min-width:1200px;margin:0;padding:16px}
+::-webkit-scrollbar{width:0;height:0}
+</style>
+</head>
+<body data-block-id="affect-agent-review" data-snapshot="initial-render"><main class="runtime-surface" inert><style data-precedence="default" data-href="ui-decision-inbox ui-tool-call ui-smart-recommendation">
+.ui-di {
+  --ui-di-tray: var(--klic-component-block-color-soft);
+  --ui-di-card: var(--klic-component-block-color-panel);
+  --ui-di-line: var(--klic-component-block-color-border);
+  --ui-di-ink: var(--klic-component-block-color-text);
+  --ui-di-text: var(--klic-component-block-color-text);
+  --ui-di-muted: var(--klic-component-block-color-muted);
+  --ui-di-faint: var(--klic-component-block-color-muted);
+  --ui-di-alert: var(--klic-component-block-color-accent);
+  --ui-di-ok: var(--klic-component-block-color-accent);
+  --ui-di-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 440px;
+  /* Like the Chat Composer: a gray tray with the heading, the white card sits on top of it */
+  background: var(--ui-di-tray);
+  /* The gray tray frames the white card on every side */
+  padding: 6px;
+  border-radius: 22px;
+  font-family: var(--runtime-font, system-ui);
+  color: var(--ui-di-ink);
+  -webkit-font-smoothing: antialiased;
+}
+.ui-di *, .ui-di *::before, .ui-di *::after { box-sizing: border-box; }
+.ui-di button { margin: 0; font: inherit; cursor: pointer; }
+.ui-di button:focus-visible { outline: 2px solid var(--klic-component-block-color-accent); outline-offset: 2px; }
+
+.ui-di__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 18px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--ui-di-alert);
+  transition: color 300ms ease;
+}
+.ui-di[data-clear] .ui-di__head { color: var(--ui-di-ok); }
+
+.ui-di__card {
+  overflow: hidden;
+  background: var(--ui-di-card);
+  border: 1px solid var(--klic-component-block-color-panel);
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+/* Rows fold away with a height transition once answered */
+.ui-di__row {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 460ms var(--ui-di-ease), opacity 300ms ease;
+}
+.ui-di__row[data-gone] { grid-template-rows: 0fr; opacity: 0; }
+.ui-di__row-inner { min-height: 0; overflow: hidden; }
+.ui-di__row + .ui-di__row .ui-di__item { border-top: 1px solid var(--ui-di-line); }
+.ui-di__row[data-gone] + .ui-di__row .ui-di__item { border-top-color: transparent; }
+
+.ui-di__item { padding: 16px 20px 14px; }
+.ui-di__item:not([data-open]) { padding-bottom: 16px; }
+.ui-di__title {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: start;
+  color: var(--ui-di-ink);
+  overflow-wrap: anywhere;
+}
+.ui-di__title--folded {
+  /* Still one line however long the title – it opens in full on click */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--ui-di-faint);
+  transition: color 160ms ease;
+}
+.ui-di__title--folded:hover { color: var(--ui-di-muted); }
+
+.ui-di__body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 420ms var(--ui-di-ease);
+}
+.ui-di__body[data-open] { grid-template-rows: 1fr; }
+/* Room around the buttons so the clipping for the fold never cuts their ring and shadow */
+.ui-di__body-inner {
+  min-height: 0;
+  overflow: hidden;
+  margin: 0 -4px -4px;
+  padding: 0 4px 4px;
+}
+.ui-di__detail {
+  margin: 4px 0 0;
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--ui-di-muted);
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+.ui-di__actions {
+  display: flex;
+  align-items: center;
+  /* Long or translated answers go on a second line instead of out of the card */
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 30px;
+  margin-top: 12px;
+}
+
+.ui-di__btn {
+  max-width: 100%;
+  min-height: 30px;
+  padding: 5px 12px;
+  border: 0;
+  border-radius: 9px;
+  background: var(--klic-component-block-color-panel);
+  box-shadow: 0 0 0 1px var(--klic-component-block-color-panel), 0 1px 2px rgba(0, 0, 0, 0.04);
+  font-size: 13px !important;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--ui-di-ink);
+  overflow-wrap: anywhere;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+.ui-di__btn:hover { background: var(--klic-component-block-color-panel); }
+.ui-di__btn:active { transform: scale(0.98); }
+.ui-di__btn--primary {
+  background: linear-gradient(var(--klic-component-block-color-text), var(--klic-component-block-color-text));
+  box-shadow: 0 0 0 1px var(--klic-component-block-color-text), 0 2px 4px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  color: var(--klic-component-block-color-panel);
+}
+.ui-di__btn--primary:hover { background: linear-gradient(var(--klic-component-block-color-text), var(--klic-component-block-color-text)); }
+
+.ui-di__done {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  max-width: 100%;
+  color: var(--ui-di-ok);
+  overflow-wrap: anywhere;
+  animation: ui-di-in 360ms var(--ui-di-ease);
+}
+.ui-di__done > span { min-width: 0; }
+
+.ui-di__empty {
+  display: none;
+  margin: 0;
+  padding: 18px 20px;
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--ui-di-muted);
+}
+.ui-di[data-clear] .ui-di__empty { display: block; animation: ui-di-in 420ms var(--ui-di-ease) 300ms both; }
+
+@keyframes ui-di-in {
+  from { opacity: 0; transform: translateY(3px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ui-di__row, .ui-di__body { transition: none; }
+  .ui-di__done, .ui-di__empty { animation: none !important; }
+}
+
+/* Dark mode: follows a .dark class or data-theme="dark" on any ancestor, e.g. <html> */
+:where(.dark, [data-theme="dark"]) .ui-di {
+  --ui-di-tray: var(--klic-component-block-color-soft);
+  --ui-di-card: var(--klic-component-block-color-panel);
+  --ui-di-line: var(--klic-component-block-color-border);
+  --ui-di-ink: var(--klic-component-block-color-text);
+  --ui-di-text: var(--klic-component-block-color-text);
+  --ui-di-muted: var(--klic-component-block-color-muted);
+  --ui-di-faint: var(--klic-component-block-color-muted);
+  --ui-di-alert: var(--klic-component-block-color-accent);
+  --ui-di-ok: var(--klic-component-block-color-accent);
+}
+:where(.dark, [data-theme="dark"]) .ui-di__card {
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+:where(.dark, [data-theme="dark"]) .ui-di__btn {
+  background: var(--klic-component-block-color-accent);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+:where(.dark, [data-theme="dark"]) .ui-di__btn:hover { background: var(--klic-component-block-color-accent); }
+/* The dark primary button inverts, like on the site */
+:where(.dark, [data-theme="dark"]) .ui-di__btn--primary {
+  background: linear-gradient(var(--klic-component-block-color-panel), var(--klic-component-block-color-panel));
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 2px 4px rgba(0, 0, 0, 0.3), inset 0 1px 0 var(--klic-component-block-color-panel);
+  color: var(--klic-component-block-color-text);
+}
+:where(.dark, [data-theme="dark"]) .ui-di__btn--primary:hover { background: linear-gradient(var(--klic-component-block-color-panel), var(--klic-component-block-color-panel)); }
+
+.ui-tc,
+.ui-tc-group {
+  --ui-tc-ink: var(--klic-component-block-color-text);
+  --ui-tc-text: var(--klic-component-block-color-text);
+  --ui-tc-muted: var(--klic-component-block-color-muted);
+  --ui-tc-bg: var(--klic-component-block-color-panel);
+  --ui-tc-line: var(--klic-component-block-color-border);
+  --ui-tc-hover: var(--klic-component-block-color-soft);
+  --ui-tc-tile: var(--klic-component-block-color-soft);
+  --ui-tc-code: var(--klic-component-block-color-soft);
+  --ui-tc-ring: var(--klic-component-block-color-panel);
+  --ui-tc-red: var(--klic-component-block-color-danger);
+  --ui-tc-red-bg: var(--klic-component-block-color-danger-surface);
+  --ui-tc-red-line: var(--klic-component-block-color-danger);
+  --ui-tc-key: var(--klic-component-block-color-text);
+  --ui-tc-str: var(--klic-component-block-color-accent);
+  --ui-tc-num: var(--klic-component-block-color-warning);
+  --ui-tc-lit: var(--klic-component-block-color-accent);
+  --ui-tc-shine: var(--klic-component-block-color-panel);
+  --ui-tc-focus: var(--klic-component-block-color-accent);
+  --ui-tc-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ui-tc-mono: ui-monospace, "SF Mono", Menlo, monospace;
+  box-sizing: border-box;
+  min-width: 0;
+  color: var(--ui-tc-text);
+  font-family: var(--runtime-font, system-ui);
+  font-size: 13.5px;
+  line-height: 1.4;
+  letter-spacing: -0.006em;
+  -webkit-font-smoothing: antialiased;
+}
+.ui-tc *,
+.ui-tc-group * { box-sizing: border-box; }
+
+.ui-tc {
+  position: relative;
+  border-radius: 12px;
+  background: var(--ui-tc-bg);
+  box-shadow: inset 0 0 0 1px var(--ui-tc-line), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+.ui-tc-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Header: icon, name + summary, status, chevron – everything truncates before it overflows */
+.ui-tc__head {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 10px 8px 9px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 160ms ease;
+}
+.ui-tc[data-open] .ui-tc__head { border-radius: 12px 12px 0 0; }
+.ui-tc__head:focus-visible,
+.ui-tc-group__head:focus-visible,
+.ui-tc__copy:focus-visible,
+.ui-tc__more:focus-visible,
+.ui-tc__retry:focus-visible {
+  outline: 2px solid var(--ui-tc-focus);
+  outline-offset: 2px;
+}
+@media (hover: hover) {
+  .ui-tc__head:hover { background: var(--ui-tc-hover); }
+  .ui-tc-group__head:hover { background: var(--ui-tc-hover); color: var(--ui-tc-ink); }
+  .ui-tc__copy:hover { background: var(--ui-tc-hover); color: var(--ui-tc-ink); }
+  .ui-tc__more:hover { color: var(--ui-tc-ink); }
+  .ui-tc__retry:hover { background: var(--ui-tc-hover); }
+}
+
+.ui-tc__icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  background: var(--ui-tc-tile);
+  box-shadow: inset 0 0 0 1px var(--ui-tc-line);
+  color: var(--ui-tc-ink);
+}
+.ui-tc__icon > svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+
+.ui-tc__main {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+.ui-tc__name {
+  flex: 0 1 auto;
+  max-width: 55%;
+  overflow: hidden;
+  color: var(--ui-tc-ink);
+  font-family: var(--ui-tc-mono);
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ui-tc__summary {
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--ui-tc-text);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ui-tc__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex: none;
+  color: var(--ui-tc-muted);
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  animation: ui-tc-in 360ms var(--ui-tc-ease) both;
+}
+.ui-tc[data-status="error"] .ui-tc__status { color: var(--ui-tc-red); }
+.ui-tc__status > svg { width: 14px; height: 14px; flex: none; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.ui-tc__spinner circle { stroke: currentColor; stroke-width: 1.6; opacity: 0.22; }
+.ui-tc__spinner path { stroke: var(--ui-tc-ink); stroke-width: 1.6; }
+.ui-tc__spinner { animation: ui-tc-spin 800ms linear infinite; }
+.ui-tc__ok { stroke: var(--ui-tc-ink); stroke-width: 1.8; }
+.ui-tc__ok path { stroke-dasharray: 1; stroke-dashoffset: 1; animation: ui-tc-draw 360ms var(--ui-tc-ease) 80ms forwards; }
+.ui-tc__err { stroke: var(--ui-tc-red); stroke-width: 1.5; }
+
+.ui-tc__chevron {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: var(--ui-tc-muted);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 360ms var(--ui-tc-ease);
+}
+.ui-tc[data-open] > .ui-tc__head .ui-tc__chevron,
+.ui-tc-group[data-open] > .ui-tc-group__head .ui-tc__chevron { transform: rotate(180deg); }
+
+/* Body: grows from 0fr to 1fr, so the height animates without measuring */
+.ui-tc__body {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 380ms var(--ui-tc-ease), opacity 240ms ease;
+}
+.ui-tc[data-open] > .ui-tc__body,
+.ui-tc-group[data-open] > .ui-tc__body {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+.ui-tc__clip { min-height: 0; overflow: hidden; }
+.ui-tc__sections {
+  display: grid;
+  gap: 12px;
+  padding: 12px;
+  border-top: 1px solid var(--ui-tc-line);
+}
+
+.ui-tc__section { display: grid; gap: 6px; min-width: 0; }
+.ui-tc__section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 24px;
+}
+.ui-tc__label { color: var(--ui-tc-muted); font-size: 12px; font-weight: 500; }
+.ui-tc__pending { margin: 0; color: var(--ui-tc-muted); font-size: 12.5px; }
+
+.ui-tc__copy {
+  all: unset;
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  color: var(--ui-tc-muted);
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+.ui-tc__copy svg {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: opacity 200ms ease, transform 320ms var(--ui-tc-ease), filter 200ms ease;
+}
+.ui-tc__copy-done { opacity: 0; transform: scale(0.6); filter: blur(2px); stroke-width: 1.7; }
+.ui-tc__copy[data-copied] { color: var(--ui-tc-ink); }
+.ui-tc__copy[data-copied] .ui-tc__copy-icon { opacity: 0; transform: scale(0.6); filter: blur(2px); }
+.ui-tc__copy[data-copied] .ui-tc__copy-done { opacity: 1; transform: none; filter: none; }
+
+/* Code: wraps instead of scrolling sideways; capped blocks fade out at the bottom */
+.ui-tc__code {
+  position: relative;
+  margin: 0;
+  padding: 10px 12px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--ui-tc-code);
+  box-shadow: inset 0 0 0 1px var(--ui-tc-line);
+  color: var(--ui-tc-muted);
+  font-family: var(--ui-tc-mono);
+  font-size: 12px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  tab-size: 2;
+  transition: max-height 420ms var(--ui-tc-ease);
+}
+.ui-tc__code code { display: block; font: inherit; }
+.ui-tc__code::after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  height: 56px;
+  border-radius: 0 0 7px 7px;
+  background: linear-gradient(to bottom, transparent, var(--ui-tc-code));
+  opacity: 0;
+  transition: opacity 240ms ease;
+  pointer-events: none;
+}
+.ui-tc__code[data-capped]::after { opacity: 1; }
+.ui-tc__code[data-scroll] { overflow-y: auto; overscroll-behavior: contain; }
+.ui-tc__t-key { color: var(--ui-tc-key); }
+.ui-tc__t-str { color: var(--ui-tc-str); }
+.ui-tc__t-num { color: var(--ui-tc-num); }
+.ui-tc__t-lit { color: var(--ui-tc-lit); }
+
+.ui-tc__more {
+  all: unset;
+  justify-self: start;
+  padding: 2px 4px;
+  margin-left: -4px;
+  border-radius: 5px;
+  color: var(--ui-tc-text);
+  font-size: 12.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 160ms ease;
+}
+
+/* Error: the message and an optional retry */
+.ui-tc__error {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 9px 10px 9px 11px;
+  border-radius: 8px;
+  background: var(--ui-tc-red-bg);
+  box-shadow: inset 0 0 0 1px var(--ui-tc-red-line);
+}
+.ui-tc__error > .ui-tc__err { flex: none; width: 14px; height: 14px; margin-top: 2px; fill: none; stroke-linecap: round; }
+.ui-tc__error-text {
+  flex: 1;
+  min-width: 0;
+  max-height: 200px;
+  margin: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  white-space: pre-line;
+  color: var(--ui-tc-red);
+  font-size: 13px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+.ui-tc__retry {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  flex: none;
+  height: 26px;
+  margin: -3px 0;
+  padding: 0 10px 0 8px;
+  border-radius: 7px;
+  background: var(--ui-tc-bg);
+  box-shadow: inset 0 0 0 1px var(--ui-tc-line), 0 1px 2px rgba(0, 0, 0, 0.04);
+  color: var(--ui-tc-ink);
+  font-size: 12.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 160ms ease;
+}
+.ui-tc__retry svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.ui-tc__retry:active svg { transform: rotate(-60deg); transition: transform 200ms var(--ui-tc-ease); }
+
+/* Group: one quiet line with the tool icons stacked, the cards below */
+.ui-tc-group { display: grid; }
+.ui-tc-group__head {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  justify-self: start;
+  max-width: 100%;
+  min-height: 36px;
+  padding: 4px 10px 4px 5px;
+  border-radius: 10px;
+  color: var(--ui-tc-text);
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+.ui-tc-group__stack { display: flex; flex: none; }
+.ui-tc-group__stack .ui-tc__icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  box-shadow: inset 0 0 0 1px var(--ui-tc-line), 0 0 0 2px var(--ui-tc-ring);
+  animation: ui-tc-pop 420ms var(--ui-tc-ease) both;
+}
+.ui-tc-group__stack .ui-tc__icon + .ui-tc__icon { margin-left: -5px; }
+.ui-tc-group__stack .ui-tc__icon > svg { width: 13px; height: 13px; }
+.ui-tc-group__title {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  min-width: 0;
+  white-space: nowrap;
+  animation: ui-tc-in 360ms var(--ui-tc-ease) both;
+}
+.ui-tc-group__label {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: inherit;
+  font-weight: 500;
+}
+.ui-tc-group__failed { flex: none; color: var(--ui-tc-red); }
+.ui-tc-group__time { flex: none; color: var(--ui-tc-muted); font-variant-numeric: tabular-nums; }
+.ui-tc-group__list { display: grid; gap: 8px; padding-top: 8px; }
+
+/* A soft light sweeping over "Using tools…" */
+.ui-tc__shine::after {
+  content: attr(data-text);
+  content: attr(data-text) / "";
+  position: absolute;
+  inset: 0;
+  white-space: nowrap;
+  color: transparent;
+  background: linear-gradient(90deg, transparent 38%, var(--ui-tc-shine) 50%, transparent 62%) 100% 0 / 300% 100% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: ui-tc-sweep 1.8s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes ui-tc-in {
+  from { opacity: 0; transform: translateY(3px); filter: blur(2px); }
+  to { opacity: 1; transform: none; filter: none; }
+}
+@keyframes ui-tc-pop {
+  from { opacity: 0; transform: scale(0.6); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes ui-tc-spin { to { transform: rotate(360deg); } }
+@keyframes ui-tc-draw { to { stroke-dashoffset: 0; } }
+@keyframes ui-tc-sweep {
+  from { background-position: 100% 0; }
+  to { background-position: 0% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ui-tc *,
+  .ui-tc-group *,
+  .ui-tc *::after,
+  .ui-tc-group *::after {
+    animation-duration: 1ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+  .ui-tc__shine::after { display: none; }
+  .ui-tc__ok path { stroke-dashoffset: 0; }
+}
+
+/* Dark mode: follows a .dark class or data-theme="dark" on any ancestor, e.g. <html> */
+:where(.dark, [data-theme="dark"]) .ui-tc,
+:where(.dark, [data-theme="dark"]) .ui-tc-group {
+  --ui-tc-ink: var(--klic-component-block-color-text);
+  --ui-tc-text: var(--klic-component-block-color-text);
+  --ui-tc-muted: var(--klic-component-block-color-muted);
+  --ui-tc-bg: var(--klic-component-block-color-panel);
+  --ui-tc-line: var(--klic-component-block-color-border);
+  --ui-tc-hover: var(--klic-component-block-color-soft);
+  --ui-tc-tile: var(--klic-component-block-color-soft);
+  --ui-tc-code: var(--klic-component-block-color-soft);
+  --ui-tc-ring: var(--klic-component-block-color-panel);
+  --ui-tc-red: var(--klic-component-block-color-danger);
+  --ui-tc-red-bg: var(--klic-component-block-color-danger-surface);
+  --ui-tc-red-line: var(--klic-component-block-color-danger);
+  --ui-tc-key: var(--klic-component-block-color-text);
+  --ui-tc-str: var(--klic-component-block-color-accent);
+  --ui-tc-num: var(--klic-component-block-color-warning);
+  --ui-tc-lit: var(--klic-component-block-color-accent);
+  --ui-tc-shine: var(--klic-component-block-color-panel);
+  --ui-tc-focus: var(--klic-component-block-color-accent);
+}
+:where(.dark, [data-theme="dark"]) .ui-tc { box-shadow: inset 0 0 0 1px var(--ui-tc-line); }
+
+.ui-sr {
+  --ui-sr-tray: var(--klic-component-block-color-soft);
+  --ui-sr-card: var(--klic-component-block-color-panel);
+  --ui-sr-ink: var(--klic-component-block-color-text);
+  --ui-sr-text: var(--klic-component-block-color-text);
+  --ui-sr-muted: var(--klic-component-block-color-muted);
+  --ui-sr-accent: var(--klic-component-block-color-accent);
+  --ui-sr-ok: var(--klic-component-block-color-accent);
+  --ui-sr-accent-text: var(--klic-component-block-color-accent);
+  --ui-sr-border: var(--klic-component-block-color-border);
+  --ui-sr-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --ui-sr-head-hover: var(--klic-component-block-color-soft);
+  --ui-sr-pill: var(--klic-component-block-color-selected);
+  --ui-sr-pill-text: var(--klic-component-block-color-accent);
+  --ui-sr-bar: var(--klic-component-block-color-border);
+  --ui-sr-btn: var(--klic-component-block-color-panel);
+  --ui-sr-btn-hover: var(--klic-component-block-color-soft);
+  --ui-sr-menu: var(--klic-component-block-color-panel);
+  --ui-sr-option-hover: var(--klic-component-block-color-soft);
+  --ui-sr-option-on: var(--klic-component-block-color-selected);
+  --ui-sr-tag: var(--klic-component-block-color-selected);
+  --ui-sr-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 440px;
+  container-type: inline-size;
+  /* Like the Chat Composer: the white card on a gray tray, the actions live in the tray below */
+  background: var(--ui-sr-tray);
+  /* The gray tray frames the white card on every side */
+  padding: 6px;
+  border-radius: 22px;
+  font-family: var(--runtime-font, system-ui);
+  color: var(--ui-sr-ink);
+  -webkit-font-smoothing: antialiased;
+}
+.ui-sr *, .ui-sr *::before, .ui-sr *::after { box-sizing: border-box; }
+.ui-sr button { margin: 0; font: inherit; color: inherit; cursor: pointer; }
+.ui-sr button:focus-visible { outline: 2px solid var(--ui-sr-accent); outline-offset: 2px; }
+
+.ui-sr__card {
+  padding: 6px 8px 8px;
+  background: var(--ui-sr-card);
+  border: 1px solid var(--ui-sr-border);
+  border-radius: 16px;
+  box-shadow: var(--ui-sr-shadow);
+}
+.ui-sr__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  text-align: left;
+  transition: background-color 140ms ease;
+}
+.ui-sr__head:hover { background: var(--ui-sr-head-hover); }
+.ui-sr__spark { flex: none; color: var(--ui-sr-accent-text); }
+.ui-sr__title { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 15px; font-weight: 500; }
+.ui-sr__pill {
+  flex: none;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--ui-sr-pill);
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--ui-sr-pill-text);
+}
+.ui-sr__chevron { display: grid; margin-left: auto; color: var(--ui-sr-muted); transition: transform 280ms var(--ui-sr-ease); }
+.ui-sr__head[aria-expanded="false"] .ui-sr__chevron { transform: rotate(-90deg); }
+.ui-sr__body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 340ms var(--ui-sr-ease);
+}
+.ui-sr__body[data-open] { grid-template-rows: 1fr; }
+.ui-sr__reason {
+  min-height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--ui-sr-text);
+  text-align: start;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+  animation: ui-sr-swap 360ms var(--ui-sr-ease);
+}
+.ui-sr__body[data-open] .ui-sr__reason { padding-bottom: 8px; }
+.ui-sr__reason strong { font-weight: 500; color: var(--ui-sr-ink); }
+
+.ui-sr__foot {
+  display: flex;
+  align-items: center;
+  /* Narrow containers: the actions move below the signal instead of running out of the tray */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 10px;
+  min-height: 50px;
+  padding: 8px 8px 8px 16px;
+}
+.ui-sr__signal {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  white-space: nowrap;
+  color: var(--ui-sr-muted);
+}
+.ui-sr__bars, .ui-sr__mini { display: inline-flex; align-items: flex-end; gap: 2px; }
+.ui-sr__bars span, .ui-sr__mini span {
+  width: 3px;
+  border-radius: 1px;
+  background: var(--ui-sr-bar);
+  transition: background-color 260ms ease;
+}
+.ui-sr__bars span:nth-child(1), .ui-sr__mini span:nth-child(1) { height: 6px; }
+.ui-sr__bars span:nth-child(2), .ui-sr__mini span:nth-child(2) { height: 9px; }
+.ui-sr__bars span:nth-child(3), .ui-sr__mini span:nth-child(3) { height: 12px; }
+/* Scoped to the card, so other components with data-level on the page keep their colors */
+.ui-sr [data-level="1"] > span[data-on] { background: var(--klic-component-block-color-danger); }
+.ui-sr [data-level="2"] > span[data-on] { background: var(--ui-sr-accent); }
+.ui-sr [data-level="3"] > span[data-on] { background: var(--ui-sr-ok); }
+.ui-sr__signal[data-level="0"] .ui-sr__bars span:first-child { background: var(--klic-component-block-color-muted); }
+
+/* Never wider than the row – a long label shortens in its button instead of running out of the tray */
+.ui-sr__actions { display: flex; align-items: center; gap: 6px; min-width: 0; max-width: 100%; margin-left: auto; }
+.ui-sr__alt, .ui-sr__actions > .ui-sr__btn:not(.ui-sr__btn--primary) { flex: none; }
+.ui-sr__btn {
+  height: 32px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--ui-sr-btn);
+  box-shadow: 0 0 0 1px var(--ui-sr-border), 0 1px 2px rgba(0, 0, 0, 0.04);
+  font-size: 13px !important;
+  font-weight: 500;
+  min-width: 0;
+  max-width: 100%;
+  white-space: nowrap;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+.ui-sr__btn--primary { display: inline-flex; align-items: center; }
+.ui-sr__btn-text { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.ui-sr__btn:hover { background: var(--ui-sr-btn-hover); }
+.ui-sr__btn:active { transform: scale(0.98); }
+.ui-sr__btn--primary {
+  background: linear-gradient(var(--klic-component-block-color-text), var(--klic-component-block-color-text));
+  box-shadow: 0 0 0 1px var(--klic-component-block-color-text), 0 2px 4px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  color: var(--klic-component-block-color-panel) !important;
+}
+.ui-sr__btn--primary:hover { background: linear-gradient(var(--klic-component-block-color-text), var(--klic-component-block-color-text)); }
+.ui-sr__done {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  padding-right: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ui-sr-ok);
+  animation: ui-sr-swap 300ms var(--ui-sr-ease);
+}
+
+.ui-sr__alt { position: relative; }
+.ui-sr__menu {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  right: 0;
+  z-index: 5;
+  display: grid;
+  gap: 2px;
+  /* The column never grows with a long name; a long list scrolls */
+  grid-template-columns: minmax(0, 1fr);
+  width: 260px;
+  max-height: min(320px, 60vh);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 4px;
+  border-radius: 12px;
+  background: var(--ui-sr-menu);
+  box-shadow: 0 0 0 1px var(--ui-sr-border), 0 12px 30px -8px rgba(0, 0, 0, 0.2);
+  animation: ui-sr-drop 180ms var(--ui-sr-ease);
+}
+.ui-sr__menu[data-flip] { right: auto; left: 0; }
+/* Narrow: the actions sit on their own row – the menu lines up with its right edge so it stays inside */
+@container (max-width: 420px) {
+  .ui-sr__actions { position: relative; }
+  .ui-sr__alt { position: static; }
+  .ui-sr__menu { width: min(260px, 100cqw - 24px); }
+}
+.ui-sr__option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 34px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  font-size: 13px !important;
+  text-align: left;
+}
+.ui-sr__option:hover { background: var(--ui-sr-option-hover); }
+.ui-sr__option[aria-checked="true"] { background: var(--ui-sr-option-on); }
+.ui-sr__option-label { display: inline-flex; flex: 0 1 auto; align-items: center; gap: 6px; min-width: 0; }
+.ui-sr__option-name, .ui-sr__done-text { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.ui-sr__tag, .ui-sr__mini { flex: none; }
+.ui-sr__tag { padding: 0 6px; border-radius: 999px; background: var(--ui-sr-tag); font-size: 10.5px; font-weight: 500; line-height: 16px; color: var(--ui-sr-accent-text); }
+
+@keyframes ui-sr-swap { from { opacity: 0; transform: translateY(2px); } }
+@keyframes ui-sr-drop { from { opacity: 0; transform: translateY(4px) scale(0.98); } }
+@media (prefers-reduced-motion: reduce) {
+  .ui-sr__reason, .ui-sr__done, .ui-sr__menu { animation: none; }
+  .ui-sr__body, .ui-sr__chevron { transition: none; }
+}
+
+/* Dark mode: follows a .dark class or data-theme="dark" on any ancestor, e.g. <html> */
+:where(.dark, [data-theme="dark"]) .ui-sr {
+  --ui-sr-tray: var(--klic-component-block-color-soft);
+  --ui-sr-card: var(--klic-component-block-color-panel);
+  --ui-sr-ink: var(--klic-component-block-color-text);
+  --ui-sr-text: var(--klic-component-block-color-text);
+  --ui-sr-muted: var(--klic-component-block-color-muted);
+  --ui-sr-ok: var(--klic-component-block-color-accent);
+  --ui-sr-accent-text: var(--klic-component-block-color-accent);
+  --ui-sr-border: var(--klic-component-block-color-border);
+  --ui-sr-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --ui-sr-head-hover: var(--klic-component-block-color-soft);
+  --ui-sr-pill: var(--klic-component-block-color-selected);
+  --ui-sr-pill-text: var(--klic-component-block-color-accent);
+  --ui-sr-bar: var(--klic-component-block-color-border);
+  --ui-sr-btn: var(--klic-component-block-color-panel);
+  --ui-sr-btn-hover: var(--klic-component-block-color-soft);
+  --ui-sr-menu: var(--klic-component-block-color-panel);
+  --ui-sr-option-hover: var(--klic-component-block-color-soft);
+  --ui-sr-option-on: var(--klic-component-block-color-selected);
+  --ui-sr-tag: var(--klic-component-block-color-selected);
+}
+:where(.dark, [data-theme="dark"]) .ui-sr__menu {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 12px 30px -8px rgba(0, 0, 0, 0.5);
+}
+:where(.dark, [data-theme="dark"]) .ui-sr__btn--primary {
+  background: linear-gradient(var(--klic-component-block-color-panel), var(--klic-component-block-color-panel));
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 2px 4px rgba(0, 0, 0, 0.35), inset 0 1px 0 var(--klic-component-block-color-panel);
+  color: var(--klic-component-block-color-text) !important;
+}
+:where(.dark, [data-theme="dark"]) .ui-sr__btn--primary:hover { background: linear-gradient(var(--klic-component-block-color-panel), var(--klic-component-block-color-panel)); }
+</style><section class="ka-showcase" data-density="normal"><header class="ka-header"><div><span class="ka-eyebrow"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg> KLIC Studio / 상호작용</span><h2>에이전트 검토 워크스페이스</h2><p>사람이 결정하고, 에이전트는 과정을 투명하게 보여줍니다.</p></div><button class="ka-control">검토 초기화</button></header><div class="ka-review"><div class="ka-main"><div class="ka-section-label">01 / 결정 대기</div><section class="ui-di"><header class="ui-di__head" aria-live="polite"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M6.7 2.3a1.5 1.5 0 0 1 2.6 0l5.4 9.4A1.5 1.5 0 0 1 13.4 14H2.6a1.5 1.5 0 0 1-1.3-2.3Z" fill="currentColor"></path><path d="M8 5.6v3.6" stroke="var(--klic-component-block-color-on-accent)" stroke-width="1.5" stroke-linecap="round"></path><circle cx="8" cy="11.4" r="0.85" fill="var(--klic-component-block-color-panel)"></circle></svg><span>결정 대기 3건</span></header><div class="ui-di__card" data-klic-surface="card"><div class="ui-di__row"><div class="ui-di__row-inner"><div class="ui-di__item" data-open="true"><p class="ui-di__title" dir="auto">배포 범위를 확정할까요?</p><div class="ui-di__body" data-open="true"><div class="ui-di__body-inner"><p class="ui-di__detail" dir="auto">블루 기본 테마와 라이트·다크 모드를 먼저 배포합니다. 중첩 테마는 다음 배포에서 검증합니다.</p><div class="ui-di__actions"><button type="button" class="ui-di__btn ui-di__btn--primary" dir="auto">이 범위로 진행</button><button type="button" class="ui-di__btn" dir="auto">다시 검토</button></div></div></div></div></div></div><div class="ui-di__row"><div class="ui-di__row-inner"><div class="ui-di__item"><button type="button" class="ui-di__title ui-di__title--folded" dir="auto" title="기존 토큰 매핑을 유지할까요?" aria-expanded="false">기존 토큰 매핑을 유지할까요?</button><div class="ui-di__body" inert=""><div class="ui-di__body-inner"><p class="ui-di__detail" dir="auto">Primitive를 보존하고 Semantic에서 승인된 Brand 말단 토큰만 연결합니다.</p><div class="ui-di__actions"><button type="button" class="ui-di__btn ui-di__btn--primary" dir="auto">매핑 유지</button><button type="button" class="ui-di__btn" dir="auto">변경 검토</button></div></div></div></div></div></div><div class="ui-di__row"><div class="ui-di__row-inner"><div class="ui-di__item"><button type="button" class="ui-di__title ui-di__title--folded" dir="auto" title="검토 패키지를 준비할까요?" aria-expanded="false">검토 패키지를 준비할까요?</button><div class="ui-di__body" inert=""><div class="ui-di__body-inner"><p class="ui-di__detail" dir="auto">브라우저 안의 샘플이며 실제 배포를 수행하지 않습니다.</p><div class="ui-di__actions"><button type="button" class="ui-di__btn ui-di__btn--primary" dir="auto">패키지 준비</button><button type="button" class="ui-di__btn" dir="auto">보류</button></div></div></div></div></div></div><p class="ui-di__empty">대기 중인 결정이 없습니다. 새로운 결정 요청이 여기에 표시됩니다.</p></div></section><div class="ka-section-label">02 / 실행 기록</div><div class="ui-tc-group" data-open="true"><span class="ui-tc-sr" role="status" aria-live="polite">도구 2개 사용, 1개 실패</span><button type="button" class="ui-tc-group__head" aria-expanded="true" aria-controls=":Rh9:-list"><span class="ui-tc-group__stack" aria-hidden="true"><span class="ui-tc__icon"><svg viewBox="0 0 16 16"><path d="M10.2 2.4a3.5 3.5 0 0 0-4.3 4.6L2.6 10.3a1.4 1.4 0 0 0 2 2L7.9 9a3.5 3.5 0 0 0 4.6-4.3l-2 2-1.6-.4-.4-1.6 1.7-2.3Z"></path></svg></span><span class="ui-tc__icon"><svg viewBox="0 0 16 16"><path d="M10.2 2.4a3.5 3.5 0 0 0-4.3 4.6L2.6 10.3a1.4 1.4 0 0 0 2 2L7.9 9a3.5 3.5 0 0 0 4.6-4.3l-2 2-1.6-.4-.4-1.6 1.7-2.3Z"></path></svg></span></span><span class="ui-tc-group__title"><span class="ui-tc-group__label" data-text="자료 검토">자료 검토</span><span class="ui-tc-group__failed">· 1개 실패</span></span><svg class="ui-tc__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 6.25 8 9.75l3.5-3.5"></path></svg></button><div class="ui-tc__body" id=":Rh9:-list"><div class="ui-tc__clip"><div class="ui-tc-group__list"><div class="ui-tc" data-status="success"><span class="ui-tc-sr" role="status" aria-live="polite">registry.search 실행 완료</span><button type="button" class="ui-tc__head" aria-expanded="false" aria-controls=":Rph9:-body"><span class="ui-tc__icon" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M10.2 2.4a3.5 3.5 0 0 0-4.3 4.6L2.6 10.3a1.4 1.4 0 0 0 2 2L7.9 9a3.5 3.5 0 0 0 4.6-4.3l-2 2-1.6-.4-.4-1.6 1.7-2.3Z"></path></svg></span><span class="ui-tc__main"><code class="ui-tc__name" title="registry.search">registry.search</code><span class="ui-tc__summary" dir="auto" title="관련 컴포넌트 4개를 찾았습니다">관련 컴포넌트 4개를 찾았습니다</span></span><span class="ui-tc__status"><svg class="ui-tc__ok" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.3 12.5 4.9" pathLength="1"></path></svg><span class="ui-tc__time">420ms</span></span><svg class="ui-tc__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 6.25 8 9.75l3.5-3.5"></path></svg></button><div class="ui-tc__body" id=":Rph9:-body" inert=""><div class="ui-tc__clip"><div class="ui-tc__sections"><div class="ui-tc__section"><div class="ui-tc__section-head"><span class="ui-tc__label">입력값</span><button type="button" class="ui-tc__copy" aria-label="복사: 입력값" title="복사: 입력값"><svg class="ui-tc__copy-icon" viewBox="0 0 16 16" aria-hidden="true"><rect x="5.25" y="5.25" width="8" height="8" rx="2"></rect><path d="M10.75 5.25v-1a1.5 1.5 0 0 0-1.5-1.5h-4.5a2 2 0 0 0-2 2v4.5a1.5 1.5 0 0 0 1.5 1.5h1"></path></svg><svg class="ui-tc__copy-done" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.3 12.5 4.9" pathLength="1"></path></svg></button></div><pre class="ui-tc__code"><code>{
+  <span class="ui-tc__t-key">&quot;query&quot;</span>: <span class="ui-tc__t-str">&quot;KLIC blue theme&quot;</span>,
+  <span class="ui-tc__t-key">&quot;limit&quot;</span>: <span class="ui-tc__t-num">4</span>
+}</code></pre></div><div class="ui-tc__section"><div class="ui-tc__section-head"><span class="ui-tc__label">실행 결과</span><button type="button" class="ui-tc__copy" aria-label="복사: 실행 결과" title="복사: 실행 결과"><svg class="ui-tc__copy-icon" viewBox="0 0 16 16" aria-hidden="true"><rect x="5.25" y="5.25" width="8" height="8" rx="2"></rect><path d="M10.75 5.25v-1a1.5 1.5 0 0 0-1.5-1.5h-4.5a2 2 0 0 0-2 2v4.5a1.5 1.5 0 0 0 1.5 1.5h1"></path></svg><svg class="ui-tc__copy-done" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.3 12.5 4.9" pathLength="1"></path></svg></button></div><pre class="ui-tc__code"><code>{
+  <span class="ui-tc__t-key">&quot;count&quot;</span>: <span class="ui-tc__t-num">4</span>,
+  <span class="ui-tc__t-key">&quot;source&quot;</span>: <span class="ui-tc__t-str">&quot;local sample&quot;</span>
+}</code></pre></div></div></div></div></div><div class="ui-tc" data-status="error"><span class="ui-tc-sr" role="status" aria-live="polite">tokens.validate 실행 실패: 샘플 연결 오류 · 재시도로 복구할 수 있습니다.</span><button type="button" class="ui-tc__head" aria-expanded="false" aria-controls=":R19h9:-body"><span class="ui-tc__icon" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M10.2 2.4a3.5 3.5 0 0 0-4.3 4.6L2.6 10.3a1.4 1.4 0 0 0 2 2L7.9 9a3.5 3.5 0 0 0 4.6-4.3l-2 2-1.6-.4-.4-1.6 1.7-2.3Z"></path></svg></span><span class="ui-tc__main"><code class="ui-tc__name" title="tokens.validate">tokens.validate</code><span class="ui-tc__summary" dir="auto" title="검증 결과 확인">검증 결과 확인</span></span><span class="ui-tc__status"><svg class="ui-tc__err" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M8 5v3.4M8 10.9v.1"></path></svg><span class="ui-tc__time">실패</span></span><svg class="ui-tc__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 6.25 8 9.75l3.5-3.5"></path></svg></button><div class="ui-tc__body" id=":R19h9:-body" inert=""><div class="ui-tc__clip"><div class="ui-tc__sections"><div class="ui-tc__error"><svg class="ui-tc__err" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M8 5v3.4M8 10.9v.1"></path></svg><p class="ui-tc__error-text" dir="auto">샘플 연결 오류 · 재시도로 복구할 수 있습니다.</p><button type="button" class="ui-tc__retry"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.75 8a5.25 5.25 0 1 0 1.6-3.77"></path><path d="M2.5 2.5v2.75h2.75"></path></svg>재시도</button></div><div class="ui-tc__section"><div class="ui-tc__section-head"><span class="ui-tc__label">입력값</span><button type="button" class="ui-tc__copy" aria-label="복사: 입력값" title="복사: 입력값"><svg class="ui-tc__copy-icon" viewBox="0 0 16 16" aria-hidden="true"><rect x="5.25" y="5.25" width="8" height="8" rx="2"></rect><path d="M10.75 5.25v-1a1.5 1.5 0 0 0-1.5-1.5h-4.5a2 2 0 0 0-2 2v4.5a1.5 1.5 0 0 0 1.5 1.5h1"></path></svg><svg class="ui-tc__copy-done" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4 6.6 11.3 12.5 4.9" pathLength="1"></path></svg></button></div><pre class="ui-tc__code"><code>{
+  <span class="ui-tc__t-key">&quot;layers&quot;</span>: <span class="ui-tc__t-num">4</span>,
+  <span class="ui-tc__t-key">&quot;modes&quot;</span>: [
+    <span class="ui-tc__t-str">&quot;light&quot;</span>,
+    <span class="ui-tc__t-str">&quot;dark&quot;</span>
+  ]
+}</code></pre></div></div></div></div></div></div></div></div></div></div><aside class="ka-aside"><div class="ka-section-label">추천</div><section class="ui-sr" aria-label="검토할 추천"><div class="ui-sr__card" data-klic-surface="card"><button type="button" class="ui-sr__head" aria-expanded="true"><svg class="ui-sr__spark" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3.5H4A1.5 1.5 0 0 0 2.5 5v7A1.5 1.5 0 0 0 4 13.5h7a1.5 1.5 0 0 0 1.5-1.5V8"></path><path d="M12.5 1.5v4M10.5 3.5h4"></path></svg><span class="ui-sr__title" dir="auto" title="검토할 추천">검토할 추천</span><span class="ui-sr__chevron"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4.5 6.25 3.5 3.5 3.5-3.5"></path></svg></span></button><div class="ui-sr__body" data-open="true"><p class="ui-sr__reason" dir="auto">기본 테마와 핵심 컴포넌트를 먼저 검증하면 변경 범위를 좁히고 호환성을 확인할 수 있습니다.</p></div></div><footer class="ui-sr__foot"><span class="ui-sr__signal" data-level="3" title="근거 충분"><span class="ui-sr__bars" aria-hidden="true"><span data-on="true"></span><span data-on="true"></span><span data-on="true"></span></span>근거 충분</span><div class="ui-sr__actions"><div class="ui-sr__alt"><button type="button" class="ui-sr__btn" aria-haspopup="menu" aria-expanded="false">다른 선택</button></div><button type="button" class="ui-sr__btn ui-sr__btn--primary" title="단계별 배포 수락"><span class="ui-sr__btn-text">단계별 배포 수락</span></button></div></footer></section><div class="ka-note"><strong>결정 권한은 팀에 있습니다.</strong><p>근거와 대안을 비교한 뒤 적용 범위를 확정하세요. 모든 동작은 로컬 샘플입니다.</p></div></aside></div><output class="ka-status" aria-live="polite">샘플 데이터 · 변경은 이 화면에만 적용됩니다.</output></section></main></body>
+</html>

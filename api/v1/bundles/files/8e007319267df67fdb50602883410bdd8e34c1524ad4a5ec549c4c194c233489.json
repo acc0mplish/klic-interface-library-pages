@@ -1,0 +1,13 @@
+{
+  "name": "klic-component-workspace",
+  "private": true,
+  "type": "module",
+  "packageManager": "bun@1.4.2",
+  "scripts": {
+    "dev": "bun prepare.mjs && bun run --bun vite public --host 127.0.0.1",
+    "build": "bun build.mjs"
+  },
+  "devDependencies": {
+    "vite": "7.1.7"
+  }
+}
