@@ -66,7 +66,13 @@ export const PUBLIC_METADATA={
       "writes": false
     },
     "cli": {
-      "status": "available"
+      "status": "available",
+      "runtime": {
+        "preferred": "bun",
+        "compatible": [
+          "node"
+        ]
+      }
     },
     "mcp": {
       "status": "remote-and-stdio",
@@ -150,7 +156,7 @@ export const PUBLIC_METADATA={
     "blockModules": 59,
     "total": 415
   },
-  "release": "5a90ebb246ea5c10",
+  "release": "59135ab672b6ade6",
   "designSystem": {
     "schemaVersion": "1.0",
     "revision": "ed3d6f98ee9de632d172e6d76605b692fb839bbbadb5ef6e342bc3287d7553ef"

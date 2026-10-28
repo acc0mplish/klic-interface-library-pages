@@ -56,7 +56,13 @@ export const SITE_METADATA = {
       "writes": false
     },
     "cli": {
-      "status": "available"
+      "status": "available",
+      "runtime": {
+        "preferred": "bun",
+        "compatible": [
+          "node"
+        ]
+      }
     },
     "mcp": {
       "status": "remote-and-stdio",
