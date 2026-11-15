@@ -1,0 +1,84 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="tree-select" data-kv-variant="single-folder" data-klic-component="tree-select" class="kn-tree-select">
+    <header data-part="heading">
+      <strong>
+        저장할 폴더
+      </strong>
+    </header>
+    <details open data-part="details">
+      <summary>
+        <component :is="KlicIcons.Folder" data-part="icon" aria-hidden="true" />
+        제품 문서
+      </summary>
+      <div>
+        <fieldset data-part="choices">
+          <legend>
+            한 가지 선택
+          </legend>
+          <label>
+            <input type="radio" name="kv-export-tree-select-tree-select-single-folder" value="기획 문서" checked data-part="radio">
+            <span>
+              <strong>
+                기획 문서
+              </strong>
+            </span>
+          </label>
+          <label>
+            <input type="radio" name="kv-export-tree-select-tree-select-single-folder" value="디자인 문서"  data-part="radio">
+            <span>
+              <strong>
+                디자인 문서
+              </strong>
+            </span>
+          </label>
+          <label>
+            <input type="radio" name="kv-export-tree-select-tree-select-single-folder" value="개발 문서"  data-part="radio">
+            <span>
+              <strong>
+                개발 문서
+              </strong>
+            </span>
+          </label>
+        </fieldset>
+      </div>
+    </details>
+    <details  data-part="details">
+      <summary>
+        <component :is="KlicIcons.Folder" data-part="icon" aria-hidden="true" />
+        운영 문서
+      </summary>
+      <div>
+        <fieldset data-part="choices">
+          <legend>
+            한 가지 선택
+          </legend>
+          <label>
+            <input type="radio" name="kv-export-tree-select-tree-select-single-folder" value="운영 매뉴얼" data-part="radio">
+            <span>
+              <strong>
+                운영 매뉴얼
+              </strong>
+            </span>
+          </label>
+          <label>
+            <input type="radio" name="kv-export-tree-select-tree-select-single-folder" value="고객 가이드"  data-part="radio">
+            <span>
+              <strong>
+                고객 가이드
+              </strong>
+            </span>
+          </label>
+        </fieldset>
+      </div>
+    </details>
+    <output data-kv-selection aria-live="polite" data-part="output">
+      기획 문서 선택됨
+    </output>
+  </div>
+</template>

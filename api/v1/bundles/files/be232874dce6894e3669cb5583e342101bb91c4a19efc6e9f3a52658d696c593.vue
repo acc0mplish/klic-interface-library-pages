@@ -1,0 +1,22 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="resizable" class="kn-resizable">
+    <div data-resize-box data-part="resize">
+      <strong>
+        폭을 바꿔보세요.
+      </strong>
+      <p>
+        텍스트는 영역 안에서 자연스럽게 줄바꿈합니다.
+      </p>
+    </div>
+    <label for="export-resizable-default-resize" data-part="label">
+      작업 영역 폭
+    </label>
+    <input id="export-resizable-default-resize" type="range" min="140" max="280" value="240" data-resize data-part="slider">
+  </div>
+</template>

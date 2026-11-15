@@ -1,0 +1,368 @@
+{
+  "id": "horizontal-step-rail",
+  "pattern": "klicHorizontalStepRail",
+  "category": "data-story",
+  "title": {
+    "ko": "가로 단계 레일",
+    "en": "Horizontal Step Rail"
+  },
+  "summary": {
+    "ko": "짧은 단계명을 한 줄에 배치하고 진행선·숫자·체크로 요청부터 적용까지 이어 보입니다.",
+    "en": "Places concise stage names on one row and carries progress from request to completion with a line, index and checks."
+  },
+  "trigger": {
+    "ko": "재생하면 가로 레일을 따라 현재 단계가 이동하고 지난 단계가 체크로 바뀝니다.",
+    "en": "Playback moves the active marker along a horizontal rail and checks off completed stages."
+  },
+  "durationMs": 3600,
+  "easing": "linear",
+  "useCases": [
+    {
+      "ko": "이름이 짧은 3–5단계 설정 흐름",
+      "en": "Three to five step setup flows with short labels"
+    },
+    {
+      "ko": "화면 너비를 아껴야 하는 진행 안내",
+      "en": "Progress guidance that needs to conserve horizontal space"
+    }
+  ],
+  "cautions": [
+    {
+      "ko": "단계명이 길거나 단계가 많으면 세로 타임라인을 사용합니다.",
+      "en": "Use a vertical timeline when labels are long or there are many stages."
+    }
+  ],
+  "reducedMotion": {
+    "ko": "마지막 단계까지 완료된 상태를 정지 화면으로 표시합니다.",
+    "en": "Show a still frame with the sequence completed."
+  },
+  "preview": {
+    "description": {
+      "ko": "짧은 단계명과 한 줄 진행 레일로 순서를 압축합니다.",
+      "en": "Compresses the sequence into short labels and one horizontal progress rail."
+    },
+    "sample": {
+      "ko": "4단계 흐름",
+      "en": "4-stage sequence"
+    }
+  },
+  "definition": {
+    "html": "\n<style>\n.klic-progress{display:block;width:100%;height:100%;color:var(--klic-semantic-color-text,#132c46);font-family:var(--klic-component-text-body-font-family,system-ui,sans-serif)}\n.klic-progress text{font-family:inherit}\n.klic-progress .panel{fill:var(--klic-semantic-color-panel,#fff);stroke:var(--klic-semantic-color-border,#dfe5ee)}\n.klic-progress .track{stroke:var(--klic-semantic-color-border,#dfe5ee)}\n.klic-progress .fill{stroke:var(--klic-semantic-color-accent,#245FC2)}\n.klic-progress .node{fill:var(--klic-semantic-color-panel,#fff);stroke:var(--klic-semantic-color-control-border,#7e8fa7)}\n.klic-progress .number,.klic-progress .meta{fill:var(--klic-semantic-color-muted,#52657b)}\n.klic-progress .label,.klic-progress .step-title{fill:var(--klic-semantic-color-text,#132c46)}\n.klic-progress .detail{fill:var(--klic-semantic-color-muted,#52657b)}\n.klic-progress .active-marker{fill:var(--klic-semantic-color-panel,#fff);stroke:var(--klic-semantic-color-accent,#245FC2)}\n.klic-progress .check{fill:none;stroke:var(--klic-semantic-color-accent,#245FC2);stroke-linecap:round;stroke-linejoin:round;opacity:0}\n</style><svg class=\"klic-progress klic-progress-horizontal\" viewBox=\"0 0 320 200\" role=\"img\" aria-label=\"가로 단계 진행 예시\">\n <title>가로 단계 진행</title>\n <desc>짧은 단계 이름을 한 줄 레일에 놓고 현재 단계를 왼쪽에서 오른쪽으로 이동합니다.</desc>\n <rect class=\"panel\" x=\"16\" y=\"34\" width=\"288\" height=\"126\" rx=\"14\" stroke-width=\"1\"/>\n <text class=\"meta\" x=\"32\" y=\"58\" font-size=\"10\" letter-spacing=\".08em\">설정 절차</text>\n <text class=\"meta\" x=\"288\" y=\"58\" text-anchor=\"end\" font-size=\"10\">단계 진행</text>\n <line class=\"track\" x1=\"42\" y1=\"99\" x2=\"279\" y2=\"99\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n <path class=\"fill horizontal-fill\" d=\"M 42 99 H 279\" pathLength=\"1\" stroke-dasharray=\"1\" stroke-dashoffset=\"1\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n <circle class=\"node\" cx=\"42\" cy=\"99\" r=\"11\" stroke-width=\"1.5\"/><text class=\"number number-1\" x=\"42\" y=\"103\" text-anchor=\"middle\" font-size=\"10\">1</text><path class=\"check check-1\" d=\"M 38 99 l3 3 6 -7\" stroke-width=\"2\"/><text class=\"label label-1\" x=\"42\" y=\"129\" text-anchor=\"middle\" font-size=\"10\">요청</text><circle class=\"node\" cx=\"121\" cy=\"99\" r=\"11\" stroke-width=\"1.5\"/><text class=\"number number-2\" x=\"121\" y=\"103\" text-anchor=\"middle\" font-size=\"10\">2</text><path class=\"check check-2\" d=\"M 117 99 l3 3 6 -7\" stroke-width=\"2\"/><text class=\"label label-2\" x=\"121\" y=\"129\" text-anchor=\"middle\" font-size=\"10\">검토</text><circle class=\"node\" cx=\"200\" cy=\"99\" r=\"11\" stroke-width=\"1.5\"/><text class=\"number number-3\" x=\"200\" y=\"103\" text-anchor=\"middle\" font-size=\"10\">3</text><path class=\"check check-3\" d=\"M 196 99 l3 3 6 -7\" stroke-width=\"2\"/><text class=\"label label-3\" x=\"200\" y=\"129\" text-anchor=\"middle\" font-size=\"10\">승인</text><circle class=\"node\" cx=\"279\" cy=\"99\" r=\"11\" stroke-width=\"1.5\"/><text class=\"number number-4\" x=\"279\" y=\"103\" text-anchor=\"middle\" font-size=\"10\">4</text><path class=\"check check-4\" d=\"M 275 99 l3 3 6 -7\" stroke-width=\"2\"/><text class=\"label label-4\" x=\"279\" y=\"129\" text-anchor=\"middle\" font-size=\"10\">적용</text>\n <circle class=\"active-marker\" cx=\"42\" cy=\"99\" r=\"15\" stroke-width=\"1.5\"/>\n</svg>",
+    "duration": 3600,
+    "easing": "linear",
+    "segmentEasing": false,
+    "reducedProgress": 1,
+    "tracks": [
+      {
+        "selector": ".horizontal-fill",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "strokeDashoffset": "1"
+          },
+          {
+            "offset": 0.25,
+            "strokeDashoffset": "0.6667"
+          },
+          {
+            "offset": 0.5,
+            "strokeDashoffset": "0.3333"
+          },
+          {
+            "offset": 0.75,
+            "strokeDashoffset": "0"
+          },
+          {
+            "offset": 1,
+            "strokeDashoffset": "0"
+          }
+        ]
+      },
+      {
+        "selector": ".active-marker",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "cx": "42px",
+            "opacity": "1"
+          },
+          {
+            "offset": 0.25,
+            "cx": "121px",
+            "opacity": "1"
+          },
+          {
+            "offset": 0.5,
+            "cx": "200px",
+            "opacity": "1"
+          },
+          {
+            "offset": 0.75,
+            "cx": "279px",
+            "opacity": "1"
+          },
+          {
+            "offset": 0.97,
+            "cx": "279px",
+            "opacity": "1"
+          },
+          {
+            "offset": 1,
+            "cx": "279px",
+            "opacity": "0"
+          }
+        ]
+      },
+      {
+        "selector": ".check-1",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "opacity": "0"
+          },
+          {
+            "offset": 0.22,
+            "opacity": "0"
+          },
+          {
+            "offset": 0.25,
+            "opacity": "1"
+          },
+          {
+            "offset": 1,
+            "opacity": "1"
+          }
+        ]
+      },
+      {
+        "selector": ".check-2",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "opacity": "0"
+          },
+          {
+            "offset": 0.47,
+            "opacity": "0"
+          },
+          {
+            "offset": 0.5,
+            "opacity": "1"
+          },
+          {
+            "offset": 1,
+            "opacity": "1"
+          }
+        ]
+      },
+      {
+        "selector": ".check-3",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "opacity": "0"
+          },
+          {
+            "offset": 0.72,
+            "opacity": "0"
+          },
+          {
+            "offset": 0.75,
+            "opacity": "1"
+          },
+          {
+            "offset": 1,
+            "opacity": "1"
+          }
+        ]
+      },
+      {
+        "selector": ".check-4",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "opacity": "0"
+          },
+          {
+            "offset": 0.97,
+            "opacity": "0"
+          },
+          {
+            "offset": 1,
+            "opacity": "1"
+          }
+        ]
+      },
+      {
+        "selector": ".number-1",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "opacity": "1"
+          },
+          {
+            "offset": 0.22,
+            "opacity": "1"
+          },
+          {
+            "offset": 0.25,
+            "opacity": "0"
+          },
+          {
+            "offset": 1,
+            "opacity": "0"
+          }
+        ]
+      },
+      {
+        "selector": ".number-2",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "opacity": "1"
+          },
+          {
+            "offset": 0.47,
+            "opacity": "1"
+          },
+          {
+            "offset": 0.5,
+            "opacity": "0"
+          },
+          {
+            "offset": 1,
+            "opacity": "0"
+          }
+        ]
+      },
+      {
+        "selector": ".number-3",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "opacity": "1"
+          },
+          {
+            "offset": 0.72,
+            "opacity": "1"
+          },
+          {
+            "offset": 0.75,
+            "opacity": "0"
+          },
+          {
+            "offset": 1,
+            "opacity": "0"
+          }
+        ]
+      },
+      {
+        "selector": ".number-4",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "opacity": "1"
+          },
+          {
+            "offset": 0.97,
+            "opacity": "1"
+          },
+          {
+            "offset": 1,
+            "opacity": "0"
+          }
+        ]
+      },
+      {
+        "selector": ".label-1",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "fill": "var(--klic-semantic-color-accent,#245FC2)"
+          },
+          {
+            "offset": 1,
+            "fill": "var(--klic-semantic-color-accent,#245FC2)"
+          }
+        ]
+      },
+      {
+        "selector": ".label-2",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "fill": "var(--klic-semantic-color-muted,#52657b)"
+          },
+          {
+            "offset": 0.22,
+            "fill": "var(--klic-semantic-color-muted,#52657b)"
+          },
+          {
+            "offset": 0.25,
+            "fill": "var(--klic-semantic-color-accent,#245FC2)"
+          },
+          {
+            "offset": 1,
+            "fill": "var(--klic-semantic-color-accent,#245FC2)"
+          }
+        ]
+      },
+      {
+        "selector": ".label-3",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "fill": "var(--klic-semantic-color-muted,#52657b)"
+          },
+          {
+            "offset": 0.47,
+            "fill": "var(--klic-semantic-color-muted,#52657b)"
+          },
+          {
+            "offset": 0.5,
+            "fill": "var(--klic-semantic-color-accent,#245FC2)"
+          },
+          {
+            "offset": 1,
+            "fill": "var(--klic-semantic-color-accent,#245FC2)"
+          }
+        ]
+      },
+      {
+        "selector": ".label-4",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "fill": "var(--klic-semantic-color-muted,#52657b)"
+          },
+          {
+            "offset": 0.72,
+            "fill": "var(--klic-semantic-color-muted,#52657b)"
+          },
+          {
+            "offset": 0.75,
+            "fill": "var(--klic-semantic-color-accent,#245FC2)"
+          },
+          {
+            "offset": 1,
+            "fill": "var(--klic-semantic-color-accent,#245FC2)"
+          }
+        ]
+      }
+    ]
+  }
+}

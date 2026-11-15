@@ -1,0 +1,67 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="accordion" data-kv-variant="order-detail" data-klic-component="accordion" class="kn-accordion">
+    <div class="ku-row" data-part="row">
+      <span>
+        <strong>
+          팀 플랜
+        </strong>
+      </span>
+      <span>
+        <span data-part="badge">
+          활성
+        </span>
+      </span>
+    </div>
+    <details open data-part="details">
+      <summary>
+        청구 상세 · ₩60,000
+      </summary>
+      <div>
+        <div class="ku-row" data-part="row">
+          <span>
+            기본 라이선스
+          </span>
+          <span>
+            ₩50,000
+          </span>
+        </div>
+        <div class="ku-row" data-part="row">
+          <span>
+            추가 저장 공간
+          </span>
+          <span>
+            ₩10,000
+          </span>
+        </div>
+        <div class="ku-row" data-part="row">
+          <span>
+            <strong>
+              합계
+            </strong>
+          </span>
+          <span>
+            <strong>
+              ₩60,000
+            </strong>
+          </span>
+        </div>
+      </div>
+    </details>
+    <details  data-part="details">
+      <summary>
+        다음 결제 안내
+      </summary>
+      <div>
+        <p data-part="muted">
+          다음 결제일은 2026년 11월 26일입니다.
+        </p>
+      </div>
+    </details>
+  </div>
+</template>

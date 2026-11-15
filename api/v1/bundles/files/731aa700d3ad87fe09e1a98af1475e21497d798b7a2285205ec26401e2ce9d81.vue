@@ -1,0 +1,73 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="table" data-kv-variant="invoices" data-klic-component="table" class="kn-table">
+    <header data-part="heading">
+      <strong>
+        최근 청구 내역
+      </strong>
+    </header>
+    <div tabindex="0" role="region" aria-label="데이터 표" data-part="table-scroll">
+      <table >
+        <thead>
+          <tr>
+            <th scope="col">
+              청구월
+            </th>
+            <th scope="col">
+              금액
+            </th>
+            <th scope="col">
+              상태
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              2026.10
+            </td>
+            <td>
+              ₩60,000
+            </td>
+            <td>
+              <span data-part="badge">
+                결제 완료
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              2026.09
+            </td>
+            <td>
+              ₩60,000
+            </td>
+            <td>
+              <span data-part="badge">
+                결제 완료
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              2026.08
+            </td>
+            <td>
+              ₩48,000
+            </td>
+            <td>
+              <span data-part="badge">
+                결제 완료
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</template>

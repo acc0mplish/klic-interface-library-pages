@@ -1,0 +1,34 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="stepper" class="kn-stepper">
+    <form data-wizard-step="0" data-part="step-form">
+      <div data-wizard-panel>
+        <label for="export-stepper-default-project" data-part="label">
+          1. 프로젝트 이름
+        </label>
+        <input id="export-stepper-default-project" required placeholder="프로젝트 이름" data-part="input">
+      </div>
+      <div data-wizard-panel hidden>
+        <label for="export-stepper-default-team-name" data-part="label">
+          2. 팀 이름
+        </label>
+        <input id="export-stepper-default-team-name" required disabled placeholder="팀 이름" data-part="input">
+      </div>
+      <div data-part="button-row" class="ku-button-row">
+        <button type="button" data-cmp-action="wizard-back" disabled data-part="btn" class="kv-neutral kv-sm">
+          이전
+        </button>
+        <button type="button" data-cmp-action="wizard-next"  data-part="btn" class="kv-neutral kv-sm">
+          다음
+        </button>
+      </div>
+      <p data-cmp-status role="status" aria-live="polite" data-part="status">
+      </p>
+    </form>
+  </div>
+</template>

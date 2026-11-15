@@ -1,0 +1,40 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="cascader" class="kn-cascader">
+    <div data-part="columns" class="ku-columns">
+      <div data-part="field">
+        <label for="export-cascader-default-dept" data-part="label">
+          부서
+        </label>
+        <select id="export-cascader-default-dept" data-cascade-dept data-part="select">
+          <option value="product">
+            제품
+          </option>
+          <option value="business">
+            사업
+          </option>
+        </select>
+      </div>
+      <div data-part="field">
+        <label for="export-cascader-default-team" data-part="label">
+          팀
+        </label>
+        <select id="export-cascader-default-team" data-cascade-team data-part="select">
+          <option>
+            디자인
+          </option>
+          <option>
+            프론트엔드
+          </option>
+        </select>
+      </div>
+    </div>
+    <p data-cmp-status role="status" aria-live="polite" data-part="status">
+    </p>
+  </div>
+</template>

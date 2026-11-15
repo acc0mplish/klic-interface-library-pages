@@ -1,0 +1,18 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="input-otp" class="kn-input-otp">
+    <div data-part="field">
+      <label for="export-input-otp-default-otp" data-part="label">
+        6자리 인증번호
+      </label>
+      <input id="export-input-otp-default-otp" data-otp-style inputmode="numeric" autocomplete="one-time-code" maxlength="6" pattern="[0-9]{6}" data-otp placeholder="000000" data-part="input">
+    </div>
+    <p data-cmp-status role="status" aria-live="polite" data-part="status">
+    </p>
+  </div>
+</template>

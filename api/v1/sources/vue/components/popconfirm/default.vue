@@ -1,0 +1,30 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="popconfirm" class="kn-popconfirm">
+    <button type="button" popovertarget="export-popconfirm-default-popup" data-part="btn" class="kv-neutral kv-sm">
+      보관하기
+      <component :is="KlicIcons.ChevronDown" data-part="icon" aria-hidden="true" />
+    </button>
+    <div popover="auto" id="export-popconfirm-default-popup" data-part="popover" data-state="closed">
+      <strong>
+        목록에서 보관할까요?
+      </strong>
+      <p>
+        실제 데이터는 바뀌지 않습니다.
+      </p>
+      <button type="button" data-cmp-action="close-popover"  data-part="btn" class="kv-neutral kv-sm">
+        취소
+      </button>
+      <button type="button" data-cmp-action="confirm"  data-part="btn" class="kv-neutral kv-sm">
+        확인
+      </button>
+    </div>
+    <p data-cmp-status role="status" aria-live="polite" data-part="status">
+    </p>
+  </div>
+</template>

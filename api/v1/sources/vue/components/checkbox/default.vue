@@ -1,0 +1,31 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="checkbox" class="kn-checkbox">
+    <label data-part="check-row">
+      <input type="checkbox" checked data-part="checkbox">
+      <span>
+        모든 프로젝트 보기
+        <small>
+          팀의 모든 작업에 참여합니다.
+        </small>
+      </span>
+    </label>
+    <label data-part="check-row">
+      <input type="checkbox" data-part="checkbox">
+      <span>
+        이메일 알림 받기
+      </span>
+    </label>
+    <label data-part="check-row">
+      <input type="checkbox" checked disabled data-part="checkbox">
+      <span data-part="muted">
+        필수 알림
+      </span>
+    </label>
+  </div>
+</template>

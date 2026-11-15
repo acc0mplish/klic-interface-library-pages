@@ -1,0 +1,32 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="dropzone" data-kv-variant="inline" data-klic-component="dropzone" class="kn-dropzone">
+    <form data-kv-form>
+      <label data-part="field">
+        <span>
+          전달 메시지
+        </span>
+        <textarea rows="3" placeholder="첨부 자료를 설명하세요." data-part="textarea">
+        </textarea>
+      </label>
+      <button type="submit" class="kv-primary" data-part="btn">
+        메시지 준비
+      </button>
+      <output aria-live="polite" data-part="output">
+      </output>
+    </form>
+    <label data-part="field">
+      <span>
+        파일 첨부
+      </span>
+      <input type="file" data-kv-files multiple data-part="input">
+    </label>
+    <ul data-kv-file-list aria-live="polite" data-part="list">
+    </ul>
+  </div>
+</template>

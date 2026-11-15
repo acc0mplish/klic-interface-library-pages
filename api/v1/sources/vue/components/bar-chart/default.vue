@@ -1,0 +1,57 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="bar-chart" class="kn-bar-chart">
+    <div role="img" aria-label="주간 완료 작업: 월42 화68 수51 목86 금72 토94" data-part="bar-chart">
+      <div>
+        <span style="height:42%">
+        </span>
+        <small>
+          월
+        </small>
+      </div>
+      <div>
+        <span style="height:68%">
+        </span>
+        <small>
+          화
+        </small>
+      </div>
+      <div>
+        <span style="height:51%">
+        </span>
+        <small>
+          수
+        </small>
+      </div>
+      <div>
+        <span style="height:86%">
+        </span>
+        <small>
+          목
+        </small>
+      </div>
+      <div>
+        <span style="height:72%">
+        </span>
+        <small>
+          금
+        </small>
+      </div>
+      <div>
+        <span style="height:94%">
+        </span>
+        <small>
+          토
+        </small>
+      </div>
+    </div>
+    <p data-part="hint">
+      완료 작업 · 42 / 68 / 51 / 86 / 72 / 94건
+    </p>
+  </div>
+</template>

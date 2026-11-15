@@ -10,5 +10,5 @@
 .admin-logo>.brand-descriptor{padding-left:14px}.admin-logo>.klic-brand-mark{width:76px;height:58px}
 @media(max-width:650px){.ka-header .klic-brand-mark,.discovery-logo>.klic-brand-mark{width:76px;height:57px}.admin-logo>.klic-brand-mark{display:inline-grid;width:66px;height:50px}.discovery-logo>.brand-descriptor{display:none}.brand>.klic-brand-mark{width:94px;height:71px}}
 
-.sidebar .brand-simple{font-size:19px;font-weight:650;letter-spacing:-.6px;line-height:1.2;white-space:nowrap;padding:22px 18px 24px;min-height:0;height:auto;color:var(--klic-semantic-color-text)}
+.sidebar .brand-simple{font-size:19px;font-weight:650;letter-spacing:-.6px;line-height:1.2;white-space:normal;overflow-wrap:anywhere;padding:22px 18px 24px;min-height:0;height:auto;color:var(--klic-semantic-color-text)}
 .ka-header .klic-brand-mark{width:60px;height:46px}.ka-header.ka-header{min-height:76px;height:auto}.ka-logo small{font-size:9px}

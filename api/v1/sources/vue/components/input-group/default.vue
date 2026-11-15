@@ -1,0 +1,22 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="input-group" class="kn-input-group">
+    <label for="export-input-group-default-url" data-part="label">
+      프로젝트 주소
+    </label>
+    <div data-part="input-group">
+      <span>
+        klic.co.kr /
+      </span>
+      <input id="export-input-group-default-url" value="interface" aria-describedby="export-input-group-default-hint" data-part="input">
+    </div>
+    <p id="export-input-group-default-hint" data-part="hint">
+      전체 주소: klic.co.kr / 프로젝트 이름
+    </p>
+  </div>
+</template>

@@ -1,0 +1,23 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="toggle-group" class="kn-toggle-group">
+    <div role="group" aria-label="텍스트 표시 옵션" data-part="button-row" class="ku-button-row">
+      <button type="button" data-cmp-action="toggle" aria-pressed="true" data-part="btn" class="kv-neutral kv-sm">
+        굵게
+      </button>
+      <button type="button" data-cmp-action="toggle" aria-pressed="false" data-part="btn" class="kv-neutral kv-sm">
+        기울임
+      </button>
+      <button type="button" data-cmp-action="toggle" aria-pressed="false" data-part="btn" class="kv-neutral kv-sm">
+        밑줄
+      </button>
+    </div>
+    <p data-cmp-status role="status" aria-live="polite" data-part="status">
+    </p>
+  </div>
+</template>

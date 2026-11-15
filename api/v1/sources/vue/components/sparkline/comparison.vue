@@ -1,0 +1,48 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="sparkline" data-kv-variant="comparison" data-klic-component="sparkline" class="kn-sparkline">
+    <div class="ku-row" data-part="row">
+      <span>
+        <div data-part="metric">
+          <span>
+            신규 사용자
+          </span>
+          <strong>
+            248
+          </strong>
+          <p data-part="muted">
+          </p>
+        </div>
+      </span>
+      <span>
+        <svg viewBox="0 0 180 56" role="img" aria-label="기간별 추세: 48, 32, 41, 28, 18, 24, 11, 8" data-part="spark">
+          <polyline points="0,48 25,32 50,41 75,28 100,18 125,24 150,11 175,8" fill="none" stroke="currentColor" stroke-width="3"/>
+        </svg>
+      </span>
+    </div>
+    <div class="ku-row" data-part="row">
+      <span>
+        <div data-part="metric">
+          <span>
+            활성 세션
+          </span>
+          <strong>
+            1,920
+          </strong>
+          <p data-part="muted">
+          </p>
+        </div>
+      </span>
+      <span>
+        <svg viewBox="0 0 180 56" role="img" aria-label="기간별 추세: 21, 33, 25, 39, 27, 17, 23, 12" data-part="spark">
+          <polyline points="0,21 25,33 50,25 75,39 100,27 125,17 150,23 175,12" fill="none" stroke="currentColor" stroke-width="3"/>
+        </svg>
+      </span>
+    </div>
+  </div>
+</template>

@@ -39,3 +39,14 @@ dialog.x-confirm{width:min(600px,calc(100vw / var(--klic-ui-scale,1) - 36px));ma
 /* Equal line boxes keep ancestors, separators and current location on one axis. */
 .breadcrumbs{align-items:center;min-width:0}#breadcrumb{flex:1;min-width:0}#breadcrumb ol{display:flex;flex-wrap:nowrap;align-items:center;padding-block:0;min-height:28px}#breadcrumb li{display:inline-flex;align-items:center;min-height:28px;line-height:20px}#breadcrumb li>a,#breadcrumb li>[aria-current=page],#breadcrumb .breadcrumb-separator{display:inline-flex;align-items:center;min-height:28px;line-height:20px;margin:0;padding-block:0;white-space:nowrap}#breadcrumb li>a{max-width:180px}#breadcrumb .breadcrumb-separator{flex:0 0 auto;justify-content:center;font-size:11px}.breadcrumbs>.crumb-divider{display:inline-flex;align-items:center;min-height:28px;line-height:20px}.breadcrumbs>.breadcrumb-icon{align-self:center;height:16px!important;width:16px!important;flex:none}
 @media(max-width:720px){#breadcrumb li>a{max-width:125px}.breadcrumbs>.crumb-divider{display:none}}
+
+/* Preserve every breadcrumb when browser text is enlarged. */
+.topbar{height:auto;min-height:73px;padding-block:8px;flex-wrap:wrap}
+.breadcrumbs{flex:1 1 12rem;overflow:visible}
+#breadcrumb,:root[data-narrow=true] #breadcrumb{overflow:visible;white-space:normal}
+#breadcrumb ol{width:auto;min-width:0;flex-wrap:wrap}
+#breadcrumb li,#breadcrumb li>a,#breadcrumb li>[aria-current=page]{white-space:normal;line-height:1.4}
+#breadcrumb li{max-width:100%}
+#breadcrumb li>a{max-width:none;overflow:visible;overflow-wrap:anywhere}
+.workspace-help-button{width:max(25px,2em);height:max(25px,2em)}
+@media(max-width:720px){.topbar{min-height:64px}}

@@ -1,0 +1,16 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="date-picker" class="kn-date-picker">
+    <div data-part="field">
+      <label for="export-date-picker-default-date" data-part="label">
+        출시 예정일
+      </label>
+      <input id="export-date-picker-default-date" type="date" min="2026-01-01" max="2027-12-31" value="2026-10-24" data-part="input">
+    </div>
+  </div>
+</template>

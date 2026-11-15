@@ -1,0 +1,31 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="time-picker" data-kv-variant="bounds" data-klic-component="time-picker" class="kn-time-picker">
+    <form data-kv-form data-kv-date-range>
+      <div class="ku-grid-2" data-part="grid-2">
+        <label data-part="field">
+          <span>
+            시작
+          </span>
+          <input type="time" value="09:00" required data-kv-start data-part="input">
+        </label>
+        <label data-part="field">
+          <span>
+            종료
+          </span>
+          <input type="time" value="18:00" required data-kv-end data-part="input">
+        </label>
+      </div>
+      <button type="submit" class="kv-primary" data-part="btn">
+        구간 확인
+      </button>
+      <output aria-live="polite" data-part="output">
+      </output>
+    </form>
+  </div>
+</template>

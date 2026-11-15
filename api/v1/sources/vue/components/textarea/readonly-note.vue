@@ -1,0 +1,26 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="textarea" data-kv-variant="readonly-note" data-klic-component="textarea" class="kn-textarea">
+    <header data-part="heading">
+      <strong>
+        회의 기록
+      </strong>
+      <p data-part="muted">
+        2026.10.26 · 제품 팀
+      </p>
+    </header>
+    <textarea aria-label="회의 기록" readonly rows="4" data-part="textarea">
+      1. 컴포넌트 검토 완료
+  2. 접근성 검증 일정 확인
+  3. 다음 릴리스 준비
+    </textarea>
+    <button type="button" data-klic-surface="control" data-kv-action="copy-value"  data-part="btn">
+      기록 복사
+    </button>
+  </div>
+</template>

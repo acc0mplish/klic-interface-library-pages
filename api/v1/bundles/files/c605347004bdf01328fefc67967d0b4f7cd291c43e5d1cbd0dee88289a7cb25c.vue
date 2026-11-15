@@ -1,0 +1,32 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="anchor" data-kv-variant="jump-top" data-klic-component="anchor" class="kn-anchor">
+    <section id="kv-export-anchor-anchor-jump-top-top" tabindex="-1">
+      <header data-part="heading">
+        <strong>
+          프로젝트 개요
+        </strong>
+      </header>
+    </section>
+    <ul data-part="list">
+      <li>
+        목표: 일관된 디자인 언어
+      </li>
+      <li>
+        범위: 웹과 모바일
+      </li>
+      <li>
+        검토: 접근성과 문서
+      </li>
+    </ul>
+    <a href="#kv-export-anchor-anchor-jump-top-top" data-part="text-link link">
+      <component :is="KlicIcons.ArrowUp" data-part="icon" aria-hidden="true" />
+      개요로 돌아가기
+    </a>
+  </div>
+</template>

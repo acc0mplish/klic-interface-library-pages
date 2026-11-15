@@ -1,0 +1,29 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="search-input" data-kv-variant="with-history" data-klic-component="search-input" class="kn-search-input">
+    <label data-part="field">
+      <span>
+        검색
+      </span>
+      <input type="search" value="" placeholder="최근 검색어를 선택해 보세요" data-part="input">
+    </label>
+    <div class="ku-actions" data-part="actions">
+      <button type="button" data-klic-surface="control" data-kv-action="fill-search" data-kv-value="디자인 토큰" data-part="btn">
+        디자인 토큰
+      </button>
+      <button type="button" data-klic-surface="control" data-kv-action="fill-search" data-kv-value="프로젝트 보고서" data-part="btn">
+        프로젝트 보고서
+      </button>
+      <button type="button" data-klic-surface="control" data-kv-action="fill-search" data-kv-value="팀 권한" data-part="btn">
+        팀 권한
+      </button>
+    </div>
+    <output aria-live="polite" data-part="output">
+    </output>
+  </div>
+</template>

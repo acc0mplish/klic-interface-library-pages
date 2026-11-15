@@ -478,7 +478,7 @@ export const chartUiMessages = {
   "위아래": "Stacked",
   "40일": "40 days",
   "수용량": "Capacity",
-  "https://design.klic.co.kr/일:": "per day:",
+  "/일:": "per day:",
   "비교:": "vs",
   "유지,": "retained,",
   "매수,": "bid and",

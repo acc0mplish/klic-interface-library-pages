@@ -1,0 +1,45 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="radio-group" data-kv-variant="delivery" data-klic-component="radio-group" class="kn-radio-group">
+    <header data-part="heading">
+      <strong>
+        전달 방식
+      </strong>
+    </header>
+    <fieldset data-part="choices choice-cards">
+      <legend>
+        한 가지 선택
+      </legend>
+      <label>
+        <input type="radio" name="kv-export-radio-group-radio-group-delivery" value="이메일" checked data-part="radio">
+        <span>
+          <strong>
+            이메일
+          </strong>
+          <small>
+            받는 사람에게 직접 전달
+          </small>
+        </span>
+      </label>
+      <label>
+        <input type="radio" name="kv-export-radio-group-radio-group-delivery" value="공유 링크"  data-part="radio">
+        <span>
+          <strong>
+            공유 링크
+          </strong>
+          <small>
+            링크를 복사해 전달
+          </small>
+        </span>
+      </label>
+    </fieldset>
+    <output data-kv-selection aria-live="polite" data-part="output">
+      이메일 선택됨
+    </output>
+  </div>
+</template>

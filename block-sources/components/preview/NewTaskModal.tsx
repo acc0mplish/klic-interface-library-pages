@@ -1,14 +1,23 @@
-import React, { useState } from 'react';
+import React, { useId, useState } from 'react';
 import { X } from 'lucide-react';
+import {
+  Dialog,
+  DialogBackdrop,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogTitle,
+  type DialogController,
+} from '@ui-sdk/react/dialog';
 import { TaskItem, StageId, SignalStatus } from '../../types';
 
 interface NewTaskModalProps {
-  isOpen: boolean;
-  onClose: () => void;
+  controller: DialogController;
   onAddTask: (task: TaskItem) => void;
 }
 
-export function NewTaskModal({ isOpen, onClose, onAddTask }: NewTaskModalProps) {
+export function NewTaskModal({ controller, onAddTask }: NewTaskModalProps) {
+  const idPrefix = useId();
   const [title, setTitle] = useState('');
   const [stage, setStage] = useState<StageId>('백로그');
   const [signal, setSignal] = useState<SignalStatus>('대기 중');
@@ -16,8 +25,6 @@ export function NewTaskModal({ isOpen, onClose, onAddTask }: NewTaskModalProps) 
   const [dueDate, setDueDate] = useState('11월 15일');
   const [progress, setProgress] = useState(25);
   const [assigneeName, setAssigneeName] = useState('김민수');
-
-  if (!isOpen) return null;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -55,30 +62,35 @@ export function NewTaskModal({ isOpen, onClose, onAddTask }: NewTaskModalProps) 
 
     onAddTask(newTask);
     setTitle('');
-    onClose();
+    controller.close();
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-klic-inverse/50 backdrop-blur-xs">
-      <div className="w-full max-w-md rounded-2xl bg-white  border border-zinc-200  shadow-2xl p-5 text-zinc-900  animate-in fade-in zoom-in-95">
+    <Dialog controller={controller}>
+      <DialogBackdrop className="fixed inset-0 z-50 bg-klic-inverse/50 backdrop-blur-xs" />
+      <DialogContent className="fixed left-1/2 top-1/2 z-50 w-[calc(100%-2rem)] max-w-md max-h-[calc(100dvh-2rem)] -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-2xl border border-zinc-200 bg-white p-5 text-zinc-900 shadow-2xl">
         <div className="flex items-center justify-between pb-3 border-b border-zinc-200 ">
-          <h3 className="text-sm font-semibold">새 로드맵 업무 등록</h3>
-          <button
-            onClick={onClose}
+          <div>
+            <DialogTitle className="text-sm font-semibold">새 로드맵 업무 등록</DialogTitle>
+            <DialogDescription className="sr-only">업무 정보를 입력해 로드맵에 추가합니다.</DialogDescription>
+          </div>
+          <DialogClose
+            type="button"
             className="p-1 rounded-md text-klic-muted hover:text-klic-muted  transition"
             aria-label="닫기"
           >
             <X size={16} />
-          </button>
+          </DialogClose>
         </div>
 
         <form onSubmit={handleSubmit} className="py-4 space-y-3 text-xs">
           <div>
-            <label className="block font-medium text-zinc-700  mb-1">
+            <label htmlFor={`${idPrefix}-title`} className="block font-medium text-zinc-700  mb-1">
               업무 제목 *
             </label>
             <input
               type="text"
+              id={`${idPrefix}-title`}
               required
               value={title}
               onChange={(e) => setTitle(e.target.value)}
@@ -89,10 +101,11 @@ export function NewTaskModal({ isOpen, onClose, onAddTask }: NewTaskModalProps) 
 
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="block font-medium text-zinc-700  mb-1">
+              <label htmlFor={`${idPrefix}-stage`} className="block font-medium text-zinc-700  mb-1">
                 진행 단계
               </label>
               <select
+                id={`${idPrefix}-stage`}
                 value={stage}
                 onChange={(e) => setStage(e.target.value as StageId)}
                 className="w-full px-3 py-2 bg-zinc-50  border border-zinc-200  rounded-lg"
@@ -105,10 +118,11 @@ export function NewTaskModal({ isOpen, onClose, onAddTask }: NewTaskModalProps) 
             </div>
 
             <div>
-              <label className="block font-medium text-zinc-700  mb-1">
+              <label htmlFor={`${idPrefix}-signal`} className="block font-medium text-zinc-700  mb-1">
                 상태 신호
               </label>
               <select
+                id={`${idPrefix}-signal`}
                 value={signal}
                 onChange={(e) => setSignal(e.target.value as SignalStatus)}
                 className="w-full px-3 py-2 bg-zinc-50  border border-zinc-200  rounded-lg"
@@ -123,10 +137,11 @@ export function NewTaskModal({ isOpen, onClose, onAddTask }: NewTaskModalProps) 
 
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="block font-medium text-zinc-700  mb-1">
+              <label htmlFor={`${idPrefix}-tag`} className="block font-medium text-zinc-700  mb-1">
                 카테고리 태그
               </label>
               <select
+                id={`${idPrefix}-tag`}
                 value={tagName}
                 onChange={(e) => setTagName(e.target.value)}
                 className="w-full px-3 py-2 bg-zinc-50  border border-zinc-200  rounded-lg"
@@ -143,11 +158,12 @@ export function NewTaskModal({ isOpen, onClose, onAddTask }: NewTaskModalProps) 
             </div>
 
             <div>
-              <label className="block font-medium text-zinc-700  mb-1">
+              <label htmlFor={`${idPrefix}-due-date`} className="block font-medium text-zinc-700  mb-1">
                 마감 목표일
               </label>
               <input
                 type="text"
+                id={`${idPrefix}-due-date`}
                 value={dueDate}
                 onChange={(e) => setDueDate(e.target.value)}
                 placeholder="예: 11월 15일"
@@ -158,11 +174,12 @@ export function NewTaskModal({ isOpen, onClose, onAddTask }: NewTaskModalProps) 
 
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="block font-medium text-zinc-700  mb-1">
+              <label htmlFor={`${idPrefix}-assignee`} className="block font-medium text-zinc-700  mb-1">
                 담당자명
               </label>
               <input
                 type="text"
+                id={`${idPrefix}-assignee`}
                 value={assigneeName}
                 onChange={(e) => setAssigneeName(e.target.value)}
                 placeholder="예: 김민수"
@@ -171,11 +188,12 @@ export function NewTaskModal({ isOpen, onClose, onAddTask }: NewTaskModalProps) 
             </div>
 
             <div>
-              <label className="block font-medium text-zinc-700  mb-1">
+              <label htmlFor={`${idPrefix}-progress`} className="block font-medium text-zinc-700  mb-1">
                 진행률: {progress}%
               </label>
               <input
                 type="range"
+                id={`${idPrefix}-progress`}
                 min="0"
                 max="100"
                 value={progress}
@@ -186,13 +204,12 @@ export function NewTaskModal({ isOpen, onClose, onAddTask }: NewTaskModalProps) 
           </div>
 
           <div className="pt-3 border-t border-zinc-200  flex justify-end gap-2">
-            <button
+            <DialogClose
               type="button"
-              onClick={onClose}
               className="px-3 py-1.5 rounded-lg border border-zinc-200  text-klic-muted  hover:bg-zinc-50 "
             >
               취소
-            </button>
+            </DialogClose>
             <button
               type="submit"
               className="px-4 py-1.5 bg-klic-inverse  text-klic-on-emphasis  rounded-lg font-semibold hover:opacity-90"
@@ -201,7 +218,7 @@ export function NewTaskModal({ isOpen, onClose, onAddTask }: NewTaskModalProps) 
             </button>
           </div>
         </form>
-      </div>
-    </div>
+      </DialogContent>
+    </Dialog>
   );
 }

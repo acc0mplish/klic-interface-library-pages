@@ -1,0 +1,46 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="collapsible" data-kv-variant="members" data-klic-component="collapsible" class="kn-collapsible">
+    <header data-part="heading">
+      <strong>
+        프로젝트 팀
+      </strong>
+    </header>
+    <div class="ku-row" data-part="row">
+      <span>
+        <span aria-label="김" data-part="avatar">
+          김
+        </span>
+        김하늘
+      </span>
+      <span>
+        <span data-part="badge">
+          관리자
+        </span>
+      </span>
+    </div>
+    <details  data-part="details">
+      <summary>
+        멤버 3명 더 보기
+      </summary>
+      <div>
+        <ul data-part="list">
+          <li>
+            이도윤 · 개발
+          </li>
+          <li>
+            박서연 · 리서치
+          </li>
+          <li>
+            최지우 · 운영
+          </li>
+        </ul>
+      </div>
+    </details>
+  </div>
+</template>

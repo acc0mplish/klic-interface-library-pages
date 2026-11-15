@@ -1,0 +1,46 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="sidebar" data-kv-variant="collapsible" data-klic-component="sidebar" class="kn-sidebar">
+    <div data-part="side-layout">
+      <aside data-kv-side data-part="sidebar">
+        <header data-part="heading">
+          <strong>
+            프로젝트
+          </strong>
+        </header>
+        <nav aria-label="예제 탐색" data-part="nav">
+          <button type="button" data-kv-action="nav" aria-current="page" data-part="btn">
+            개요
+          </button>
+          <button type="button" data-kv-action="nav" aria-current="false" data-part="btn">
+            보드
+          </button>
+          <button type="button" data-kv-action="nav" aria-current="false" data-part="btn">
+            파일
+          </button>
+        </nav>
+        <output aria-live="polite" data-part="output">
+          개요
+        </output>
+      </aside>
+      <section>
+        <button type="button" data-klic-surface="control" data-kv-action="sidebar"  data-part="btn">
+          탐색 접기 / 펼치기
+        </button>
+        <header data-part="heading">
+          <strong>
+            작업 공간
+          </strong>
+        </header>
+        <p data-part="muted">
+          사이드바를 접으면 본문 영역이 넓어집니다.
+        </p>
+      </section>
+    </div>
+  </div>
+</template>

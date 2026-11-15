@@ -1,0 +1,58 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="form" data-kv-variant="invitation" data-klic-component="form" class="kn-form">
+    <form data-kv-form>
+      <header data-part="heading">
+        <strong>
+          새 멤버 초대
+        </strong>
+        <p data-part="muted">
+          서버로 전송하지 않는 로컬 데모입니다.
+        </p>
+      </header>
+      <label data-part="field">
+        <span>
+          이메일
+        </span>
+        <input type="email" value="" required data-part="input">
+      </label>
+      <fieldset data-part="choices choice-cards">
+        <legend>
+          한 가지 선택
+        </legend>
+        <label>
+          <input type="radio" name="kv-export-form-form-invitation" value="뷰어" checked data-part="radio">
+          <span>
+            <strong>
+              뷰어
+            </strong>
+            <small>
+              열람만 가능
+            </small>
+          </span>
+        </label>
+        <label>
+          <input type="radio" name="kv-export-form-form-invitation" value="에디터"  data-part="radio">
+          <span>
+            <strong>
+              에디터
+            </strong>
+            <small>
+              문서 편집 가능
+            </small>
+          </span>
+        </label>
+      </fieldset>
+      <button type="submit" class="kv-primary" data-part="btn">
+        초대 준비
+      </button>
+      <output aria-live="polite" data-part="output">
+      </output>
+    </form>
+  </div>
+</template>

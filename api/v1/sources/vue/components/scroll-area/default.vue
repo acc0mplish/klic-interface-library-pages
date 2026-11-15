@@ -1,0 +1,84 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="scroll-area" class="kn-scroll-area">
+    <div tabindex="0" role="region" aria-label="프로젝트 활동 기록" data-part="scroll" class="ku-scroll">
+      <p>
+        <strong>
+          01
+        </strong>
+        디자인 시스템 작업 기록
+      </p>
+      <p>
+        <strong>
+          02
+        </strong>
+        디자인 시스템 작업 기록
+      </p>
+      <p>
+        <strong>
+          03
+        </strong>
+        디자인 시스템 작업 기록
+      </p>
+      <p>
+        <strong>
+          04
+        </strong>
+        디자인 시스템 작업 기록
+      </p>
+      <p>
+        <strong>
+          05
+        </strong>
+        디자인 시스템 작업 기록
+      </p>
+      <p>
+        <strong>
+          06
+        </strong>
+        디자인 시스템 작업 기록
+      </p>
+      <p>
+        <strong>
+          07
+        </strong>
+        디자인 시스템 작업 기록
+      </p>
+      <p>
+        <strong>
+          08
+        </strong>
+        디자인 시스템 작업 기록
+      </p>
+      <p>
+        <strong>
+          09
+        </strong>
+        디자인 시스템 작업 기록
+      </p>
+      <p>
+        <strong>
+          10
+        </strong>
+        디자인 시스템 작업 기록
+      </p>
+      <p>
+        <strong>
+          11
+        </strong>
+        디자인 시스템 작업 기록
+      </p>
+      <p>
+        <strong>
+          12
+        </strong>
+        디자인 시스템 작업 기록
+      </p>
+    </div>
+  </div>
+</template>

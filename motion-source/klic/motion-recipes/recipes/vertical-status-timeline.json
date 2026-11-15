@@ -1,0 +1,293 @@
+{
+  "id": "vertical-status-timeline",
+  "pattern": "klicVerticalStatusTimeline",
+  "category": "data-story",
+  "title": {
+    "ko": "세로 상태 타임라인",
+    "en": "Vertical Status Timeline"
+  },
+  "summary": {
+    "ko": "설명과 시각을 각 이벤트 옆에 두고 활성 진행점을 위에서 아래로 이동합니다.",
+    "en": "Places a description and time beside each event, then moves the active marker from top to bottom."
+  },
+  "trigger": {
+    "ko": "재생하면 세로 레일이 채워지고 완료 단계에는 파란 체크가 남습니다.",
+    "en": "Playback fills the vertical rail and leaves a blue check on each completed stage."
+  },
+  "durationMs": 3600,
+  "easing": "linear",
+  "useCases": [
+    {
+      "ko": "검토·승인처럼 설명과 시각이 필요한 상태 기록",
+      "en": "Status histories such as review and approval that need descriptions and times"
+    },
+    {
+      "ko": "단계명이 길거나 세부 정보를 함께 보여 주는 흐름",
+      "en": "Flows with longer labels or supporting details"
+    }
+  ],
+  "cautions": [
+    {
+      "ko": "세로 공간이 부족하면 단계를 짧게 줄여 가로 레일을 사용합니다.",
+      "en": "Use the horizontal rail with shorter labels when vertical space is limited."
+    }
+  ],
+  "reducedMotion": {
+    "ko": "시간순 상태를 정지 목록으로 표시하고 완료·대기 상태를 텍스트로 구분합니다.",
+    "en": "Show the events as a still chronological list with text for completed and pending states."
+  },
+  "preview": {
+    "description": {
+      "ko": "이벤트 설명과 시각을 세로로 읽으며 현재 단계를 확인합니다.",
+      "en": "Read event descriptions and times vertically while tracking the current stage."
+    },
+    "sample": {
+      "ko": "상태 기록",
+      "en": "Status history"
+    }
+  },
+  "definition": {
+    "html": "\n<style>\n.klic-progress{display:block;width:100%;height:100%;color:var(--klic-semantic-color-text,#132c46);font-family:var(--klic-component-text-body-font-family,system-ui,sans-serif)}\n.klic-progress text{font-family:inherit}\n.klic-progress .panel{fill:var(--klic-semantic-color-panel,#fff);stroke:var(--klic-semantic-color-border,#dfe5ee)}\n.klic-progress .track{stroke:var(--klic-semantic-color-border,#dfe5ee)}\n.klic-progress .fill{stroke:var(--klic-semantic-color-accent,#245FC2)}\n.klic-progress .node{fill:var(--klic-semantic-color-panel,#fff);stroke:var(--klic-semantic-color-control-border,#7e8fa7)}\n.klic-progress .number,.klic-progress .meta{fill:var(--klic-semantic-color-muted,#52657b)}\n.klic-progress .label,.klic-progress .step-title{fill:var(--klic-semantic-color-text,#132c46)}\n.klic-progress .detail{fill:var(--klic-semantic-color-muted,#52657b)}\n.klic-progress .active-marker{fill:var(--klic-semantic-color-panel,#fff);stroke:var(--klic-semantic-color-accent,#245FC2)}\n.klic-progress .check{fill:none;stroke:var(--klic-semantic-color-accent,#245FC2);stroke-linecap:round;stroke-linejoin:round;opacity:0}\n</style><svg class=\"klic-progress klic-progress-vertical\" viewBox=\"0 0 320 200\" role=\"img\" aria-label=\"세로 상태 타임라인 예시\">\n <title>세로 상태 타임라인</title>\n <desc>각 이벤트의 설명과 시각을 세로 레일에 놓고 활성 진행점을 위에서 아래로 이동합니다.</desc>\n <rect class=\"panel\" x=\"56\" y=\"22\" width=\"248\" height=\"48\" rx=\"9\" stroke-width=\"1\"/><rect class=\"panel\" x=\"56\" y=\"76\" width=\"248\" height=\"48\" rx=\"9\" stroke-width=\"1\"/><rect class=\"panel\" x=\"56\" y=\"130\" width=\"248\" height=\"48\" rx=\"9\" stroke-width=\"1\"/>\n <line class=\"track\" x1=\"36\" y1=\"46\" x2=\"36\" y2=\"154\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>\n <path class=\"fill vertical-fill\" d=\"M 36 46 V 154\" pathLength=\"1\" stroke-dasharray=\"1\" stroke-dashoffset=\"1\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>\n <circle class=\"node\" cx=\"36\" cy=\"46\" r=\"9\" stroke-width=\"1.5\"/><text class=\"number number-1\" x=\"36\" y=\"49\" text-anchor=\"middle\" font-size=\"8\">1</text><path class=\"check check-1\" d=\"M 32 46 l2.5 2.5 5 -5\" stroke-width=\"1.8\"/><circle class=\"node\" cx=\"36\" cy=\"100\" r=\"9\" stroke-width=\"1.5\"/><text class=\"number number-2\" x=\"36\" y=\"103\" text-anchor=\"middle\" font-size=\"8\">2</text><path class=\"check check-2\" d=\"M 32 100 l2.5 2.5 5 -5\" stroke-width=\"1.8\"/><circle class=\"node\" cx=\"36\" cy=\"154\" r=\"9\" stroke-width=\"1.5\"/><text class=\"number number-3\" x=\"36\" y=\"157\" text-anchor=\"middle\" font-size=\"8\">3</text><path class=\"check check-3\" d=\"M 32 154 l2.5 2.5 5 -5\" stroke-width=\"1.8\"/>\n <circle class=\"active-marker\" cx=\"36\" cy=\"46\" r=\"13\" stroke-width=\"1.5\"/>\n <text class=\"step-title step-title-1\" x=\"72\" y=\"43\" font-size=\"11\" font-weight=\"650\">요청 등록</text>\n <text class=\"detail\" x=\"72\" y=\"57\" font-size=\"9\">필수 정보를 확인합니다</text>\n <text class=\"meta\" x=\"288\" y=\"44\" text-anchor=\"end\" font-size=\"9\">09:10</text>\n <text class=\"step-title step-title-2\" x=\"72\" y=\"97\" font-size=\"11\" font-weight=\"650\">자료 검토</text>\n <text class=\"detail\" x=\"72\" y=\"111\" font-size=\"9\">담당자가 내용을 살핍니다</text>\n <text class=\"meta\" x=\"288\" y=\"98\" text-anchor=\"end\" font-size=\"9\">09:18</text>\n <text class=\"step-title step-title-3\" x=\"72\" y=\"151\" font-size=\"11\" font-weight=\"650\">결과 전달</text>\n <text class=\"detail\" x=\"72\" y=\"165\" font-size=\"9\">검토가 끝나면 알려드립니다</text>\n <text class=\"meta\" x=\"288\" y=\"152\" text-anchor=\"end\" font-size=\"9\">09:24</text>\n</svg>",
+    "duration": 3600,
+    "easing": "linear",
+    "segmentEasing": false,
+    "reducedProgress": 1,
+    "tracks": [
+      {
+        "selector": ".vertical-fill",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "strokeDashoffset": "1"
+          },
+          {
+            "offset": 0.5,
+            "strokeDashoffset": "0.5"
+          },
+          {
+            "offset": 0.75,
+            "strokeDashoffset": "0"
+          },
+          {
+            "offset": 1,
+            "strokeDashoffset": "0"
+          }
+        ]
+      },
+      {
+        "selector": ".active-marker",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "cy": "46px",
+            "opacity": "1"
+          },
+          {
+            "offset": 0.5,
+            "cy": "100px",
+            "opacity": "1"
+          },
+          {
+            "offset": 0.75,
+            "cy": "154px",
+            "opacity": "1"
+          },
+          {
+            "offset": 0.97,
+            "cy": "154px",
+            "opacity": "1"
+          },
+          {
+            "offset": 1,
+            "cy": "154px",
+            "opacity": "0"
+          }
+        ]
+      },
+      {
+        "selector": ".check-1",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "opacity": "0"
+          },
+          {
+            "offset": 0.47,
+            "opacity": "0"
+          },
+          {
+            "offset": 0.5,
+            "opacity": "1"
+          },
+          {
+            "offset": 1,
+            "opacity": "1"
+          }
+        ]
+      },
+      {
+        "selector": ".check-2",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "opacity": "0"
+          },
+          {
+            "offset": 0.72,
+            "opacity": "0"
+          },
+          {
+            "offset": 0.75,
+            "opacity": "1"
+          },
+          {
+            "offset": 1,
+            "opacity": "1"
+          }
+        ]
+      },
+      {
+        "selector": ".check-3",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "opacity": "0"
+          },
+          {
+            "offset": 0.97,
+            "opacity": "0"
+          },
+          {
+            "offset": 1,
+            "opacity": "1"
+          }
+        ]
+      },
+      {
+        "selector": ".number-1",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "opacity": "1"
+          },
+          {
+            "offset": 0.47,
+            "opacity": "1"
+          },
+          {
+            "offset": 0.5,
+            "opacity": "0"
+          },
+          {
+            "offset": 1,
+            "opacity": "0"
+          }
+        ]
+      },
+      {
+        "selector": ".number-2",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "opacity": "1"
+          },
+          {
+            "offset": 0.72,
+            "opacity": "1"
+          },
+          {
+            "offset": 0.75,
+            "opacity": "0"
+          },
+          {
+            "offset": 1,
+            "opacity": "0"
+          }
+        ]
+      },
+      {
+        "selector": ".number-3",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "opacity": "1"
+          },
+          {
+            "offset": 0.97,
+            "opacity": "1"
+          },
+          {
+            "offset": 1,
+            "opacity": "0"
+          }
+        ]
+      },
+      {
+        "selector": ".step-title-1",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "fill": "var(--klic-semantic-color-accent,#245FC2)"
+          },
+          {
+            "offset": 1,
+            "fill": "var(--klic-semantic-color-accent,#245FC2)"
+          }
+        ]
+      },
+      {
+        "selector": ".step-title-2",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "fill": "var(--klic-semantic-color-muted,#52657b)"
+          },
+          {
+            "offset": 0.47,
+            "fill": "var(--klic-semantic-color-muted,#52657b)"
+          },
+          {
+            "offset": 0.5,
+            "fill": "var(--klic-semantic-color-accent,#245FC2)"
+          },
+          {
+            "offset": 1,
+            "fill": "var(--klic-semantic-color-accent,#245FC2)"
+          }
+        ]
+      },
+      {
+        "selector": ".step-title-3",
+        "easing": "linear",
+        "keyframes": [
+          {
+            "offset": 0,
+            "fill": "var(--klic-semantic-color-muted,#52657b)"
+          },
+          {
+            "offset": 0.72,
+            "fill": "var(--klic-semantic-color-muted,#52657b)"
+          },
+          {
+            "offset": 0.75,
+            "fill": "var(--klic-semantic-color-accent,#245FC2)"
+          },
+          {
+            "offset": 1,
+            "fill": "var(--klic-semantic-color-accent,#245FC2)"
+          }
+        ]
+      }
+    ]
+  }
+}

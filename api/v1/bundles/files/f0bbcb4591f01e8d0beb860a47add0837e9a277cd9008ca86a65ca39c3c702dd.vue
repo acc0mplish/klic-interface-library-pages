@@ -1,0 +1,51 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="card" data-kv-variant="pricing" data-klic-component="card" class="kn-card">
+    <article data-klic-surface="card" data-part="card card-body">
+      <div class="ku-row" data-part="row">
+        <span>
+          <strong>
+            Team
+          </strong>
+        </span>
+        <span>
+          <span data-part="badge">
+            협업 추천
+          </span>
+        </span>
+      </div>
+      <div data-part="metric">
+        <span>
+          멤버당 월
+        </span>
+        <strong>
+          ₩12,000
+        </strong>
+        <p data-part="muted">
+          부가세 별도
+        </p>
+      </div>
+      <ul data-part="list">
+        <li>
+          무제한 프로젝트
+        </li>
+        <li>
+          공유 컴포넌트
+        </li>
+        <li>
+          팀 권한 관리
+        </li>
+      </ul>
+      <button type="button" data-klic-surface="control" data-kv-action="choose"  data-part="btn">
+        플랜 선택
+      </button>
+      <output aria-live="polite" data-part="output">
+      </output>
+    </article>
+  </div>
+</template>

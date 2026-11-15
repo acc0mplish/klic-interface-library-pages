@@ -5,7 +5,14 @@ export const MATERIAL_IDS=Object.freeze(['flat','glass','solid-glass','liquid-gl
 export const MATERIAL_LABELS=Object.freeze({flat:'Flat',glass:'Glass','solid-glass':'Solid Glass','liquid-glass':'Liquid Glass'});
 export const normalizeMaterial=value=>MATERIAL_IDS.includes(value)?value:'flat';
 const ROLES=['card','chrome','overlay','field','dense','control'];
-const PRESETS=Object.freeze({flat:{alpha:1,blur:0,shadow:0,rim:0,y:0,spread:0},glass:{alpha:.72,blur:1,shadow:.10,rim:.36,y:.25,spread:1},'solid-glass':{alpha:.92,blur:.75,shadow:.14,rim:.52,y:.375,spread:1.25},'liquid-glass':{alpha:.64,blur:1.5,shadow:.18,rim:.72,y:.5,spread:1.75}});
+const PRESETS=Object.freeze({flat:{alpha:1,blur:0,shadow:0,rim:0,y:0,spread:0},glass:{alpha:.72,blur:1,shadow:.10,rim:.36,y:.25,spread:1},'solid-glass':{alpha:.92,blur:.75,shadow:.17,rim:.60,y:.375,spread:1.25},'liquid-glass':{alpha:.64,blur:1.5,shadow:.18,rim:.72,y:.5,spread:1.75}});
+function glassAlpha(material,role,appearance){
+ if(material==='flat'||role==='dense')return 1;
+ const raw=appearance?.glassAppearance,value=typeof raw==='number'||typeof raw==='string'&&raw.trim()!==''?Number(raw):NaN;
+ const level=Number.isFinite(value)?Math.max(0,Math.min(100,value)):50,minimum=role==='overlay'?.96:role==='field'?.92:0,base=Math.max(PRESETS[material].alpha,minimum);
+ const adjusted=level<=50?base*level/50:base+(1-base)*(level-50)/50;
+ return Math.max(minimum,Math.min(1,adjusted));
+}
 const alias=(type,path)=>({$type:type,$value:`{${path}}`});
 const dimension=value=>({$type:'dimension',$value:{value,unit:'rem'}});
 const color=(hex,alpha=1)=>({$type:'color',$value:{colorSpace:'srgb',components:[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16)/255),alpha}});
@@ -17,14 +24,14 @@ export function appendMaterialTokens(tokens,mode='light',appearance={}){
  for(const material of MATERIAL_IDS)for(const role of ROLES)for(const theme of ['light','dark']){
   const dark=theme==='dark',preset=PRESETS[material],opaque=role==='dense'||material==='flat';
   const base=dark?(role==='chrome'?'#101722':'#172132'):'#ffffff';
-  const values={background:color(base,opaque?1:Math.max(preset.alpha,role==='overlay'?.96:role==='field'?.92:0)),fallback:color(base),border:color(dark?'#31425c':'#dfe5ee'),rim:color(dark?'#e8eef8':'#ffffff',opaque?0:preset.rim),shadow:color('#101722',opaque?0:preset.shadow),blur:dimension(opaque?0:preset.blur),'shadow-y':dimension(opaque?0:preset.y),'shadow-blur':dimension(opaque?0:preset.spread)};
+  const values={background:color(base,glassAlpha(material,role,appearance)),fallback:color(base),border:color(dark?'#31425c':'#dfe5ee'),rim:color(dark?'#e8eef8':'#ffffff',opaque?0:preset.rim),shadow:color('#101722',opaque?0:preset.shadow),blur:dimension(opaque?0:preset.blur),'shadow-y':dimension(opaque?0:preset.y),'shadow-blur':dimension(opaque?0:preset.spread)};
   for(const prop of properties)tokens[`klic.primitive.material.${material}.${role}.${theme}.${prop}`]=values[prop];
  }
  // The complete themed surface inventory never depends on selected context.
  const gray={id:'gray',light:{surface:'#fafafa',panel:'#ffffff',line:'#e2e3e6',text:'#202329','control-border':'#6c7080'},dark:{surface:'#17181c',panel:'#202126',line:'#3c3e47',text:'#edf1fa','control-border':'#98a5ba'}};
  for(const palette of [...COLOR_THEMES,gray])for(const material of MATERIAL_IDS)for(const role of ROLES)for(const theme of ['light','dark']){
   const p=palette[theme],preset=PRESETS[material],opaque=role==='dense'||material==='flat',base=role==='chrome'?p.surface:p.panel;
-  const values={background:color(base,opaque?1:Math.max(preset.alpha,role==='overlay'?.96:role==='field'?.92:0)),fallback:color(base),border:color(['field','control'].includes(role)?p['control-border']:p.line),rim:color(theme==='dark'?p.text:p.panel,opaque?0:preset.rim)};
+  const values={background:color(base,glassAlpha(material,role,appearance)),fallback:color(base),border:color(['field','control'].includes(role)?p['control-border']:p.line),rim:color(theme==='dark'?p.text:p.panel,opaque?0:preset.rim)};
   for(const [prop,value] of Object.entries(values))tokens[`klic.primitive.material.theme.${palette.id}.${material}.${role}.${theme}.${prop}`]=value;
  }
  const themeId=appearance.neutral==='gray'?'gray':getColorTheme(appearance.colorTheme).id;
@@ -49,11 +56,17 @@ export function materialStylesCSS(){
   const sensitive=['field','control'].includes(role),state=sensitive?stateSafe(target):target;
   recipes.push(`${target}{background:${v('background')};-webkit-backdrop-filter:blur(${v('blur')});backdrop-filter:blur(${v('blur')});}`);
   recipes.push(`${state}{border-color:${v('border')};box-shadow:inset 0 1px 0 ${v('rim')},0 ${v('shadow-y')} ${v('shadow-blur')} ${v('shadow')};}`);
-  fallbacks.push(`${target}{background:${v('fallback')};-webkit-backdrop-filter:none;backdrop-filter:none;}${state}{box-shadow:none;}`);
-  forced.push(`${target}{background:Canvas;color:CanvasText;-webkit-backdrop-filter:none;backdrop-filter:none;}${state}{border-color:CanvasText;box-shadow:none;}`);
+  fallbacks.push(`${target}{background:${v('fallback')};background-image:none;-webkit-backdrop-filter:none;backdrop-filter:none;}${state}{box-shadow:none;}`);
+  forced.push(`${target}{background:Canvas;color:CanvasText;background-image:none;-webkit-backdrop-filter:none;backdrop-filter:none;}${state}{border-color:CanvasText;box-shadow:none;}`);
  }
  // Native scope boundaries stop an outer material from styling a nested preview.
  // Browsers without @scope retain their original, opaque component appearance.
- for(const material of MATERIAL_IDS.filter(id=>id!=='flat'))rules.push(`@scope ([data-material="${material}"]) to ([data-material]){${recipes.join('\n')}@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){${fallbacks.join('\n')}}@media (prefers-reduced-transparency: reduce){${fallbacks.join('\n')}}@media (forced-colors: active){${forced.join('\n')}}}`);
+ for(const material of MATERIAL_IDS.filter(id=>id!=='flat')){
+  const highlight=material==='liquid-glass'?'rgb(255 255 255 / .30)':'rgb(255 255 255 / .22)';
+  const blueSheen=material==='liquid-glass'?'rgb(36 95 194 / .18)':material==='glass'?'rgb(36 95 194 / .10)':'rgb(36 95 194 / .06)';
+  const sheen=`linear-gradient(135deg, ${highlight} 0%, transparent 38%),linear-gradient(315deg, ${blueSheen} 0%, transparent 42%)`;
+  const glossyRoles=['card','chrome'].map(role=>`${`:is(${selector(role)},:scope${selector(role)})`}{background-image:${sheen};}`).join('\n');
+  rules.push(`@scope ([data-material="${material}"]) to ([data-material]){${recipes.join('\n')}\n${glossyRoles}@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){${fallbacks.join('\n')}}@media (prefers-reduced-transparency: reduce){${fallbacks.join('\n')}}@media (forced-colors: active){${forced.join('\n')}}}`);
+ }
  return rules.join('\n');
 }

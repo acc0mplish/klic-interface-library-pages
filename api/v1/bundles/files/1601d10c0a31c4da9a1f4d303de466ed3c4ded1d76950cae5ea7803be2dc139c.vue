@@ -1,0 +1,36 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="segmented-control" class="kn-segmented-control">
+    <fieldset data-part="segment">
+      <legend>
+        일정 보기
+      </legend>
+      <label>
+        <input type="radio" name="export-segmented-control-default-choice" value="일"  data-choice data-part="radio">
+        <span >
+          일
+        </span>
+      </label>
+      <label>
+        <input type="radio" name="export-segmented-control-default-choice" value="주" checked data-choice data-part="radio">
+        <span >
+          주
+        </span>
+      </label>
+      <label>
+        <input type="radio" name="export-segmented-control-default-choice" value="월"  data-choice data-part="radio">
+        <span >
+          월
+        </span>
+      </label>
+    </fieldset>
+    <p data-choice-result data-part="hint">
+      선택: 주
+    </p>
+  </div>
+</template>

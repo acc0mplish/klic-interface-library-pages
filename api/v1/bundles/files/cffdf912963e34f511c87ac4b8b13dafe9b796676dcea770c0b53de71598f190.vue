@@ -1,0 +1,29 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="scroll-area" data-kv-variant="code-scroll" data-klic-component="scroll-area" class="kn-scroll-area">
+    <header data-part="heading">
+      <strong>
+        설정 예제
+      </strong>
+    </header>
+    <pre tabindex="0" aria-label="설정 코드" class="ku-scroll" data-part="code scroll">
+      <code>
+        {
+    "project": "klic-interface-library",
+    "theme": "company-blue",
+    "tokens": ["primitive", "semantic", "component", "context"],
+    "features": {
+      "keyboard": true,
+      "responsive": true,
+      "nativeHTML": true
+    }
+  }
+      </code>
+    </pre>
+  </div>
+</template>

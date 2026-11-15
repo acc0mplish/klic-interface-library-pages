@@ -1,0 +1,33 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="alert-dialog" class="kn-alert-dialog">
+    <button type="button" data-cmp-action="open-dialog"  data-part="btn" class="kv-neutral kv-sm">
+      보관 전 확인
+    </button>
+    <dialog data-part="confirm dialog">
+      <h3>
+        프로젝트를 보관할까요?
+      </h3>
+      <p>
+        목록에서 숨기는 동작을 시연합니다.
+        <br>
+        실제 프로젝트는 변경하지 않습니다.
+      </p>
+      <form method="dialog">
+        <button value="cancel" autofocus data-part="btn" class="kv-neutral kv-sm">
+          취소
+        </button>
+        <button value="confirm" data-part="btn" class="kv-sm">
+          보관 확인
+        </button>
+      </form>
+    </dialog>
+    <p data-cmp-status role="status" aria-live="polite" data-part="status">
+    </p>
+  </div>
+</template>

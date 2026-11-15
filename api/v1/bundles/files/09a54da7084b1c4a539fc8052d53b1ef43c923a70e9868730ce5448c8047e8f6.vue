@@ -1,0 +1,17 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="spinner" class="ku-spin kn-spinner">
+    <div role="status" data-part="spinner-row">
+      <span aria-hidden="true" data-part="spinner spin" class="ku-spin">
+      </span>
+      <span>
+        변경사항을 처리하고 있습니다.
+      </span>
+    </div>
+  </div>
+</template>

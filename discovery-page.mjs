@@ -2,7 +2,7 @@ import {initDocumentLinks} from './document-links.mjs';
 import {initSiteChrome} from './site-chrome.mjs?v=20261025-polish-1';
 import {initPublicTheme} from './public-theme.mjs';
 initPublicTheme();initSiteChrome();
-import {mountDiscoveryActions} from './discovery-content.mjs';
+import {mountDiscoveryActions} from './discovery-content.mjs?v=20261030-delivery-1';
 const en=document.documentElement.lang==='en';
 async function copy(value){
  try{await navigator.clipboard.writeText(value);}catch{let area=document.querySelector('[data-manual-copy]');if(!area){area=document.createElement('textarea');area.dataset.manualCopy='';area.setAttribute('aria-label',en?'Select and copy manually':'직접 선택해 복사');document.querySelector('main').append(area);}area.value=value;area.focus();area.select();throw Error('manual');}

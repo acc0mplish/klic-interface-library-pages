@@ -1,0 +1,35 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="watermark" data-kv-variant="preview" data-klic-component="watermark" class="kn-watermark">
+    <article data-part="watermarked watermark-grid">
+      <span aria-hidden="true" data-part="watermark">
+        DRAFT · DRAFT · DRAFT
+      </span>
+      <header data-part="heading">
+        <strong>
+          릴리스 노트 미리 보기
+        </strong>
+      </header>
+      <span data-part="badge">
+        초안 · 검토 중
+      </span>
+      <p data-part="muted">
+        아직 게시되지 않은 내용입니다.
+      </p>
+      <label data-part="progress-label">
+        작성 완료
+        <span>
+          70%
+        </span>
+        <progress max="100" value="70">
+          70%
+        </progress>
+      </label>
+    </article>
+  </div>
+</template>

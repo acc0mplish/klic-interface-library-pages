@@ -1,0 +1,53 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="tree" data-kv-variant="files" data-klic-component="tree" class="kn-tree">
+    <header data-part="heading">
+      <strong>
+        프로젝트 파일
+      </strong>
+    </header>
+    <details open data-part="details">
+      <summary>
+        디자인 시스템
+      </summary>
+      <div>
+        <details open data-part="details">
+          <summary>
+            기초 스타일
+          </summary>
+          <div>
+            <button type="button" data-klic-surface="control" data-kv-action="choose"  data-part="btn">
+              색상 토큰
+            </button>
+            <button type="button" data-klic-surface="control" data-kv-action="choose"  data-part="btn">
+              타이포그래피
+            </button>
+          </div>
+        </details>
+        <button type="button" data-klic-surface="control" data-kv-action="choose"  data-part="btn">
+          컴포넌트 가이드
+        </button>
+      </div>
+    </details>
+    <details  data-part="details">
+      <summary>
+        프로젝트
+      </summary>
+      <div>
+        <button type="button" data-klic-surface="control" data-kv-action="choose"  data-part="btn">
+          웹 리뉴얼
+        </button>
+        <button type="button" data-klic-surface="control" data-kv-action="choose"  data-part="btn">
+          모바일 앱
+        </button>
+      </div>
+    </details>
+    <output aria-live="polite" data-part="output">
+    </output>
+  </div>
+</template>

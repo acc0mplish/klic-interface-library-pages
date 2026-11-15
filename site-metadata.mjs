@@ -16,12 +16,12 @@ export const SITE_METADATA = {
     }
   },
   "toolchain": {
-    "bun": "1.4.2",
+    "bun": "1.4.4",
     "nodeMinimum": "22"
   },
   "package": {
-    "name": "klic-interface-library",
-    "version": "0.0.1",
+    "name": "klic-design",
+    "version": "0.0.7",
     "registry": "https://registry.npmjs.org/"
   },
   "versions": {
@@ -41,8 +41,8 @@ export const SITE_METADATA = {
     ]
   },
   "routes": {
-    "mcp": "https://design.klic.co.kr/api/v1/mcp",
-    "cli": "/klic-interface-library-pages/integrations/klic.mjs"
+    "mcp": "/api/v1/mcp",
+    "cli": "/integrations/klic-standalone.mjs"
   },
   "integrations": {
     "api": {
@@ -67,12 +67,34 @@ export const SITE_METADATA = {
     "mcp": {
       "status": "remote-and-stdio",
       "authentication": "public-design-read-only",
-      "managedAuthentication": "Sites personal plugin"
+      "managedAuthentication": "Sites personal plugin",
+      "chartAuthoring": {
+        "status": "available",
+        "schemaVersion": "1.0",
+        "renderer": "KLIC SVG",
+        "localDataTransport": "stdio",
+        "hostedDataTools": false,
+        "webmcpDataTools": false,
+        "mcpAppMimeType": "text/html;profile=mcp-app"
+      }
     },
     "webmcp": {
       "status": "feature-detected",
       "interface": "document.modelContext",
       "scope": "current browser tab"
+    },
+    "skill": {
+      "status": "available",
+      "name": "klic-design",
+      "format": "agentskills",
+      "path": "/skills/klic-design/SKILL.md",
+      "packagePath": "skills/klic-design/SKILL.md",
+      "npmPackage": {
+        "name": "klic-design",
+        "version": "0.0.7",
+        "registry": "https://registry.npmjs.org/",
+        "skillPath": "SKILL.md"
+      }
     },
     "themes": {
       "status": "available",
@@ -94,17 +116,17 @@ export const SITE_METADATA = {
   },
   "delivery": {
     "type": "reference-library",
-    "summary": "HTML 데모 라이브러리·4계층 토큰 레지스트리·공개 조회 API와 개발 도구",
-    "enSummary": "HTML demo library, four-layer token registry, public read APIs and developer tools",
-    "sourceDelivery": "Standalone reference workspaces delivered by CLI; review dependencies and adapt to your product.",
+    "summary": "klic-design 통합 패키지: AI 설계 지침·토큰·테마·폰트·재사용 차트 엔진·CLI·사용자 제공 모션 소스의 KLIC 각색·공유 런타임 예제",
+    "enSummary": "Unified klic-design package: Agent Skill, tokens, themes, fonts, reusable KLIC chart engine, CLI and KLIC-adapted motion source with shared runtime examples",
+    "sourceDelivery": "Components: Native HTML and Vue SFCs for 109 IDs / 525 forms. Ready blocks: React and Vue workspaces for all 357 IDs, delivered by the current standalone Site CLI. Vue SFC motion examples cover all 925 records. Public klic-design@latest does not yet include Vue exports; use the current Site source workspaces until a separate npm release. Motion: preserve the 884 adopted source patterns and add individual KLIC-authored FlowMotion effects in the same 67 categories, grouped in the existing KLIC navigation. Preserve source id + pattern + engine, choreography, timing, paths, layers, SVG/inline/WAAPI alpha, per-source authorship, copyright and license notices; do not carry old recipes or routes forward as compatibility entries. Adapt color, fonts, surfaces, borders, radius and spacing through existing four-layer KLIC token paths, and scope demo CSS per item. Previews and JavaScript/React delivery use the shared klic-design/motions/runtime and klic-design/motions/runtime.css exports; Canvas playback requires JavaScript and is not reproduced by CSS alone. Motion counts remain separate from component, block and CLI workspace counts. Charts: use KLIC-owned KlicChartSpec and the local npm candidate exports klic-design/charts and klic-design/charts/react; a separate npm release is required before public latest includes them. send chart rows only to local stdio MCP. Hosted HTTP and WebMCP expose metadata only; a guessed HTTP request is rejected with LOCAL_ONLY before chart validation or rendering after the caller's payload reaches the endpoint.",
     "licensing": {
       "mode": "per-file",
-      "guide": "/klic-interface-library-pages/licenses/README.md"
+      "guide": "/licenses/README.md"
     },
     "figma": {
       "delivery": "manifest-and-migration-guide",
-      "manifest": "/klic-interface-library-pages/design-contract/materials/figma-manifest.json",
-      "guide": "/klic-interface-library-pages/design-contract/materials/figma-migration.md",
+      "manifest": "/design-contract/materials/figma-manifest.json",
+      "guide": "/design-contract/materials/figma-migration.md",
       "liveSync": false
     },
     "sourceRepository": {
@@ -112,33 +134,34 @@ export const SITE_METADATA = {
       "delivery": "Use the published source exports and verified CLI bundles."
     },
     "versioning": {
-      "toolkit": "CLI and shared integration runtime version; initial value tracks the package release",
+      "toolkit": "CLI and shared integration runtime version; independent of the npm package version",
       "schema": "Response format version",
       "release": "Registry publication hash",
       "revision": "Design criteria hash"
     }
   },
   "links": {
-    "deliveryScope": "https://design.klic.co.kr/about",
-    "licenses": "/klic-interface-library-pages/licenses/README.md",
-    "figma": "/klic-interface-library-pages/design-contract/materials/figma-migration.md",
-    "designSystem": "/klic-interface-library-pages/api/v1/design-system.json",
-    "designDocs": "/klic-interface-library-pages/#docs/architecture",
-    "themes": "/klic-interface-library-pages/api/v1/themes.json",
-    "themeGuide": "https://design.klic.co.kr/resources/cli#themes",
-    "docs": "https://design.klic.co.kr/resources",
-    "api": "https://design.klic.co.kr/resources/api",
-    "cli": "https://design.klic.co.kr/resources/cli",
-    "mcp": "https://design.klic.co.kr/resources/mcp",
-    "webmcp": "https://design.klic.co.kr/resources/webmcp",
-    "schema": "/klic-interface-library-pages/api/v1/registry.schema.json",
-    "openapi": "/klic-interface-library-pages/api/v1/openapi.json",
-    "capabilities": "/klic-interface-library-pages/api/v1/capabilities.json",
-    "tools": "/klic-interface-library-pages/api/v1/tools.json"
+    "deliveryScope": "/about",
+    "licenses": "/licenses/README.md",
+    "figma": "/design-contract/materials/figma-migration.md",
+    "designSystem": "/api/v1/design-system.json",
+    "designDocs": "/#docs/architecture",
+    "themes": "/api/v1/themes.json",
+    "themeGuide": "/resources/cli#themes",
+    "docs": "/resources",
+    "api": "/resources/api",
+    "cli": "/resources/cli",
+    "mcp": "/resources/mcp",
+    "webmcp": "/resources/webmcp",
+    "skill": "/resources/cli#klic-design-skill",
+    "schema": "/api/v1/registry.schema.json",
+    "openapi": "/api/v1/openapi.json",
+    "capabilities": "/api/v1/capabilities.json",
+    "tools": "/api/v1/tools.json"
   }
 };
 export const SITE_ORIGIN = SITE_METADATA.site.origin;
-export const MCP_URL = new URL(SITE_METADATA.routes.mcp, SITE_ORIGIN+'/klic-interface-library-pages/').href;
+export const MCP_URL = new URL(SITE_METADATA.routes.mcp, SITE_ORIGIN+'/').href;
 export const INTEGRATION_VERSION = SITE_METADATA.versions.toolkit;
 export const PROTOCOL_VERSIONS = SITE_METADATA.versions.mcpProtocols;
 export const RATE_LIMIT_DEFAULTS = Object.freeze({...SITE_METADATA.rateLimit.limits,windowSeconds:SITE_METADATA.rateLimit.windowSeconds});

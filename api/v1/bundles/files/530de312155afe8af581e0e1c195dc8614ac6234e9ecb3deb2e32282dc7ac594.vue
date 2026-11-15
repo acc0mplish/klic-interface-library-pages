@@ -1,0 +1,47 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="checkbox" data-kv-variant="permissions" data-klic-component="checkbox" class="kn-checkbox">
+    <header data-part="heading">
+      <strong>
+        권한 행렬
+      </strong>
+    </header>
+    <fieldset data-part="choices">
+      <legend>
+        필요한 항목 선택
+      </legend>
+      <label>
+        <input type="checkbox" name="kv-export-checkbox-checkbox-permissions" value="문서 읽기" checked data-part="checkbox">
+        <span>
+          <strong>
+            문서 읽기
+          </strong>
+        </span>
+      </label>
+      <label>
+        <input type="checkbox" name="kv-export-checkbox-checkbox-permissions" value="문서 편집"  data-part="checkbox">
+        <span>
+          <strong>
+            문서 편집
+          </strong>
+        </span>
+      </label>
+      <label>
+        <input type="checkbox" name="kv-export-checkbox-checkbox-permissions" value="멤버 초대"  data-part="checkbox">
+        <span>
+          <strong>
+            멤버 초대
+          </strong>
+        </span>
+      </label>
+    </fieldset>
+    <output data-kv-selection aria-live="polite" data-part="output">
+      문서 읽기 선택됨
+    </output>
+  </div>
+</template>

@@ -1,0 +1,17 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="slider" class="kn-slider">
+    <label for="export-slider-default-range" data-part="label">
+      작업 진행률
+    </label>
+    <input id="export-slider-default-range" type="range" min="0" max="100" step="5" value="65" data-range-value data-part="slider">
+    <output data-range-output data-part="number">
+      65%
+    </output>
+  </div>
+</template>

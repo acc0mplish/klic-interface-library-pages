@@ -1,0 +1,31 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="input" data-kv-variant="quick-add" data-klic-component="input" class="kn-input">
+    <header data-part="heading">
+      <strong>
+        빠른 할 일
+      </strong>
+    </header>
+    <form data-kv-add-form class="ku-inline" data-part="inline">
+      <label data-part="field">
+        <span>
+          새 할 일
+        </span>
+        <input type="text" value="" required placeholder="다음 작업을 적어보세요" data-part="input">
+      </label>
+      <button data-klic-surface="control" type="submit" data-part="btn">
+        추가
+      </button>
+    </form>
+    <ul data-kv-added-list data-part="list">
+      <li>
+        컴포넌트 문서 검토
+      </li>
+    </ul>
+  </div>
+</template>

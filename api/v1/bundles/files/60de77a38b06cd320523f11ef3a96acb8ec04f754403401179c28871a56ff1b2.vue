@@ -1,0 +1,27 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="breadcrumb" class="kn-breadcrumb">
+    <nav aria-label="현재 위치">
+      <ol data-part="breadcrumb">
+        <li>
+          <a href="#components" data-part="link">
+            라이브러리
+          </a>
+        </li>
+        <li>
+          <a href="#components/input" data-part="link">
+            입력과 선택
+          </a>
+        </li>
+        <li aria-current="page">
+          컴포넌트
+        </li>
+      </ol>
+    </nav>
+  </div>
+</template>

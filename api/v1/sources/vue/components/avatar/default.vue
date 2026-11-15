@@ -1,0 +1,26 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="avatar" class="kn-avatar">
+    <div data-part="profile">
+      <span role="img" aria-label="김하늘 · 생성한 가상 인물 프로필" title="김하늘" style="background-image:url('./block-runtime/portraits/team-atlas-d.png');background-size:600% 600%;background-position:60% 40%" data-part="person-avatar root-person has-photo">
+        하늘
+      </span>
+      <div>
+        <strong>
+          김하늘
+        </strong>
+        <small>
+          Product Designer
+        </small>
+      </div>
+    </div>
+    <p data-part="hint">
+      KLIC 가상 인물 · 생성 프로필
+    </p>
+  </div>
+</template>

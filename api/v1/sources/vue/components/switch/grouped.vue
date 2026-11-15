@@ -1,0 +1,38 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="switch" data-kv-variant="grouped" data-klic-component="switch" class="kn-switch">
+    <header data-part="heading">
+      <strong>
+        알림
+      </strong>
+    </header>
+    <label data-part="switch-row">
+      <strong>
+        댓글 알림
+      </strong>
+      <input type="checkbox" role="switch" aria-label="댓글 알림" data-part="checkbox">
+    </label>
+    <label data-part="switch-row">
+      <strong>
+        검토 요청
+      </strong>
+      <input type="checkbox" role="switch" aria-label="검토 요청" data-part="checkbox">
+    </label>
+    <header data-part="heading">
+      <strong>
+        개인정보
+      </strong>
+    </header>
+    <label data-part="switch-row">
+      <strong>
+        활동 상태 공개
+      </strong>
+      <input type="checkbox" role="switch" aria-label="활동 상태 공개" checked data-part="checkbox">
+    </label>
+  </div>
+</template>

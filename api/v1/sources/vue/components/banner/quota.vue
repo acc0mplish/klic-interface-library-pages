@@ -1,0 +1,55 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="banner" data-kv-variant="quota" data-klic-component="banner" class="kn-banner">
+    <section data-part="banner">
+      <div class="ku-row" data-part="row">
+        <span>
+          <component :is="KlicIcons.Database" data-part="icon" aria-hidden="true" />
+          저장 공간 안내
+        </span>
+        <span>
+          <span data-part="badge">
+            Team
+          </span>
+        </span>
+      </div>
+      <header data-part="heading">
+        <strong>
+          저장 공간의 84%를 사용했습니다
+        </strong>
+      </header>
+      <label data-part="progress-label">
+        84 GB / 100 GB
+        <span>
+          84%
+        </span>
+        <progress max="100" value="84">
+          84%
+        </progress>
+      </label>
+      <details  data-part="details">
+        <summary>
+          공간 확보 방법
+        </summary>
+        <div>
+          <ul data-part="list">
+            <li>
+              사용하지 않는 초안 확인
+            </li>
+            <li>
+              중복 파일 정리
+            </li>
+            <li>
+              큰 첨부 파일 검토
+            </li>
+          </ul>
+        </div>
+      </details>
+    </section>
+  </div>
+</template>

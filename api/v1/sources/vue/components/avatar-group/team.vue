@@ -1,0 +1,32 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="avatar-group" data-kv-variant="team" data-klic-component="avatar-group" class="kn-avatar-group">
+    <header data-part="heading">
+      <strong>
+        제품 디자인 팀
+      </strong>
+    </header>
+    <div data-part="avatar-stack">
+      <span aria-label="김" data-part="avatar">
+        김
+      </span>
+      <span aria-label="이" data-part="avatar">
+        이
+      </span>
+      <span aria-label="박" data-part="avatar">
+        박
+      </span>
+      <span aria-label="최" data-part="avatar">
+        최
+      </span>
+    </div>
+    <p data-part="muted">
+      4명의 멤버가 참여하고 있습니다.
+    </p>
+  </div>
+</template>

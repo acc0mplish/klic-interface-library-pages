@@ -1,0 +1,34 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="combobox" data-kv-variant="timezone" data-klic-component="combobox" class="kn-combobox">
+    <header data-part="heading">
+      <strong>
+        워크스페이스 시간대
+      </strong>
+    </header>
+    <label data-part="field">
+      <span>
+        도시 / 시간대
+      </span>
+      <input list="kv-export-combobox-combobox-timezone-suggest"  placeholder="입력하거나 후보를 선택하세요" data-part="input">
+    </label>
+    <datalist id="kv-export-combobox-combobox-timezone-suggest">
+      <option value="Asia/Seoul">
+      </option>
+      <option value="Asia/Tokyo">
+      </option>
+      <option value="Europe/London">
+      </option>
+      <option value="America/New_York">
+      </option>
+    </datalist>
+    <p data-part="muted">
+      팀의 업무 시간 기준으로 사용합니다.
+    </p>
+  </div>
+</template>

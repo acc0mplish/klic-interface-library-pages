@@ -1,0 +1,27 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="autocomplete" class="kn-autocomplete">
+    <div data-part="field">
+      <label for="export-autocomplete-default-auto" data-part="label">
+        이메일 도메인
+      </label>
+      <input id="export-autocomplete-default-auto" list="export-autocomplete-default-domains" placeholder="도메인을 입력하세요" data-part="input">
+    </div>
+    <datalist id="export-autocomplete-default-domains">
+      <option value="klic.co.kr">
+      </option>
+      <option value="clickdata.co.kr">
+      </option>
+      <option value="example.com">
+      </option>
+    </datalist>
+    <p data-part="hint">
+      목록에 없는 값도 입력할 수 있어요.
+    </p>
+  </div>
+</template>

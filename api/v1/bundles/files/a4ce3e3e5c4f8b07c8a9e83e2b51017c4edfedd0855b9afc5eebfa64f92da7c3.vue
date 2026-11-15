@@ -1,0 +1,30 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="progress" data-kv-variant="task" data-klic-component="progress" class="kn-progress">
+    <header data-part="heading">
+      <strong>
+        문서 마이그레이션
+      </strong>
+      <p data-part="muted">
+        총 100건 중 72건 완료
+      </p>
+    </header>
+    <label data-part="progress-label">
+      완료
+      <span>
+        72%
+      </span>
+      <progress max="100" value="72">
+        72%
+      </progress>
+    </label>
+    <p data-part="muted">
+      남은 작업: 이미지 검증 28건
+    </p>
+  </div>
+</template>

@@ -1,0 +1,40 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="notification" data-kv-variant="file-processing" data-klic-component="notification" class="kn-notification">
+    <article data-part="notification">
+      <div class="ku-row" data-part="row">
+        <span>
+          <component :is="KlicIcons.FileText" data-part="icon" aria-hidden="true" />
+          브랜드 가이드.pdf
+        </span>
+        <span>
+          <span data-part="badge">
+            처리 중
+          </span>
+        </span>
+      </div>
+      <label data-part="progress-label">
+        내용 분석
+        <span>
+          72%
+        </span>
+        <progress max="100" value="72">
+          72%
+        </progress>
+      </label>
+      <p data-part="muted">
+        분석을 마치면 문서 목록에서 확인할 수 있습니다.
+      </p>
+      <button type="button" data-klic-surface="control" data-kv-action="notification-read"  data-part="btn">
+        처리 알림 끄기
+      </button>
+      <output aria-live="polite" data-part="output">
+      </output>
+    </article>
+  </div>
+</template>

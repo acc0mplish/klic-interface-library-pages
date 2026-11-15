@@ -1,0 +1,37 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="tree-select" class="kn-tree-select">
+    <fieldset data-part="options">
+      <legend>
+        저장할 폴더
+      </legend>
+      <details open>
+        <summary>
+          프로젝트
+        </summary>
+        <div data-part="tree-indent">
+          <label>
+            <input type="radio" name="export-tree-select-default-folder" value="디자인" checked data-choice data-part="radio">
+            디자인
+          </label>
+          <label>
+            <input type="radio" name="export-tree-select-default-folder" value="개발"  data-choice data-part="radio">
+            개발
+          </label>
+          <label>
+            <input type="radio" name="export-tree-select-default-folder" value="운영"  data-choice data-part="radio">
+            운영
+          </label>
+        </div>
+      </details>
+    </fieldset>
+    <p data-choice-result data-part="hint">
+      선택: 디자인
+    </p>
+  </div>
+</template>

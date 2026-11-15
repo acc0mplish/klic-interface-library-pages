@@ -1,7 +1,9 @@
+import {NPM_PACKAGE} from './npm-package-data.mjs';
 import {RIGHT_PANEL_EXAMPLES,RIGHT_PANEL_ADOPTION} from './right-panel-block-catalog.mjs';
 import {TIMELINE_BLOCK_EXAMPLES,TIMELINE_ADOPTION} from './timeline-block-catalog.mjs';
 import {FLOW_CONNECTOR_EXAMPLES} from './flow-connector-catalog.mjs';
 import {DASHBOARD_BLOCK_EXAMPLES,DASHBOARD_ADOPTION} from './dashboard-block-catalog.mjs';
+import {REFERENCE_COMPONENT_BLOCKS,REFERENCE_COMPONENT_ADOPTION} from './reference-component-block-catalog.mjs';
 // KLIC block adoption policies, not a record of browser certification.
 // Value ownership is defined in tokens.mjs; structural and interaction rules live here.
 export const AXES=Object.freeze([
@@ -202,25 +204,28 @@ export function getBlockContract(block={}){
   const panelRows=key=>[...RIGHT_PANEL_ADOPTION[key]];
   const dashboard=DASHBOARD_BLOCK_EXAMPLES.find(e=>e.id===block.id);
   const dashboardRows=key=>DASHBOARD_ADOPTION[key].map(pair=>pair[0]);
+  const interaction=REFERENCE_COMPONENT_BLOCKS.find(e=>e.id===block.id);
   const timeline=TIMELINE_BLOCK_EXAMPLES.find(e=>e.id===block.id);
   const timelineRows=key=>TIMELINE_ADOPTION[key].map(pair=>pair[0]);
   const connector=FLOW_CONNECTOR_EXAMPLES.find(e=>e.id===block.id);
-  const profile=rightPanel?{...profiles.overlay,composition:panelRows('composition'),interaction:panelRows('interaction')[0],keyboard:panelRows('keyboard'),responsive:panelRows('responsive'),states:panelRows('states')}:dashboard?{...profiles.chart,composition:dashboardRows('composition'),interaction:dashboardRows('interaction')[0],keyboard:dashboardRows('keyboard'),responsive:dashboardRows('responsive'),states:dashboardRows('states')}:connector?{...profiles.editor,composition:[connector.description],keyboard:['Tab으로 연결선과 노드를 이동하고 Enter·Space로 선택합니다. 관계 표의 버튼으로도 같은 선택을 제공합니다.','조정값은 range의 방향키로 변경하고 초기화·SVG·JSON 내보내기를 키보드로 실행합니다.'],states:['선택·선택 해제·조정값 변경·초기화·차단으로 인한 경로 없음·구독자 없음을 구분합니다.'],responsive:['2차원 다이어그램은 내부 가로 스크롤을 허용하고 관계 목록과 조정 컨트롤은 좁은 폭에서도 접근 가능하게 유지합니다.']}:timeline?{...profiles.gantt,composition:timelineRows('composition'),interaction:timelineRows('interaction')[0],keyboard:timelineRows('keyboard'),responsive:timelineRows('responsive'),states:timelineRows('states')}:profileFor(block),sourceFile=block.sourceFile||'출처 파일 경로 미제공';
+  const profile=interaction?{...profileFor(block),composition:[interaction.description],interaction:REFERENCE_COMPONENT_ADOPTION.interaction,keyboard:[REFERENCE_COMPONENT_ADOPTION.keyboard],responsive:[REFERENCE_COMPONENT_ADOPTION.responsive],states:[REFERENCE_COMPONENT_ADOPTION.states]}:rightPanel?{...profiles.overlay,composition:panelRows('composition'),interaction:panelRows('interaction')[0],keyboard:panelRows('keyboard'),responsive:panelRows('responsive'),states:panelRows('states')}:dashboard?{...profiles.chart,composition:dashboardRows('composition'),interaction:dashboardRows('interaction')[0],keyboard:dashboardRows('keyboard'),responsive:dashboardRows('responsive'),states:dashboardRows('states')}:connector?{...profiles.editor,composition:[connector.description],keyboard:['Tab으로 연결선과 노드를 이동하고 Enter·Space로 선택합니다. 관계 표의 버튼으로도 같은 선택을 제공합니다.','조정값은 range의 방향키로 변경하고 초기화·SVG·JSON 내보내기를 키보드로 실행합니다.'],states:['선택·선택 해제·조정값 변경·초기화·차단으로 인한 경로 없음·구독자 없음을 구분합니다.'],responsive:['2차원 다이어그램은 내부 가로 스크롤을 허용하고 관계 목록과 조정 컨트롤은 좁은 폭에서도 접근 가능하게 유지합니다.']}:timeline?{...profiles.gantt,composition:timelineRows('composition'),interaction:timelineRows('interaction')[0],keyboard:timelineRows('keyboard'),responsive:timelineRows('responsive'),states:timelineRows('states')}:profileFor(block),sourceFile=block.sourceFile||'출처 파일 경로 미제공';
   const requirements=['FR01','FR02','FR03','FR10','FR11','FR12','FR14','FR15','FR17','FR19','FR21','FR22','FR23','FR24','FR26','FR27','FR30','FR31','FR33',...profile.requirements];
   if(block.categoryId==='virtualization')requirements.push('FR20');
   if(block.categoryId==='drag-drop')requirements.push('FR32');
   const limits=[
     '각 디멘션의 상태는 정책 채택(policy-adopted)이다. 연결된 소스나 토큰이 존재한다는 사실을 실제 동작 검증 완료로 해석하지 않는다.',
     '실제 200% 브라우저 확대·스크린리더·한글 IME·forced-colors·물리 모바일 키보드는 미검증이다. 지원 환경별 결과와 예외 근거를 별도로 기록한다.',
-    dashboard?'신규 대시보드의 미리보기와 소스는 사용자 제공 시각 참고를 KLIC 구조로 재해석한 로컬 예제입니다. 제품 데이터 연결은 별도 구현합니다.':'미리보기와 예제 코드는 제공 ZIP을 KLIC에 맞추는 구현 범위다. 제품 저장·인증·외부 연동·배포의 완료를 보장하지 않는다.'
+    dashboard?'신규 대시보드의 미리보기와 소스는 사용자 제공 시각 참고를 KLIC 구조로 재해석한 로컬 예제입니다. 제품 데이터 연결은 별도 구현합니다.':interaction?'사용자 제공 상호작용 참고를 KLIC 토큰과 샘플 데이터로 재해석한 독립 구현입니다. 실제 업로드·로그 수신·CI 실행은 하지 않습니다.':'미리보기와 예제 코드는 KLIC이 직접 구현한 Block Studio의 로컬 예제다. 디자인 참고와 구현 코드의 출처를 구분한다. 제품 저장·인증·외부 연동·배포는 별도 구현한다.'
   ];
+  limits.push(...(NPM_PACKAGE.publishedLimitations||[]).filter(item=>item.items.includes('block/'+block.id)).map(item=>item.ko));
   if(rightPanel)limits.push(...panelRows('limits'));
   if(timeline)limits.push(...timelineRows('limits'));
   if(dashboard)limits.push(...dashboardRows('limits'));
+  if(interaction)limits.push(REFERENCE_COMPONENT_ADOPTION.limits);
   if(!block.implemented)limits.unshift('이 항목은 전용 구현이 연결되지 않은 카탈로그 예시다. 대체 미리보기를 해당 블록의 기능 검증으로 간주하지 않는다.');
   if(block.categoryId==='virtualization')limits.push('가상화 채택 시 추정·실측·재측정, 첫·중간·마지막 행 접근, 선택·편집·초점 보존을 FR20에 따라 별도로 검증해야 한다.');
   return {
-    use:rightPanel?panelRows('use'):dashboard?[dashboard.use[0]]:connector?[connector.use]:timeline?timelineRows('use'):undefined,avoid:rightPanel?panelRows('avoid'):dashboard?[dashboard.avoid[0]]:connector?[connector.avoid]:timeline?timelineRows('avoid'):undefined,
+    use:interaction?interaction.use:rightPanel?panelRows('use'):dashboard?[dashboard.use[0]]:connector?[connector.use]:timeline?timelineRows('use'):undefined,avoid:interaction?interaction.avoid:rightPanel?panelRows('avoid'):dashboard?[dashboard.avoid[0]]:connector?[connector.avoid]:timeline?timelineRows('avoid'):undefined,
     axes:AXES.map(axis=>({...axis,policy:profile[axis.id]||shared[axis.id],evidence:evidenceByAxis[axis.id],status:'policy-adopted'})),
     tokens:[...tokenRows.map(token=>({...token})),...(rightPanel?['default','wide'].map(size=>({path:'klic.component.block.right-panel.width.'+size,label:size==='wide'?'패널 확장 너비':'패널 기본 너비'})):[])],
     composition:[`${block.title||'블록'} · ${block.categoryName||block.categoryId||'애플리케이션'} 분류.`,...(dashboard?dashboardRows('composition'):profile.composition)],
@@ -229,9 +234,9 @@ export function getBlockContract(block={}){
     states:[...(dashboard?dashboardRows('states'):profile.states),'완료·성공은 블루와 체크·명시적 문구로 전달한다. hover가 selected·invalid·focus 의미를 지우지 않도록 한다.'],
     limits,
     source:[
-      block.origin==='klic-native'?'기준: KLIC 독립 구현과 디자인 시스템.':'기준: 사용자 제공 Block Studio ZIP의 카탈로그·구현 소스와 KLIC 디자인 시스템 PRD v1.0.',
+      block.origin==='klic-adapted'?'기준: KLIC 조합 구현과 별도 연동한 외부 모듈의 파일별 고지.':'기준: KLIC Block Studio 자체 구현과 디자인 시스템. 외부 디자인 참고는 구현 코드의 출처와 구분한다.',
       block.implemented?`카탈로그에 전용 구현 연결: ${sourceFile}. 구현 연결은 브라우저 검증 결과와 별개다.`:`카탈로그 예시 항목: ${sourceFile}. 전용 구현 연결 여부는 미확정이다.`,
-      'KLIC 신규 결정: 회사 블루·4계층 토큰 adapter·7 디멘션 채택 정책. ReUI 공식 배포본 설치 또는 전체 PRD 수용시험 완료를 뜻하지 않는다.'
+      'KLIC 구현 기준: 회사 블루·4계층 토큰·7 디멘션. 별도로 연동한 외부 코드·폰트·의존성은 해당 파일의 고지를 따른다. 전체 PRD 수용시험 완료를 뜻하지 않는다.'
     ],
     requirements:[...new Set(requirements)].sort((a,b)=>Number(a.slice(2))-Number(b.slice(2)))
   };

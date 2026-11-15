@@ -1,0 +1,48 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="sidebar" data-kv-variant="settings" data-klic-component="sidebar" class="kn-sidebar">
+    <aside data-part="sidebar">
+      <header data-part="heading">
+        <strong>
+          설정
+        </strong>
+      </header>
+      <p data-part="muted">
+        계정
+      </p>
+      <nav aria-label="예제 탐색" data-part="nav">
+        <button type="button" data-kv-action="nav" aria-current="page" data-part="btn">
+          내 프로필
+        </button>
+        <button type="button" data-kv-action="nav" aria-current="false" data-part="btn">
+          알림 설정
+        </button>
+        <button type="button" data-kv-action="nav" aria-current="false" data-part="btn">
+          보안
+        </button>
+      </nav>
+      <output aria-live="polite" data-part="output">
+        내 프로필
+      </output>
+      <p data-part="muted">
+        워크스페이스
+      </p>
+      <nav aria-label="예제 탐색" data-part="nav">
+        <button type="button" data-kv-action="nav" aria-current="page" data-part="btn">
+          일반
+        </button>
+        <button type="button" data-kv-action="nav" aria-current="false" data-part="btn">
+          멤버와 권한
+        </button>
+      </nav>
+      <output aria-live="polite" data-part="output">
+        일반
+      </output>
+    </aside>
+  </div>
+</template>

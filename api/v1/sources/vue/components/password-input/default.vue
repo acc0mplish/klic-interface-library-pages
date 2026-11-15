@@ -1,0 +1,19 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="password-input" class="kn-password-input">
+    <label for="export-password-input-default-password" data-part="label">
+      비밀번호
+    </label>
+    <div data-part="password">
+      <input id="export-password-input-default-password" type="password" value="KlicDemo2026!" autocomplete="new-password" data-password data-part="input">
+      <button type="button" data-cmp-action="password" aria-pressed="false" data-part="btn" class="kv-neutral kv-sm">
+        표시
+      </button>
+    </div>
+  </div>
+</template>

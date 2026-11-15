@@ -1,0 +1,67 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="steps" data-kv-variant="wizard" data-klic-component="steps" class="kn-steps">
+    <div data-kv-stepper>
+      <header data-part="heading">
+        <strong>
+          프로젝트 설정
+        </strong>
+      </header>
+      <section data-kv-step>
+        <label data-part="field">
+          <span>
+            프로젝트 이름
+          </span>
+          <input type="text" value="새 프로젝트"  data-part="input">
+        </label>
+      </section>
+      <section data-kv-step hidden>
+        <label data-part="field">
+          <span>
+            담당 팀
+          </span>
+          <select data-part="select">
+            <option>
+              디자인
+            </option>
+            <option>
+              개발
+            </option>
+            <option>
+              운영
+            </option>
+          </select>
+        </label>
+      </section>
+      <section data-kv-step hidden>
+        <header data-part="heading">
+          <strong>
+            설정 검토
+          </strong>
+          <p data-part="muted">
+            입력한 내용을 저장할 준비가 되었습니다.
+          </p>
+        </header>
+        <button type="button" data-klic-surface="control" data-kv-action="notice"  data-part="btn">
+          설정 완료
+        </button>
+      </section>
+      <div class="ku-actions" data-part="actions">
+        <button type="button" data-klic-surface="control" data-kv-action="step-prev"  data-part="btn">
+          이전
+        </button>
+        <button type="button" data-klic-surface="control" data-kv-action="step-next"  data-part="btn">
+          다음
+        </button>
+      </div>
+      <output aria-live="polite" data-part="output">
+        1 / 3 단계
+      </output>
+    </div>
+  </div>
+</template>

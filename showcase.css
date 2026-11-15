@@ -99,3 +99,70 @@ body[data-page=home]{background:#fff;color:#142b49}body[data-page=home]>.sidebar
 
 /* Public reference scope and direct radius entry. */
 .hs-scope-note{max-width:52ch;font-size:14px;line-height:1.65;color:var(--klic-component-showcase-color-muted);margin-top:18px}.hs-scope-note a{color:var(--klic-semantic-color-accent);white-space:nowrap}.hs-hero-proof{flex-wrap:wrap}.hs-controls .hs-radius-input{display:flex;align-items:center;gap:8px}.hs-controls .hs-radius-input input{width:76px;min-height:36px;padding:6px 8px;border:1px solid var(--klic-semantic-color-control-border);border-radius:6px;background:var(--klic-semantic-color-panel);color:var(--klic-semantic-color-text);font:inherit}.hs-controls .hs-radius-input input:focus-visible{outline:2px solid var(--klic-semantic-color-focus);outline-offset:2px}
+
+.block-install{margin:32px 0;color:var(--klic-semantic-color-text,#15243b)}
+.block-install h2{margin:0 0 16px;font-size:20px;font-weight:650}
+.block-install-options{display:flex;align-items:center;gap:16px;margin-bottom:12px;font-size:12px}
+.block-install-options strong{padding:8px 12px;background:var(--klic-semantic-color-surface-soft,#f4f6fa);border-radius:7px;font-weight:600}
+.block-install-options a,.block-install-source{color:var(--klic-semantic-color-muted,#62718a);text-decoration:none}
+.block-install-options a:hover,.block-install-source:hover{color:var(--klic-semantic-color-accent,#245fc2)}
+.block-install-box{border:1px solid var(--klic-semantic-color-border,#dce3ed);border-radius:9px;overflow:hidden;background:var(--klic-semantic-color-panel,#fff)}
+.block-install-tabs{display:flex;flex-wrap:wrap;gap:4px;align-items:center;padding:8px 12px;border-bottom:1px solid var(--klic-semantic-color-border,#dce3ed)}
+.block-install-tabs button{border:0;border-radius:5px;background:transparent;color:var(--klic-semantic-color-muted,#62718a);font:inherit;font-size:12px;padding:6px 9px;cursor:pointer}
+.block-install-tabs button[aria-pressed=true]{background:var(--klic-semantic-color-surface-soft,#f4f6fa);color:var(--klic-semantic-color-text,#15243b)}
+.block-install-tabs button:focus-visible,.block-install a:focus-visible{outline:2px solid var(--klic-semantic-color-focus,#245fc2);outline-offset:2px}
+.block-install-code{display:flex;align-items:flex-start;gap:8px;padding:14px 12px 14px 16px}
+.block-install-code code{flex:1;min-width:0;white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;line-height:1.65;color:var(--klic-semantic-color-text,#15243b)}
+.block-install-code .icon-button{flex:none}
+.block-install p{margin:10px 0 4px;color:var(--klic-semantic-color-muted,#62718a);font-size:12px;line-height:1.6}
+.block-install-source{font-size:12px}
+
+/* Compact resource shortcuts and package installation. */
+.hs-resource-links{display:flex;align-items:center;gap:8px;margin-top:20px;color:var(--klic-semantic-color-muted,#62718a)}
+.hs-resource-links>span{margin-right:4px;font-size:12px;font-weight:600}
+.hs-resource-link{display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--klic-semantic-color-border,#dce3ed);border-radius:8px;background:var(--klic-semantic-color-panel,#fff);color:var(--klic-semantic-color-text,#15243b);text-decoration:none}
+.hs-resource-link:hover{border-color:var(--klic-semantic-color-accent,#245fc2);color:var(--klic-semantic-color-accent,#245fc2)}
+.hs-resource-link svg{width:16px;height:16px}
+.hs-install-panel{min-width:0;align-self:start;color:var(--klic-semantic-color-text,#15243b)}
+.hs-install-heading{display:flex;align-items:start;justify-content:space-between;gap:16px;margin-bottom:16px}
+.hs-install-heading span{font-size:10px;letter-spacing:.12em;color:var(--klic-semantic-color-muted,#62718a)}
+.hs-install-heading h3{font-size:20px;margin:8px 0}
+.hs-install-heading p,.hs-install-unpublished{font-size:13px;line-height:1.6;color:var(--klic-semantic-color-muted,#62718a);margin:0}
+.hs-install-heading>a{display:flex;align-items:center;gap:5px;white-space:nowrap;font-size:12px;color:var(--klic-semantic-color-accent,#245fc2);text-decoration:none}
+.hs-install-heading>a svg{width:14px}
+.hs-install-unpublished{margin-bottom:12px}
+.hs-install-box{border:1px solid var(--klic-semantic-color-border,#dce3ed);border-radius:10px;background:var(--klic-semantic-color-panel,#fff);overflow:hidden}
+.hs-install-tabs{display:flex;align-items:center;gap:4px;padding:8px 12px;border-bottom:1px solid var(--klic-semantic-color-border,#dce3ed)}
+.hs-install-tabs button,.hs-example-actions button{border:0;border-radius:6px;background:transparent;color:var(--klic-semantic-color-muted,#62718a);font:inherit;font-size:12px;padding:7px 10px;cursor:pointer}
+.hs-install-tabs button[aria-pressed=true]{background:var(--klic-semantic-color-surface-soft,#f4f6fa);color:var(--klic-semantic-color-text,#15243b)}
+.hs-install-tabs .hs-install-copy{display:flex;align-items:center;gap:5px;margin-left:auto}
+.hs-install-copy svg,.hs-example-actions svg{width:14px;height:14px}
+.hs-install-box pre,.hs-integration-examples pre{margin:0;padding:16px;white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.8 var(--klic-ui-mono),monospace;color:var(--klic-semantic-color-text,#15243b)}
+.hs-integration-examples{margin-top:14px;border:1px solid var(--klic-semantic-color-border,#dce3ed);border-radius:10px;padding:14px 16px;background:var(--klic-semantic-color-panel,#fff)}
+.hs-integration-examples summary{font-size:13px;font-weight:600;cursor:pointer}
+.hs-integration-examples .hs-client-tabs{flex-wrap:wrap;gap:12px;padding:16px 0 0}
+.hs-integration-examples .hs-client-tabs button{color:var(--klic-semantic-color-muted,#62718a);font-size:12px;cursor:pointer}
+.hs-integration-examples .hs-client-tabs button[aria-pressed=true]{color:var(--klic-semantic-color-accent,#245fc2);border-color:var(--klic-semantic-color-accent,#245fc2)}
+.hs-integration-examples pre{padding:14px 0}
+.hs-integration-examples p{font-size:12px;line-height:1.6;color:var(--klic-semantic-color-muted,#62718a)}
+.hs-example-actions{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.hs-example-actions button,.hs-example-actions a{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--klic-semantic-color-accent,#245fc2)}
+.hs-resource-link:focus-visible,.hs-install-panel button:focus-visible,.hs-install-panel a:focus-visible,.hs-integration-examples summary:focus-visible{outline:2px solid var(--klic-semantic-color-focus,#245fc2);outline-offset:2px}
+.hs-install-products{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:12px}
+.hs-install-products button{border:0;border-radius:6px;background:transparent;color:var(--klic-semantic-color-muted,#62718a);font:inherit;font-size:12px;font-weight:600;padding:8px 11px;cursor:pointer}
+.hs-install-products button[aria-pressed=true]{background:var(--klic-semantic-color-surface-soft,#f4f6fa);color:var(--klic-semantic-color-text,#15243b)}
+.hs-install-unpublished[hidden]{display:none}
+
+/* Keep the connection terminal visible beside installation choices. */
+.hs-connect-tools{display:grid;gap:20px;min-width:0}
+.hs-terminal .hs-client-tabs{gap:20px;padding:19px 25px 0}
+.hs-terminal .hs-client-tabs button{color:#8b9eb8;font-size:10px}
+.hs-terminal .hs-client-tabs button[aria-pressed=true]{color:#e2ecf9;border-color:#6a9be4}
+.hs-terminal .hs-window-lights{display:flex;gap:6px}
+.hs-terminal .hs-window-lights i{width:10px;height:10px}
+.hs-terminal .hs-window-lights i:nth-child(1){background:#ff5f57}
+.hs-terminal .hs-window-lights i:nth-child(2){background:#febc2e}
+.hs-terminal .hs-window-lights i:nth-child(3){background:#547db8}
+.hs-terminal .hs-terminal-path{display:flex;align-items:center;gap:6px}
+.hs-terminal .hs-terminal-path svg{width:12px;height:12px}
+@media(max-width:600px){.hs-terminal .hs-client-tabs{flex-wrap:wrap;gap:12px;padding:16px 20px 0}}

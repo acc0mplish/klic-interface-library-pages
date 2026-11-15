@@ -1,0 +1,30 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="splitter" class="kn-splitter">
+    <div style="--split:45%" data-split-box data-part="split">
+      <div>
+        탐색 패널
+        <br>
+        <small>
+          프로젝트 · 문서
+        </small>
+      </div>
+      <div>
+        작업 공간
+        <br>
+        <small>
+          선택한 내용을 편집합니다.
+        </small>
+      </div>
+    </div>
+    <label for="export-splitter-default-split" data-part="label">
+      왼쪽 패널 비율
+    </label>
+    <input id="export-splitter-default-split" type="range" min="25" max="75" value="45" data-split data-part="slider">
+  </div>
+</template>

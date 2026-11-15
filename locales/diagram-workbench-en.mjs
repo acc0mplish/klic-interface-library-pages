@@ -61,9 +61,12 @@ CSS 변수와 Tailwind 연결	CSS variable and Tailwind mapping
 CSS 변수	CSS variable
 CSS 매핑 복사	Copy CSS mapping
 Tailwind 예시 복사	Copy Tailwind example
-React · Vue · HTML 미리보기 삽입	Embed previews in React, Vue, and HTML
-복사하면 작동하는 iframe 어댑터입니다. Vue 네이티브 포팅이 아닙니다. 실제 React 구현은 기존 실제 소스 탭에서 확인하세요. 사이트의 로컬 데모를 호스팅된 미리보기로 삽입합니다.	This copyable iframe adapter embeds a hosted preview of the site's local demo. It is not a native Vue port. See the Actual source tab for the React implementation.
-복사하면 작동하는 iframe 어댑터입니다. Vue 네이티브 포팅이 아닙니다. 네이티브 HTML은 기본 코드 탭에서 확인하세요. 사이트의 로컬 데모를 호스팅된 미리보기로 삽입합니다.	This copyable iframe adapter embeds a hosted preview of the site's local demo. It is not a native Vue port. See the basic Code tab for the native HTML.
+라이브 미리보기 삽입 코드	Live preview embed code
+아래 코드는 KLIC 사이트의 라이브 미리보기를 iframe으로 넣습니다. 네이티브 Vue 구현은 별도 소스 workspace로 받을 수 있습니다.	This snippet embeds the live KLIC preview in an iframe. Native Vue implementations are available separately in a source workspace.
+네이티브 Vue 소스	Native Vue source
+현재 카탈로그용 standalone CLI가 Vue 구현 workspace를 받습니다.	Use the current catalog standalone CLI to get the Vue implementation workspace.
+Vue workspace 파일 목록	Vue workspace files
+현재 CLI 다운로드	Download current CLI
 프레임워크	Framework
 준비 항목은 실행 코드 내보내기를 제공하지 않습니다.	Planned items do not provide runnable code exports.
 비슷한 블록	Related blocks

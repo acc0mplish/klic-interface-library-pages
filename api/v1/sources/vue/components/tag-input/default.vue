@@ -1,0 +1,33 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="tag-input" class="kn-tag-input">
+    <label for="export-tag-input-default-tag" data-part="label">
+      프로젝트 태그
+    </label>
+    <div data-tags data-part="chip-list">
+      <span data-part="chip">
+        디자인
+        <button type="button" data-cmp-action="remove-chip" aria-label="디자인 제거" data-part="btn">
+          ×
+        </button>
+      </span>
+      <span data-part="chip">
+        KLIC
+        <button type="button" data-cmp-action="remove-chip" aria-label="KLIC 제거" data-part="btn">
+          ×
+        </button>
+      </span>
+    </div>
+    <input id="export-tag-input-default-tag" data-tag-input maxlength="24" placeholder="입력 후 Enter" data-part="input">
+    <p data-part="hint">
+      Enter로 추가 · ×로 제거
+    </p>
+    <p data-cmp-status role="status" aria-live="polite" data-part="status">
+    </p>
+  </div>
+</template>

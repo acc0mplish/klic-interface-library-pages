@@ -1,0 +1,48 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="rating" data-kv-variant="sentiment" data-klic-component="rating" class="kn-rating">
+    <fieldset data-part="choices choice-cards">
+      <legend>
+        한 가지 선택
+      </legend>
+      <label>
+        <input type="radio" name="kv-export-rating-rating-sentiment" value="1점" checked data-part="radio">
+        <span>
+          <strong>
+            1점
+          </strong>
+          <small>
+            많이 아쉬워요
+          </small>
+        </span>
+      </label>
+      <label>
+        <input type="radio" name="kv-export-rating-rating-sentiment" value="3점"  data-part="radio">
+        <span>
+          <strong>
+            3점
+          </strong>
+          <small>
+            보통이에요
+          </small>
+        </span>
+      </label>
+      <label>
+        <input type="radio" name="kv-export-rating-rating-sentiment" value="5점"  data-part="radio">
+        <span>
+          <strong>
+            5점
+          </strong>
+          <small>
+            매우 만족해요
+          </small>
+        </span>
+      </label>
+    </fieldset>
+  </div>
+</template>

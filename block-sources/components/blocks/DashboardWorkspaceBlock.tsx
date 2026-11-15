@@ -375,6 +375,7 @@ export const DashboardWorkspaceBlock: React.FC<DashboardWorkspaceBlockProps> = (
     (s) => s.status === 'CONFLICT' || s.status === 'NEEDS REVIEW'
   ).length;
   const approvedCount = sources.filter((s) => s.status === 'APPROVED').length;
+  const duplicateCount = sources.filter((s) => s.status === 'DUPLICATE').length;
 
   return (
     <div className="w-full space-y-4">
@@ -628,7 +629,7 @@ export const DashboardWorkspaceBlock: React.FC<DashboardWorkspaceBlockProps> = (
                   <span className="w-2 h-2 rounded-full bg-blue-600" />
                 </div>
                 <p className="text-[11px] text-[color:var(--klic-component-block-color-muted)]">
-                  문서 24개 동기화 · 검토 필요 {conflictCount}건
+                  문서 {sources.length}개 동기화 · 검토 필요 {conflictCount}건
                 </p>
               </div>
             </div>
@@ -798,7 +799,7 @@ export const DashboardWorkspaceBlock: React.FC<DashboardWorkspaceBlockProps> = (
                   <div className="lg:col-span-8 bg-white rounded-xl border border-[color:var(--klic-component-block-color-border)] p-4 flex flex-col justify-between">
                     <div className="flex items-center justify-between mb-3">
                       <span className="text-xs font-semibold text-[color:var(--klic-component-block-color-text)]">
-                        24개 문서에서 자동 구조화된 지식 자산
+                        별도 집계 예시 · 24개 문서에서 자동 구조화된 지식 자산
                       </span>
                       <span className="text-[11px] text-[color:var(--klic-component-block-color-muted)]">2분 전 처리 완료</span>
                     </div>
@@ -820,7 +821,7 @@ export const DashboardWorkspaceBlock: React.FC<DashboardWorkspaceBlockProps> = (
                         <div className="text-2xl font-bold text-[color:var(--klic-component-block-color-muted)] tracking-tight">6</div>
                         <div className="text-[11px] text-[color:var(--klic-component-block-color-muted)] mt-0.5 flex items-center gap-1">
                           <span className="w-1.5 h-1.5 rounded-full bg-[var(--klic-component-block-color-warning)]" />
-                          <span>중복 제외 문서</span>
+                          <span>집계 예시의 중복 제외 문서</span>
                         </div>
                       </div>
                     </div>
@@ -832,10 +833,10 @@ export const DashboardWorkspaceBlock: React.FC<DashboardWorkspaceBlockProps> = (
                   {/* 상단 폴더형 탭 바: 활성 탭은 흰색 둥근 상단 배경으로 아래 카드와 일체형 연결 */}
                   <div className="flex items-end gap-1 overflow-x-auto">
                     {[
-                      { id: 'ALL', label: '전체 소스', count: 24 },
-                      { id: 'REVIEW', label: '검토 필요', count: 3 },
-                      { id: 'APPROVED', label: '승인됨', count: 15 },
-                      { id: 'DUPLICATES', label: '중복 문서', count: 6 },
+                      { id: 'ALL', label: '전체 소스', count: sources.length },
+                      { id: 'REVIEW', label: '검토 필요', count: conflictCount },
+                      { id: 'APPROVED', label: '승인됨', count: approvedCount },
+                      { id: 'DUPLICATES', label: '중복 문서', count: duplicateCount },
                     ].map((tab) => {
                       const active = sourceTab === tab.id;
                       return (

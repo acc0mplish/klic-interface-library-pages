@@ -1,0 +1,15 @@
+import {createApp,defineComponent,h,ref} from 'vue';
+import './styles.css';
+import './brand.css';
+import './component-expansion.css';
+import './component-variants-examples.css';
+import './component-families.css';
+import './affect-components.css';
+import './component-structure.css';
+import './terminal-components.css';
+import './fonts.css';
+import VueForm0 from './components/vue-sfc/ghostty-terminal/default.vue';
+const choices=[{id:"default",name:"터미널 창",component:VueForm0}];
+const selected=ref(new URLSearchParams(location.search).get('form')||choices[0]?.id);
+const App=defineComponent({setup(){return()=>{const choice=choices.find(item=>item.id===selected.value)||choices[0];return h('main',{class:'cf-detail klic-vue-component-workspace'},[h('h1',"Ghostty"),h('p',"Ghostty 네이티브 제목줄, 탭과 세 갈래 split pane을 갖춘 개발 터미널 컴포넌트."),h('nav',{'aria-label':'Component forms'},choices.map(item=>h('button',{type:'button','aria-pressed':String(item.id===selected.value),onClick:()=>selected.value=item.id},item.name))),h('div',{class:'cf-canvas'},h(choice.component))]);}}});
+createApp(App).mount('#app');

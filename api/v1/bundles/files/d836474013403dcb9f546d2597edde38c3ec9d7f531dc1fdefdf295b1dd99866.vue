@@ -1,0 +1,25 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="spinner" data-kv-variant="panel" data-klic-component="spinner" class="ku-spin kn-spinner">
+    <section aria-busy="true" data-part="loading-panel">
+      <span aria-hidden="true" class="ku-spin" data-part="spinner">
+      </span>
+      <header data-part="heading">
+        <strong>
+          프로젝트를 불러오는 중
+        </strong>
+        <p data-part="muted">
+          최근 변경 사항을 확인하고 있습니다.
+        </p>
+      </header>
+      <span role="status" data-part="sr-only">
+        프로젝트 로딩 중
+      </span>
+    </section>
+  </div>
+</template>

@@ -12,16 +12,17 @@ export function buildBreadcrumbs(route=[],{components=[],categories={},blocks={}
  if(section==='home')return [leaf('디자인 쇼케이스','#home')];
  if(section==='component'){
   const c=components.find(x=>x.id===id);if(!c)return [leaf('컴포넌트','#components'),leaf('항목을 찾을 수 없음')];
-  return [leaf('컴포넌트','#components'),leaf(categories[c.category]||c.category,'#components/'+c.category),leaf(c.name,'#component/'+c.id),leaf(componentTabs[tab]||componentTabs.preview)];
+  return [leaf('컴포넌트','#components'),leaf(categories[c.category]||c.category,'#components/'+c.category),leaf(c.ko||c.name,'#component/'+c.id),leaf(componentTabs[tab]||componentTabs.preview)];
  }
  if(section==='components')return [leaf('컴포넌트','#components'),...(id&&id!=='all'&&categories[id]?[leaf(categories[id])]:[])];
+ if(section==='motion')return [leaf('모션 라이브러리')];
  if(section==='blocks'){
   const first=leaf('블록 스튜디오','#blocks');
   if(id==='guide')return [first,leaf('적용 가이드')];
   if(id==='collection')return [first,...(tab&&tab!=='all'?[leaf(collectionLabels[tab]||tab,'#blocks/collection/'+tab)]:[]),...(category?[leaf(blocks.categories?.find(c=>c.id===category)?.name||category)]:[])];
   if(!id)return [first];
   const b=blocks.blocks?.find(x=>x.id===id);if(!b)return [first,leaf(id)];
-  return [first,leaf(collectionLabels[b.collection]||b.collection,'#blocks/collection/'+b.collection),leaf(b.categoryName,'#blocks/collection/'+b.collection+'/klic-interface-library-pages/'+b.categoryId),leaf(b.catalogTitle||b.title,'#blocks/'+b.id),leaf(blockTabs[tab]||blockTabs.preview)];
+  return [first,leaf(collectionLabels[b.collection]||b.collection,'#blocks/collection/'+b.collection),leaf(b.categoryName,'#blocks/collection/'+b.collection+'/'+b.categoryId),leaf(b.catalogTitle||b.title,'#blocks/'+b.id),leaf(blockTabs[tab]||blockTabs.preview)];
  }
  if(section==='fonts'){
   const first=leaf('폰트','#fonts'),f=fonts.families?.find(f=>f.id===id);
@@ -46,16 +47,17 @@ export async function updateWorkspaceBreadcrumbs(element,route,context={}){
  const items=buildBreadcrumbs(route,data);element.innerHTML=breadcrumbHTML(items);
  element.setAttribute('aria-label','현재 위치');
  const specific=route[0]==='component'||route[0]==='blocks'&&route[1]&&route[1]!=='collection'&&route[1]!=='guide'?items.at(-2):items.at(-1);
- if(specific&&route[0]!=='home'&&!globalThis.location?.pathname?.startsWith('https://design.klic.co.kr/share/'))document.title=specific.label+' — KLIC';
+ if(specific&&route[0]!=='home'&&!globalThis.location?.pathname?.startsWith('/share/'))document.title=specific.label+' — KLIC';
  // Preserve every ancestor on narrow screens; show the current item first via a scrollable trail.
  element.scrollLeft=element.scrollWidth;
 }
 export const SHORTCUTS=[
  {keys:['⌘ / Ctrl','K'],label:'라이브러리 검색'},
- {keys:['/klic-interface-library-pages/'],label:'검색 열기'},
+ {keys:['/'],label:'검색 열기'},
  {keys:['?'],label:'도움말 · 키보드 단축키'},
  {keys:['G','C'],label:'컴포넌트'},
  {keys:['G','B'],label:'블록 스튜디오'},
+ {keys:['G','M'],label:'모션'},
  {keys:['G','D'],label:'Docs'},
  {keys:['G','T'],label:'디자인 토큰'},
  {keys:['G','F'],label:'폰트 라이브러리'},
@@ -64,11 +66,11 @@ export const SHORTCUTS=[
  {keys:['Esc'],label:'열린 모달 · 패널 닫기'},
  {keys:['↑','↓','Enter'],label:'검색 결과 이동 · 열기'}
 ];
-const destinations={c:'#components',b:'#blocks',d:'#docs/overview',t:'#tokens',f:'#fonts',l:'#lab/viewport',s:'#settings/theme'};
+const destinations={c:'#components',b:'#blocks',m:'#motion',d:'#docs/overview',t:'#tokens',f:'#fonts',l:'#lab/viewport',s:'#settings/theme'};
 export function workspaceShortcut(key,{editable=false,dialogOpen=false,composing=false,modified=false,pendingG=false}={}){
  if(editable||dialogOpen||composing||modified)return null;
  if(key==='?')return {action:'help'};
- if(key==='/klic-interface-library-pages/')return {action:'search'};
+ if(key==='/')return {action:'search'};
  if(pendingG&&destinations[key.toLowerCase()])return {action:'navigate',href:destinations[key.toLowerCase()]};
  if(key.toLowerCase()==='g')return {action:'prefix'};
  return null;

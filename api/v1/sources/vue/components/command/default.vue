@@ -1,0 +1,38 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="command" class="kn-command">
+    <div data-part="field">
+      <label for="export-command-default-search" data-part="label">
+        명령 검색
+      </label>
+      <input id="export-command-default-search" type="search" data-local-filter placeholder="명령어를 입력하세요" data-part="input">
+    </div>
+    <ul data-part="search-results">
+      <li data-search-item>
+        <button type="button" data-cmp-action="command"  data-part="btn" class="kv-neutral kv-sm">
+          새 프로젝트 만들기
+        </button>
+      </li>
+      <li data-search-item>
+        <button type="button" data-cmp-action="command"  data-part="btn" class="kv-neutral kv-sm">
+          설정 열기
+        </button>
+      </li>
+      <li data-search-item>
+        <button type="button" data-cmp-action="command"  data-part="btn" class="kv-neutral kv-sm">
+          변경사항 확인
+        </button>
+      </li>
+    </ul>
+    <p data-search-count data-part="hint">
+      3개 결과
+    </p>
+    <p data-cmp-status role="status" aria-live="polite" data-part="status">
+    </p>
+  </div>
+</template>

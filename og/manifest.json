@@ -1,5 +1,5 @@
 {
-  "revision": "bcd7c825d1d0c397",
+  "revision": "fc22e37ca92e8efc",
   "width": 1200,
   "height": 630,
   "representation": "Typographic design summary, not a screenshot",
@@ -7,2152 +7,2437 @@
     {
       "id": "accordion",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/accordion.png"
+      "path": "/og/component/accordion.png"
     },
     {
       "id": "alert",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/alert.png"
+      "path": "/og/component/alert.png"
     },
     {
       "id": "alert-dialog",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/alert-dialog.png"
+      "path": "/og/component/alert-dialog.png"
     },
     {
       "id": "anchor",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/anchor.png"
+      "path": "/og/component/anchor.png"
     },
     {
       "id": "aspect-ratio",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/aspect-ratio.png"
+      "path": "/og/component/aspect-ratio.png"
     },
     {
       "id": "autocomplete",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/autocomplete.png"
+      "path": "/og/component/autocomplete.png"
     },
     {
       "id": "avatar",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/avatar.png"
+      "path": "/og/component/avatar.png"
     },
     {
       "id": "avatar-group",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/avatar-group.png"
+      "path": "/og/component/avatar-group.png"
     },
     {
       "id": "badge",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/badge.png"
+      "path": "/og/component/badge.png"
     },
     {
       "id": "banner",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/banner.png"
+      "path": "/og/component/banner.png"
     },
     {
       "id": "bar-chart",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/bar-chart.png"
+      "path": "/og/component/bar-chart.png"
     },
     {
       "id": "blockquote",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/blockquote.png"
+      "path": "/og/component/blockquote.png"
     },
     {
       "id": "bottom-navigation",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/bottom-navigation.png"
+      "path": "/og/component/bottom-navigation.png"
     },
     {
       "id": "breadcrumb",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/breadcrumb.png"
+      "path": "/og/component/breadcrumb.png"
     },
     {
       "id": "button",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/button.png"
+      "path": "/og/component/button.png"
     },
     {
       "id": "button-group",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/button-group.png"
+      "path": "/og/component/button-group.png"
     },
     {
       "id": "calendar",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/calendar.png"
+      "path": "/og/component/calendar.png"
     },
     {
       "id": "card",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/card.png"
+      "path": "/og/component/card.png"
     },
     {
       "id": "carousel",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/carousel.png"
+      "path": "/og/component/carousel.png"
     },
     {
       "id": "cascader",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/cascader.png"
+      "path": "/og/component/cascader.png"
     },
     {
       "id": "checkbox",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/checkbox.png"
+      "path": "/og/component/checkbox.png"
     },
     {
       "id": "chip",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/chip.png"
+      "path": "/og/component/chip.png"
     },
     {
       "id": "code-block",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/code-block.png"
+      "path": "/og/component/code-block.png"
     },
     {
       "id": "collapsible",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/collapsible.png"
+      "path": "/og/component/collapsible.png"
     },
     {
       "id": "color-picker",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/color-picker.png"
+      "path": "/og/component/color-picker.png"
     },
     {
       "id": "combobox",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/combobox.png"
+      "path": "/og/component/combobox.png"
     },
     {
       "id": "command",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/command.png"
+      "path": "/og/component/command.png"
     },
     {
       "id": "context-menu",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/context-menu.png"
+      "path": "/og/component/context-menu.png"
     },
     {
       "id": "data-grid",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/data-grid.png"
+      "path": "/og/component/data-grid.png"
     },
     {
       "id": "date-picker",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/date-picker.png"
+      "path": "/og/component/date-picker.png"
     },
     {
       "id": "date-range-picker",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/date-range-picker.png"
+      "path": "/og/component/date-range-picker.png"
     },
     {
       "id": "decision-inbox",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/decision-inbox.png"
+      "path": "/og/component/decision-inbox.png"
     },
     {
       "id": "descriptions",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/descriptions.png"
+      "path": "/og/component/descriptions.png"
     },
     {
       "id": "dialog",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/dialog.png"
+      "path": "/og/component/dialog.png"
     },
     {
       "id": "donut-chart",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/donut-chart.png"
+      "path": "/og/component/donut-chart.png"
     },
     {
       "id": "dropdown-menu",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/dropdown-menu.png"
+      "path": "/og/component/dropdown-menu.png"
     },
     {
       "id": "dropzone",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/dropzone.png"
+      "path": "/og/component/dropzone.png"
     },
     {
       "id": "empty-state",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/empty-state.png"
+      "path": "/og/component/empty-state.png"
     },
     {
       "id": "field",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/field.png"
+      "path": "/og/component/field.png"
     },
     {
       "id": "file-upload",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/file-upload.png"
+      "path": "/og/component/file-upload.png"
     },
     {
       "id": "form",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/form.png"
+      "path": "/og/component/form.png"
+    },
+    {
+      "id": "ghostty-terminal",
+      "kind": "component",
+      "path": "/og/component/ghostty-terminal.png"
     },
     {
       "id": "hover-card",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/hover-card.png"
+      "path": "/og/component/hover-card.png"
     },
     {
       "id": "icon",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/icon.png"
+      "path": "/og/component/icon.png"
     },
     {
       "id": "image",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/image.png"
+      "path": "/og/component/image.png"
     },
     {
       "id": "input",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/input.png"
+      "path": "/og/component/input.png"
     },
     {
       "id": "input-group",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/input-group.png"
+      "path": "/og/component/input-group.png"
     },
     {
       "id": "input-otp",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/input-otp.png"
+      "path": "/og/component/input-otp.png"
     },
     {
       "id": "kbd",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/kbd.png"
+      "path": "/og/component/kbd.png"
     },
     {
       "id": "line-chart",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/line-chart.png"
+      "path": "/og/component/line-chart.png"
     },
     {
       "id": "link",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/link.png"
+      "path": "/og/component/link.png"
     },
     {
       "id": "list",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/list.png"
+      "path": "/og/component/list.png"
     },
     {
       "id": "loading-overlay",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/loading-overlay.png"
+      "path": "/og/component/loading-overlay.png"
+    },
+    {
+      "id": "macos-terminal",
+      "kind": "component",
+      "path": "/og/component/macos-terminal.png"
     },
     {
       "id": "mentions",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/mentions.png"
+      "path": "/og/component/mentions.png"
     },
     {
       "id": "menubar",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/menubar.png"
+      "path": "/og/component/menubar.png"
     },
     {
       "id": "message-actions",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/message-actions.png"
+      "path": "/og/component/message-actions.png"
     },
     {
       "id": "multi-select",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/multi-select.png"
+      "path": "/og/component/multi-select.png"
     },
     {
       "id": "navigation-menu",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/navigation-menu.png"
+      "path": "/og/component/navigation-menu.png"
     },
     {
       "id": "notification",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/notification.png"
+      "path": "/og/component/notification.png"
     },
     {
       "id": "number-input",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/number-input.png"
+      "path": "/og/component/number-input.png"
     },
     {
       "id": "pagination",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/pagination.png"
+      "path": "/og/component/pagination.png"
     },
     {
       "id": "password-input",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/password-input.png"
+      "path": "/og/component/password-input.png"
     },
     {
       "id": "popconfirm",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/popconfirm.png"
+      "path": "/og/component/popconfirm.png"
     },
     {
       "id": "popover",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/popover.png"
+      "path": "/og/component/popover.png"
     },
     {
       "id": "progress",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/progress.png"
+      "path": "/og/component/progress.png"
     },
     {
       "id": "radio-group",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/radio-group.png"
+      "path": "/og/component/radio-group.png"
     },
     {
       "id": "range-slider",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/range-slider.png"
+      "path": "/og/component/range-slider.png"
     },
     {
       "id": "rating",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/rating.png"
+      "path": "/og/component/rating.png"
     },
     {
       "id": "resizable",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/resizable.png"
+      "path": "/og/component/resizable.png"
     },
     {
       "id": "result",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/result.png"
+      "path": "/og/component/result.png"
     },
     {
       "id": "scroll-area",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/scroll-area.png"
+      "path": "/og/component/scroll-area.png"
     },
     {
       "id": "search-input",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/search-input.png"
+      "path": "/og/component/search-input.png"
     },
     {
       "id": "segmented-control",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/segmented-control.png"
+      "path": "/og/component/segmented-control.png"
     },
     {
       "id": "select",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/select.png"
+      "path": "/og/component/select.png"
     },
     {
       "id": "separator",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/separator.png"
+      "path": "/og/component/separator.png"
     },
     {
       "id": "sheet",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/sheet.png"
+      "path": "/og/component/sheet.png"
     },
     {
       "id": "sidebar",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/sidebar.png"
+      "path": "/og/component/sidebar.png"
     },
     {
       "id": "skeleton",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/skeleton.png"
+      "path": "/og/component/skeleton.png"
     },
     {
       "id": "slider",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/slider.png"
+      "path": "/og/component/slider.png"
     },
     {
       "id": "smart-recommendation",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/smart-recommendation.png"
+      "path": "/og/component/smart-recommendation.png"
     },
     {
       "id": "sparkline",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/sparkline.png"
+      "path": "/og/component/sparkline.png"
     },
     {
       "id": "spinner",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/spinner.png"
+      "path": "/og/component/spinner.png"
     },
     {
       "id": "splitter",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/splitter.png"
+      "path": "/og/component/splitter.png"
     },
     {
       "id": "statistic",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/statistic.png"
+      "path": "/og/component/statistic.png"
     },
     {
       "id": "stepper",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/stepper.png"
+      "path": "/og/component/stepper.png"
     },
     {
       "id": "steps",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/steps.png"
+      "path": "/og/component/steps.png"
     },
     {
       "id": "switch",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/switch.png"
+      "path": "/og/component/switch.png"
     },
     {
       "id": "table",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/table.png"
+      "path": "/og/component/table.png"
     },
     {
       "id": "tabs",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/tabs.png"
+      "path": "/og/component/tabs.png"
     },
     {
       "id": "tag",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/tag.png"
+      "path": "/og/component/tag.png"
     },
     {
       "id": "tag-input",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/tag-input.png"
+      "path": "/og/component/tag-input.png"
+    },
+    {
+      "id": "termius-terminal",
+      "kind": "component",
+      "path": "/og/component/termius-terminal.png"
     },
     {
       "id": "textarea",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/textarea.png"
+      "path": "/og/component/textarea.png"
     },
     {
       "id": "time-picker",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/time-picker.png"
+      "path": "/og/component/time-picker.png"
     },
     {
       "id": "timeline",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/timeline.png"
+      "path": "/og/component/timeline.png"
     },
     {
       "id": "toast",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/toast.png"
+      "path": "/og/component/toast.png"
     },
     {
       "id": "toggle",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/toggle.png"
+      "path": "/og/component/toggle.png"
     },
     {
       "id": "toggle-group",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/toggle-group.png"
+      "path": "/og/component/toggle-group.png"
     },
     {
       "id": "tool-call-card",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/tool-call-card.png"
+      "path": "/og/component/tool-call-card.png"
     },
     {
       "id": "toolbar",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/toolbar.png"
+      "path": "/og/component/toolbar.png"
     },
     {
       "id": "tooltip",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/tooltip.png"
+      "path": "/og/component/tooltip.png"
     },
     {
       "id": "transfer",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/transfer.png"
+      "path": "/og/component/transfer.png"
     },
     {
       "id": "tree",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/tree.png"
+      "path": "/og/component/tree.png"
     },
     {
       "id": "tree-select",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/tree-select.png"
+      "path": "/og/component/tree-select.png"
     },
     {
       "id": "typography",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/typography.png"
+      "path": "/og/component/typography.png"
+    },
+    {
+      "id": "ubuntu-terminal",
+      "kind": "component",
+      "path": "/og/component/ubuntu-terminal.png"
     },
     {
       "id": "watermark",
       "kind": "component",
-      "path": "/klic-interface-library-pages/og/component/watermark.png"
+      "path": "/og/component/watermark.png"
+    },
+    {
+      "id": "powershell-terminal",
+      "kind": "component",
+      "path": "/og/component/powershell-terminal.png"
+    },
+    {
+      "id": "klic-reusable-chart-types",
+      "kind": "block",
+      "path": "/og/block/klic-reusable-chart-types.png"
+    },
+    {
+      "id": "splitter-canvas-drawer",
+      "kind": "block",
+      "path": "/og/block/splitter-canvas-drawer.png"
+    },
+    {
+      "id": "splitter-master-detail",
+      "kind": "block",
+      "path": "/og/block/splitter-master-detail.png"
+    },
+    {
+      "id": "splitter-diff-compare",
+      "kind": "block",
+      "path": "/og/block/splitter-diff-compare.png"
+    },
+    {
+      "id": "splitter-ide-nested",
+      "kind": "block",
+      "path": "/og/block/splitter-ide-nested.png"
+    },
+    {
+      "id": "splitter-code-preview",
+      "kind": "block",
+      "path": "/og/block/splitter-code-preview.png"
+    },
+    {
+      "id": "chart3d-funnel-slab-cascade",
+      "kind": "block",
+      "path": "/og/block/chart3d-funnel-slab-cascade.png"
+    },
+    {
+      "id": "chart3d-cluster-topology-bars",
+      "kind": "block",
+      "path": "/og/block/chart3d-cluster-topology-bars.png"
+    },
+    {
+      "id": "chart3d-cylinder-donut-stack",
+      "kind": "block",
+      "path": "/og/block/chart3d-cylinder-donut-stack.png"
+    },
+    {
+      "id": "chart3d-voxel-hourly-density",
+      "kind": "block",
+      "path": "/og/block/chart3d-voxel-hourly-density.png"
+    },
+    {
+      "id": "chart3d-isometric-latency",
+      "kind": "block",
+      "path": "/og/block/chart3d-isometric-latency.png"
+    },
+    {
+      "id": "file-upload-basketball-hoop",
+      "kind": "block",
+      "path": "/og/block/file-upload-basketball-hoop.png"
+    },
+    {
+      "id": "file-upload-soccer-goal",
+      "kind": "block",
+      "path": "/og/block/file-upload-soccer-goal.png"
+    },
+    {
+      "id": "file-upload-trash-can",
+      "kind": "block",
+      "path": "/og/block/file-upload-trash-can.png"
+    },
+    {
+      "id": "flowmotion-inbound-lead-routing",
+      "kind": "block",
+      "path": "/og/block/flowmotion-inbound-lead-routing.png"
+    },
+    {
+      "id": "flowmotion-realtime-ai-scoring-hub",
+      "kind": "block",
+      "path": "/og/block/flowmotion-realtime-ai-scoring-hub.png"
+    },
+    {
+      "id": "flowmotion-swimlane-etl-funnel",
+      "kind": "block",
+      "path": "/og/block/flowmotion-swimlane-etl-funnel.png"
+    },
+    {
+      "id": "flowmotion-cyclic-agent-ring",
+      "kind": "block",
+      "path": "/og/block/flowmotion-cyclic-agent-ring.png"
+    },
+    {
+      "id": "flowmotion-vertical-region-tree",
+      "kind": "block",
+      "path": "/og/block/flowmotion-vertical-region-tree.png"
+    },
+    {
+      "id": "flowmotion-ppt-chevron-funnel",
+      "kind": "block",
+      "path": "/og/block/flowmotion-ppt-chevron-funnel.png"
+    },
+    {
+      "id": "flowmotion-ppt-sequence-flowchart",
+      "kind": "block",
+      "path": "/og/block/flowmotion-ppt-sequence-flowchart.png"
+    },
+    {
+      "id": "flowmotion-ppt-flywheel-infographic",
+      "kind": "block",
+      "path": "/og/block/flowmotion-ppt-flywheel-infographic.png"
+    },
+    {
+      "id": "flowmotion-ppt-asis-tobe-bridge",
+      "kind": "block",
+      "path": "/og/block/flowmotion-ppt-asis-tobe-bridge.png"
+    },
+    {
+      "id": "flowmotion-ppt-milestone-roadmap",
+      "kind": "block",
+      "path": "/og/block/flowmotion-ppt-milestone-roadmap.png"
+    },
+    {
+      "id": "flowmotion-creative-zigzag-ribbon",
+      "kind": "block",
+      "path": "/og/block/flowmotion-creative-zigzag-ribbon.png"
+    },
+    {
+      "id": "flowmotion-creative-lightbulb-brainstorm",
+      "kind": "block",
+      "path": "/og/block/flowmotion-creative-lightbulb-brainstorm.png"
+    },
+    {
+      "id": "flowmotion-creative-strategy-pyramid",
+      "kind": "block",
+      "path": "/og/block/flowmotion-creative-strategy-pyramid.png"
+    },
+    {
+      "id": "flowmotion-creative-semicircle-radial-fan",
+      "kind": "block",
+      "path": "/og/block/flowmotion-creative-semicircle-radial-fan.png"
+    },
+    {
+      "id": "flowmotion-creative-hexagon-honeycomb",
+      "kind": "block",
+      "path": "/og/block/flowmotion-creative-hexagon-honeycomb.png"
+    },
+    {
+      "id": "flowmotion-cinematic-node-connect",
+      "kind": "block",
+      "path": "/og/block/flowmotion-cinematic-node-connect.png"
+    },
+    {
+      "id": "flowmotion-editorial-mcp-skill-compare",
+      "kind": "block",
+      "path": "/og/block/flowmotion-editorial-mcp-skill-compare.png"
+    },
+    {
+      "id": "flowmotion-it-pms-project",
+      "kind": "block",
+      "path": "/og/block/flowmotion-it-pms-project.png"
+    },
+    {
+      "id": "flowmotion-it-design-system",
+      "kind": "block",
+      "path": "/og/block/flowmotion-it-design-system.png"
+    },
+    {
+      "id": "flowmotion-it-slack-chatops",
+      "kind": "block",
+      "path": "/og/block/flowmotion-it-slack-chatops.png"
+    },
+    {
+      "id": "flowmotion-it-dev-cicd",
+      "kind": "block",
+      "path": "/og/block/flowmotion-it-dev-cicd.png"
+    },
+    {
+      "id": "flowmotion-it-si-integration",
+      "kind": "block",
+      "path": "/og/block/flowmotion-it-si-integration.png"
+    },
+    {
+      "id": "deploy-pipeline",
+      "kind": "block",
+      "path": "/og/block/deploy-pipeline.png"
+    },
+    {
+      "id": "log-stream",
+      "kind": "block",
+      "path": "/og/block/log-stream.png"
+    },
+    {
+      "id": "trace-waterfall",
+      "kind": "block",
+      "path": "/og/block/trace-waterfall.png"
+    },
+    {
+      "id": "file-upload",
+      "kind": "block",
+      "path": "/og/block/file-upload.png"
+    },
+    {
+      "id": "tree-view",
+      "kind": "block",
+      "path": "/og/block/tree-view.png"
+    },
+    {
+      "id": "multi-select",
+      "kind": "block",
+      "path": "/og/block/multi-select.png"
+    },
+    {
+      "id": "dashboard-delivery-tracker",
+      "kind": "block",
+      "path": "/og/block/dashboard-delivery-tracker.png"
+    },
+    {
+      "id": "dashboard-project-tracker",
+      "kind": "block",
+      "path": "/og/block/dashboard-project-tracker.png"
+    },
+    {
+      "id": "dashboard-payment-authorizations",
+      "kind": "block",
+      "path": "/og/block/dashboard-payment-authorizations.png"
+    },
+    {
+      "id": "dashboard-ai-mail",
+      "kind": "block",
+      "path": "/og/block/dashboard-ai-mail.png"
+    },
+    {
+      "id": "dashboard-deal-momentum",
+      "kind": "block",
+      "path": "/og/block/dashboard-deal-momentum.png"
+    },
+    {
+      "id": "dashboard-sales-pipeline",
+      "kind": "block",
+      "path": "/og/block/dashboard-sales-pipeline.png"
+    },
+    {
+      "id": "dashboard-report-center",
+      "kind": "block",
+      "path": "/og/block/dashboard-report-center.png"
+    },
+    {
+      "id": "dashboard-activation-goals",
+      "kind": "block",
+      "path": "/og/block/dashboard-activation-goals.png"
+    },
+    {
+      "id": "dashboard-flow-operations",
+      "kind": "block",
+      "path": "/og/block/dashboard-flow-operations.png"
+    },
+    {
+      "id": "dashboard-personal-finance",
+      "kind": "block",
+      "path": "/og/block/dashboard-personal-finance.png"
     },
     {
       "id": "panel-risk-review",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/panel-risk-review.png"
+      "path": "/og/block/panel-risk-review.png"
     },
     {
       "id": "panel-task-discussion",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/panel-task-discussion.png"
+      "path": "/og/block/panel-task-discussion.png"
     },
     {
       "id": "panel-customer-inspector",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/panel-customer-inspector.png"
+      "path": "/og/block/panel-customer-inspector.png"
     },
     {
       "id": "panel-timeline-context",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/panel-timeline-context.png"
+      "path": "/og/block/panel-timeline-context.png"
     },
     {
       "id": "dashboard-automation-ops",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/dashboard-automation-ops.png"
+      "path": "/og/block/dashboard-automation-ops.png"
     },
     {
       "id": "dashboard-ai-workspace",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/dashboard-ai-workspace.png"
+      "path": "/og/block/dashboard-ai-workspace.png"
     },
     {
       "id": "dashboard-sales-analytics",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/dashboard-sales-analytics.png"
+      "path": "/og/block/dashboard-sales-analytics.png"
     },
     {
       "id": "affect-testimonial-wall",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/affect-testimonial-wall.png"
+      "path": "/og/block/affect-testimonial-wall.png"
     },
     {
       "id": "affect-logo-marquee",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/affect-logo-marquee.png"
+      "path": "/og/block/affect-logo-marquee.png"
     },
     {
       "id": "affect-response-workspace",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/affect-response-workspace.png"
+      "path": "/og/block/affect-response-workspace.png"
     },
     {
       "id": "affect-agent-review",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/affect-agent-review.png"
+      "path": "/og/block/affect-agent-review.png"
     },
     {
       "id": "chart-bullet",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/chart-bullet.png"
+      "path": "/og/block/chart-bullet.png"
     },
     {
       "id": "chart-calendar-heatmap",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/chart-calendar-heatmap.png"
+      "path": "/og/block/chart-calendar-heatmap.png"
     },
     {
       "id": "chart-cohort-retention",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/chart-cohort-retention.png"
+      "path": "/og/block/chart-cohort-retention.png"
     },
     {
       "id": "chart-correlation",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/chart-correlation.png"
+      "path": "/og/block/chart-correlation.png"
     },
     {
       "id": "chart-dumbbell",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/chart-dumbbell.png"
+      "path": "/og/block/chart-dumbbell.png"
     },
     {
       "id": "chart-streamgraph",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/chart-streamgraph.png"
+      "path": "/og/block/chart-streamgraph.png"
     },
     {
       "id": "chart-treemap",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/chart-treemap.png"
+      "path": "/og/block/chart-treemap.png"
     },
     {
       "id": "chart-waterfall",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/chart-waterfall.png"
+      "path": "/og/block/chart-waterfall.png"
     },
     {
       "id": "chart-spark-table",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/chart-spark-table.png"
+      "path": "/og/block/chart-spark-table.png"
     },
     {
       "id": "chart-state-timeline",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/chart-state-timeline.png"
+      "path": "/og/block/chart-state-timeline.png"
     },
     {
       "id": "chart-orderbook",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/chart-orderbook.png"
+      "path": "/og/block/chart-orderbook.png"
     },
     {
       "id": "chart-market-depth",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/chart-market-depth.png"
+      "path": "/og/block/chart-market-depth.png"
     },
     {
       "id": "chart-drawdown",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/chart-drawdown.png"
+      "path": "/og/block/chart-drawdown.png"
     },
     {
       "id": "chart-forecast-fan",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/chart-forecast-fan.png"
+      "path": "/og/block/chart-forecast-fan.png"
     },
     {
       "id": "chart-candlestick",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/chart-candlestick.png"
+      "path": "/og/block/chart-candlestick.png"
     },
     {
       "id": "chart-calibration",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/chart-calibration.png"
+      "path": "/og/block/chart-calibration.png"
     },
     {
       "id": "chart-scatter-brush",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/chart-scatter-brush.png"
+      "path": "/og/block/chart-scatter-brush.png"
     },
     {
       "id": "chart-beeswarm",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/chart-beeswarm.png"
+      "path": "/og/block/chart-beeswarm.png"
     },
     {
       "id": "chart-violin",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/chart-violin.png"
+      "path": "/og/block/chart-violin.png"
     },
     {
       "id": "chart-distribution",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/chart-distribution.png"
+      "path": "/og/block/chart-distribution.png"
     },
     {
       "id": "timeline-release-gates",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/timeline-release-gates.png"
+      "path": "/og/block/timeline-release-gates.png"
     },
     {
       "id": "timeline-milestone-delta",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/timeline-milestone-delta.png"
+      "path": "/og/block/timeline-milestone-delta.png"
     },
     {
       "id": "timeline-team-swimlane",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/timeline-team-swimlane.png"
+      "path": "/og/block/timeline-team-swimlane.png"
     },
     {
       "id": "timeline-execution-waterfall",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/timeline-execution-waterfall.png"
+      "path": "/og/block/timeline-execution-waterfall.png"
     },
     {
       "id": "timeline-plan-actual",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/timeline-plan-actual.png"
+      "path": "/og/block/timeline-plan-actual.png"
     },
     {
       "id": "flow-connector-interaction",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-interaction.png"
+      "path": "/og/block/flow-connector-interaction.png"
     },
     {
       "id": "flow-connector-retry",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-retry.png"
+      "path": "/og/block/flow-connector-retry.png"
     },
     {
       "id": "flow-connector-state",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-state.png"
+      "path": "/og/block/flow-connector-state.png"
     },
     {
       "id": "flow-connector-parallel",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-parallel.png"
+      "path": "/og/block/flow-connector-parallel.png"
     },
     {
       "id": "flow-connector-decision",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-decision.png"
+      "path": "/og/block/flow-connector-decision.png"
     },
     {
       "id": "flow-connector-taper",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-taper.png"
+      "path": "/og/block/flow-connector-taper.png"
     },
     {
       "id": "flow-connector-labels",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-labels.png"
+      "path": "/og/block/flow-connector-labels.png"
     },
     {
       "id": "flow-connector-feedback",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-feedback.png"
+      "path": "/og/block/flow-connector-feedback.png"
     },
     {
       "id": "flow-connector-hyperedge",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-hyperedge.png"
+      "path": "/og/block/flow-connector-hyperedge.png"
     },
     {
       "id": "flow-connector-ports",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-ports.png"
+      "path": "/og/block/flow-connector-ports.png"
     },
     {
       "id": "flow-connector-rounded",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-rounded.png"
+      "path": "/og/block/flow-connector-rounded.png"
     },
     {
       "id": "flow-connector-bidirectional",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-bidirectional.png"
+      "path": "/og/block/flow-connector-bidirectional.png"
     },
     {
       "id": "flow-connector-dashed",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-dashed.png"
+      "path": "/og/block/flow-connector-dashed.png"
     },
     {
       "id": "flow-connector-step",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-step.png"
+      "path": "/og/block/flow-connector-step.png"
     },
     {
       "id": "flow-connector-curve",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-curve.png"
+      "path": "/og/block/flow-connector-curve.png"
     },
     {
       "id": "flow-connector-elbow",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-elbow.png"
+      "path": "/og/block/flow-connector-elbow.png"
     },
     {
       "id": "flow-connector-straight",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-straight.png"
+      "path": "/og/block/flow-connector-straight.png"
     },
     {
       "id": "flow-connector-radial",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-radial.png"
+      "path": "/og/block/flow-connector-radial.png"
     },
     {
       "id": "flow-connector-ribbons",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-ribbons.png"
+      "path": "/og/block/flow-connector-ribbons.png"
     },
     {
       "id": "flow-connector-bridges",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-bridges.png"
+      "path": "/og/block/flow-connector-bridges.png"
     },
     {
       "id": "flow-connector-bus",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-bus.png"
+      "path": "/og/block/flow-connector-bus.png"
     },
     {
       "id": "flow-connector-bundle",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-bundle.png"
+      "path": "/og/block/flow-connector-bundle.png"
     },
     {
       "id": "flow-connector-containers",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-containers.png"
+      "path": "/og/block/flow-connector-containers.png"
     },
     {
       "id": "flow-connector-loops",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-loops.png"
+      "path": "/og/block/flow-connector-loops.png"
     },
     {
       "id": "flow-connector-multiedge",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-multiedge.png"
+      "path": "/og/block/flow-connector-multiedge.png"
     },
     {
       "id": "flow-connector-metro",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-metro.png"
+      "path": "/og/block/flow-connector-metro.png"
     },
     {
       "id": "flow-connector-obstacle",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-connector-obstacle.png"
+      "path": "/og/block/flow-connector-obstacle.png"
     },
     {
       "id": "diagram-service-flow",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/diagram-service-flow.png"
+      "path": "/og/block/diagram-service-flow.png"
     },
     {
       "id": "template-advisor-knowledge",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/template-advisor-knowledge.png"
+      "path": "/og/block/template-advisor-knowledge.png"
     },
     {
       "id": "template-autonomous-task-lifecycle",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/template-autonomous-task-lifecycle.png"
+      "path": "/og/block/template-autonomous-task-lifecycle.png"
     },
     {
       "id": "template-smart-reorder-supplychain",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/template-smart-reorder-supplychain.png"
+      "path": "/og/block/template-smart-reorder-supplychain.png"
     },
     {
       "id": "template-proforma-financial-roi",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/template-proforma-financial-roi.png"
+      "path": "/og/block/template-proforma-financial-roi.png"
     },
     {
       "id": "template-enterprise-reports-center",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/template-enterprise-reports-center.png"
+      "path": "/og/block/template-enterprise-reports-center.png"
     },
     {
       "id": "agent-task-lifecycle",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/agent-task-lifecycle.png"
+      "path": "/og/block/agent-task-lifecycle.png"
     },
     {
       "id": "kanban-sprint-board",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/kanban-sprint-board.png"
+      "path": "/og/block/kanban-sprint-board.png"
     },
     {
       "id": "kanban-swimlane-squad",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/kanban-swimlane-squad.png"
+      "path": "/og/block/kanban-swimlane-squad.png"
     },
     {
       "id": "kanban-crm-deal",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/kanban-crm-deal.png"
+      "path": "/og/block/kanban-crm-deal.png"
     },
     {
       "id": "kanban-incident-triage",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/kanban-incident-triage.png"
+      "path": "/og/block/kanban-incident-triage.png"
     },
     {
       "id": "kanban-hiring-ats",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/kanban-hiring-ats.png"
+      "path": "/og/block/kanban-hiring-ats.png"
     },
     {
       "id": "card-saas-metric",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/card-saas-metric.png"
+      "path": "/og/block/card-saas-metric.png"
     },
     {
       "id": "card-project-health",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/card-project-health.png"
+      "path": "/og/block/card-project-health.png"
     },
     {
       "id": "card-pricing-tier",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/card-pricing-tier.png"
+      "path": "/og/block/card-pricing-tier.png"
     },
     {
       "id": "card-api-integration",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/card-api-integration.png"
+      "path": "/og/block/card-api-integration.png"
     },
     {
       "id": "card-approval-request",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/card-approval-request.png"
+      "path": "/og/block/card-approval-request.png"
     },
     {
       "id": "card-meeting-schedule",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/card-meeting-schedule.png"
+      "path": "/og/block/card-meeting-schedule.png"
     },
     {
       "id": "dashboard-exec-revenue",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/dashboard-exec-revenue.png"
+      "path": "/og/block/dashboard-exec-revenue.png"
     },
     {
       "id": "dashboard-sre-observability",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/dashboard-sre-observability.png"
+      "path": "/og/block/dashboard-sre-observability.png"
     },
     {
       "id": "dashboard-product-analytics",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/dashboard-product-analytics.png"
+      "path": "/og/block/dashboard-product-analytics.png"
     },
     {
       "id": "dashboard-finops-cost",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/dashboard-finops-cost.png"
+      "path": "/og/block/dashboard-finops-cost.png"
     },
     {
       "id": "dashboard-cx-support",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/dashboard-cx-support.png"
+      "path": "/og/block/dashboard-cx-support.png"
     },
     {
       "id": "dialog-command-palette",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/dialog-command-palette.png"
+      "path": "/og/block/dialog-command-palette.png"
     },
     {
       "id": "dialog-destructive-confirm",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/dialog-destructive-confirm.png"
+      "path": "/og/block/dialog-destructive-confirm.png"
     },
     {
       "id": "dialog-share-permissions",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/dialog-share-permissions.png"
+      "path": "/og/block/dialog-share-permissions.png"
     },
     {
       "id": "dialog-api-token-create",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/dialog-api-token-create.png"
+      "path": "/og/block/dialog-api-token-create.png"
     },
     {
       "id": "dialog-bulk-import-csv",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/dialog-bulk-import-csv.png"
+      "path": "/og/block/dialog-bulk-import-csv.png"
     },
     {
       "id": "navbar-workspace-header",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/navbar-workspace-header.png"
+      "path": "/og/block/navbar-workspace-header.png"
     },
     {
       "id": "navbar-contextual-subnav",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/navbar-contextual-subnav.png"
+      "path": "/og/block/navbar-contextual-subnav.png"
     },
     {
       "id": "navbar-floating-dock",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/navbar-floating-dock.png"
+      "path": "/og/block/navbar-floating-dock.png"
     },
     {
       "id": "navbar-mega-menu",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/navbar-mega-menu.png"
+      "path": "/og/block/navbar-mega-menu.png"
     },
     {
       "id": "navbar-incident-banner",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/navbar-incident-banner.png"
+      "path": "/og/block/navbar-incident-banner.png"
     },
     {
       "id": "rte-slash-document",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/rte-slash-document.png"
+      "path": "/og/block/rte-slash-document.png"
     },
     {
       "id": "rte-markdown-tech-spec",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/rte-markdown-tech-spec.png"
+      "path": "/og/block/rte-markdown-tech-spec.png"
     },
     {
       "id": "rte-collaborative-comment",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/rte-collaborative-comment.png"
+      "path": "/og/block/rte-collaborative-comment.png"
     },
     {
       "id": "rte-incident-postmortem",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/rte-incident-postmortem.png"
+      "path": "/og/block/rte-incident-postmortem.png"
     },
     {
       "id": "rte-email-campaign",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/rte-email-campaign.png"
+      "path": "/og/block/rte-email-campaign.png"
     },
     {
       "id": "list-agent-tasks",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/list-agent-tasks.png"
+      "path": "/og/block/list-agent-tasks.png"
     },
     {
       "id": "list-audit-activity",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/list-audit-activity.png"
+      "path": "/og/block/list-audit-activity.png"
     },
     {
       "id": "list-notification-inbox",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/list-notification-inbox.png"
+      "path": "/og/block/list-notification-inbox.png"
     },
     {
       "id": "list-git-deployments",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/list-git-deployments.png"
+      "path": "/og/block/list-git-deployments.png"
     },
     {
       "id": "list-team-directory",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/list-team-directory.png"
+      "path": "/og/block/list-team-directory.png"
     },
     {
       "id": "list-api-webhooks",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/list-api-webhooks.png"
+      "path": "/og/block/list-api-webhooks.png"
     },
     {
       "id": "empty-search-filter",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/empty-search-filter.png"
+      "path": "/og/block/empty-search-filter.png"
     },
     {
       "id": "empty-first-project",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/empty-first-project.png"
+      "path": "/og/block/empty-first-project.png"
     },
     {
       "id": "empty-permission-locked",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/empty-permission-locked.png"
+      "path": "/og/block/empty-permission-locked.png"
     },
     {
       "id": "empty-integration-disconnected",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/empty-integration-disconnected.png"
+      "path": "/og/block/empty-integration-disconnected.png"
     },
     {
       "id": "empty-inbox-zero",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/empty-inbox-zero.png"
+      "path": "/og/block/empty-inbox-zero.png"
     },
     {
       "id": "settings-team-permissions",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/settings-team-permissions.png"
+      "path": "/og/block/settings-team-permissions.png"
     },
     {
       "id": "settings-workspace-general",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/settings-workspace-general.png"
+      "path": "/og/block/settings-workspace-general.png"
     },
     {
       "id": "settings-security-sso",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/settings-security-sso.png"
+      "path": "/og/block/settings-security-sso.png"
     },
     {
       "id": "settings-notification-routing",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/settings-notification-routing.png"
+      "path": "/og/block/settings-notification-routing.png"
     },
     {
       "id": "settings-api-webhooks",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/settings-api-webhooks.png"
+      "path": "/og/block/settings-api-webhooks.png"
     },
     {
       "id": "settings-billing-plan",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/settings-billing-plan.png"
+      "path": "/og/block/settings-billing-plan.png"
     },
     {
       "id": "notif-project-updates",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/notif-project-updates.png"
+      "path": "/og/block/notif-project-updates.png"
     },
     {
       "id": "notif-floating-toast",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/notif-floating-toast.png"
+      "path": "/og/block/notif-floating-toast.png"
     },
     {
       "id": "notif-approval-center",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/notif-approval-center.png"
+      "path": "/og/block/notif-approval-center.png"
     },
     {
       "id": "notif-incident-pager",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/notif-incident-pager.png"
+      "path": "/og/block/notif-incident-pager.png"
     },
     {
       "id": "notif-mention-thread",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/notif-mention-thread.png"
+      "path": "/og/block/notif-mention-thread.png"
     },
     {
       "id": "notif-daily-digest",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/notif-daily-digest.png"
+      "path": "/og/block/notif-daily-digest.png"
     },
     {
       "id": "cell-inline-input",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/cell-inline-input.png"
+      "path": "/og/block/cell-inline-input.png"
     },
     {
       "id": "popover-date-picker",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/popover-date-picker.png"
+      "path": "/og/block/popover-date-picker.png"
     },
     {
       "id": "tag-multiselect-editor",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/tag-multiselect-editor.png"
+      "path": "/og/block/tag-multiselect-editor.png"
     },
     {
       "id": "numeric-stepper-cell",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/numeric-stepper-cell.png"
+      "path": "/og/block/numeric-stepper-cell.png"
     },
     {
       "id": "optimistic-cell-save",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/optimistic-cell-save.png"
+      "path": "/og/block/optimistic-cell-save.png"
     },
     {
       "id": "sheet-issue-detail",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/sheet-issue-detail.png"
+      "path": "/og/block/sheet-issue-detail.png"
     },
     {
       "id": "sheet-trace-inspector",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/sheet-trace-inspector.png"
+      "path": "/og/block/sheet-trace-inspector.png"
     },
     {
       "id": "sheet-customer-360",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/sheet-customer-360.png"
+      "path": "/og/block/sheet-customer-360.png"
     },
     {
       "id": "sheet-advanced-filter",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/sheet-advanced-filter.png"
+      "path": "/og/block/sheet-advanced-filter.png"
     },
     {
       "id": "sheet-audit-diff",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/sheet-audit-diff.png"
+      "path": "/og/block/sheet-audit-diff.png"
     },
     {
       "id": "flow-react-lead-routing",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-react-lead-routing.png"
+      "path": "/og/block/flow-react-lead-routing.png"
     },
     {
       "id": "flow-react-fds-routing",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-react-fds-routing.png"
+      "path": "/og/block/flow-react-fds-routing.png"
     },
     {
       "id": "flow-react-vip-defense",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-react-vip-defense.png"
+      "path": "/og/block/flow-react-vip-defense.png"
     },
     {
       "id": "flow-cicd-pipeline",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-cicd-pipeline.png"
+      "path": "/og/block/flow-cicd-pipeline.png"
     },
     {
       "id": "flow-webhook-automation",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-webhook-automation.png"
+      "path": "/og/block/flow-webhook-automation.png"
     },
     {
       "id": "flow-etl-lineage",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-etl-lineage.png"
+      "path": "/og/block/flow-etl-lineage.png"
     },
     {
       "id": "flow-microservice-topology",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-microservice-topology.png"
+      "path": "/og/block/flow-microservice-topology.png"
     },
     {
       "id": "flow-approval-routing",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/flow-approval-routing.png"
+      "path": "/og/block/flow-approval-routing.png"
     },
     {
       "id": "shell-enterprise-sidebar",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/shell-enterprise-sidebar.png"
+      "path": "/og/block/shell-enterprise-sidebar.png"
     },
     {
       "id": "shell-dual-rail-ide",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/shell-dual-rail-ide.png"
+      "path": "/og/block/shell-dual-rail-ide.png"
     },
     {
       "id": "shell-top-nav-portal",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/shell-top-nav-portal.png"
+      "path": "/og/block/shell-top-nav-portal.png"
     },
     {
       "id": "shell-master-detail-inbox",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/shell-master-detail-inbox.png"
+      "path": "/og/block/shell-master-detail-inbox.png"
     },
     {
       "id": "shell-canvas-studio",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/shell-canvas-studio.png"
+      "path": "/og/block/shell-canvas-studio.png"
     },
     {
       "id": "gantt-flux-wbs-svg",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/gantt-flux-wbs-svg.png"
+      "path": "/og/block/gantt-flux-wbs-svg.png"
     },
     {
       "id": "gantt-project-tasks",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/gantt-project-tasks.png"
+      "path": "/og/block/gantt-project-tasks.png"
     },
     {
       "id": "gantt-resource-capacity",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/gantt-resource-capacity.png"
+      "path": "/og/block/gantt-resource-capacity.png"
     },
     {
       "id": "gantt-milestone-roadmap",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/gantt-milestone-roadmap.png"
+      "path": "/og/block/gantt-milestone-roadmap.png"
     },
     {
       "id": "gantt-sprint-release",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/gantt-sprint-release.png"
+      "path": "/og/block/gantt-sprint-release.png"
     },
     {
       "id": "gantt-critical-path",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/gantt-critical-path.png"
+      "path": "/og/block/gantt-critical-path.png"
     },
     {
       "id": "onboarding-checklist-hub",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/onboarding-checklist-hub.png"
+      "path": "/og/block/onboarding-checklist-hub.png"
     },
     {
       "id": "onboarding-role-personalize",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/onboarding-role-personalize.png"
+      "path": "/og/block/onboarding-role-personalize.png"
     },
     {
       "id": "onboarding-interactive-tour",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/onboarding-interactive-tour.png"
+      "path": "/og/block/onboarding-interactive-tour.png"
     },
     {
       "id": "onboarding-sdk-quickstart",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/onboarding-sdk-quickstart.png"
+      "path": "/og/block/onboarding-sdk-quickstart.png"
     },
     {
       "id": "onboarding-data-migration",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/onboarding-data-migration.png"
+      "path": "/og/block/onboarding-data-migration.png"
     },
     {
       "id": "wizard-cloud-provisioning",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/wizard-cloud-provisioning.png"
+      "path": "/og/block/wizard-cloud-provisioning.png"
     },
     {
       "id": "wizard-enterprise-contract",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/wizard-enterprise-contract.png"
+      "path": "/og/block/wizard-enterprise-contract.png"
     },
     {
       "id": "wizard-rbac-role-builder",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/wizard-rbac-role-builder.png"
+      "path": "/og/block/wizard-rbac-role-builder.png"
     },
     {
       "id": "wizard-report-scheduler",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/wizard-report-scheduler.png"
+      "path": "/og/block/wizard-report-scheduler.png"
     },
     {
       "id": "wizard-sso-saml-setup",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/wizard-sso-saml-setup.png"
+      "path": "/og/block/wizard-sso-saml-setup.png"
     },
     {
       "id": "calendar-release-freeze",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/calendar-release-freeze.png"
+      "path": "/og/block/calendar-release-freeze.png"
     },
     {
       "id": "calendar-marketing-campaign",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/calendar-marketing-campaign.png"
+      "path": "/og/block/calendar-marketing-campaign.png"
     },
     {
       "id": "calendar-oncall-rotation",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/calendar-oncall-rotation.png"
+      "path": "/og/block/calendar-oncall-rotation.png"
     },
     {
       "id": "calendar-resource-booking",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/calendar-resource-booking.png"
+      "path": "/og/block/calendar-resource-booking.png"
     },
     {
       "id": "calendar-compliance-audit",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/calendar-compliance-audit.png"
+      "path": "/og/block/calendar-compliance-audit.png"
     },
     {
       "id": "auth-enterprise-sso-login",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/auth-enterprise-sso-login.png"
+      "path": "/og/block/auth-enterprise-sso-login.png"
     },
     {
       "id": "auth-mfa-totp-verify",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/auth-mfa-totp-verify.png"
+      "path": "/og/block/auth-mfa-totp-verify.png"
     },
     {
       "id": "auth-workspace-signup",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/auth-workspace-signup.png"
+      "path": "/og/block/auth-workspace-signup.png"
     },
     {
       "id": "auth-session-device-manager",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/auth-session-device-manager.png"
+      "path": "/og/block/auth-session-device-manager.png"
     },
     {
       "id": "auth-step-up-reauth",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/auth-step-up-reauth.png"
+      "path": "/og/block/auth-step-up-reauth.png"
     },
     {
       "id": "schedule-shift-optimize",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/schedule-shift-optimize.png"
+      "path": "/og/block/schedule-shift-optimize.png"
     },
     {
       "id": "schedule-field-dispatch",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/schedule-field-dispatch.png"
+      "path": "/og/block/schedule-field-dispatch.png"
     },
     {
       "id": "schedule-daily-agenda",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/schedule-daily-agenda.png"
+      "path": "/og/block/schedule-daily-agenda.png"
     },
     {
       "id": "schedule-interview-slots",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/schedule-interview-slots.png"
+      "path": "/og/block/schedule-interview-slots.png"
     },
     {
       "id": "schedule-maintenance-window",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/schedule-maintenance-window.png"
+      "path": "/og/block/schedule-maintenance-window.png"
     },
     {
       "id": "schedule-shift-planner",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/schedule-shift-planner.png"
+      "path": "/og/block/schedule-shift-planner.png"
     },
     {
       "id": "schedule-batch-cron-agenda",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/schedule-batch-cron-agenda.png"
+      "path": "/og/block/schedule-batch-cron-agenda.png"
     },
     {
       "id": "stats-executive-kpi-strip",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/stats-executive-kpi-strip.png"
+      "path": "/og/block/stats-executive-kpi-strip.png"
     },
     {
       "id": "stats-sla-uptime-summary",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/stats-sla-uptime-summary.png"
+      "path": "/og/block/stats-sla-uptime-summary.png"
     },
     {
       "id": "stats-usage-quota-meters",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/stats-usage-quota-meters.png"
+      "path": "/og/block/stats-usage-quota-meters.png"
     },
     {
       "id": "stats-conversion-benchmark",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/stats-conversion-benchmark.png"
+      "path": "/og/block/stats-conversion-benchmark.png"
     },
     {
       "id": "stats-dora-engineering",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/stats-dora-engineering.png"
+      "path": "/og/block/stats-dora-engineering.png"
     },
     {
       "id": "timeline-incident-response",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/timeline-incident-response.png"
+      "path": "/og/block/timeline-incident-response.png"
     },
     {
       "id": "timeline-order-fulfillment",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/timeline-order-fulfillment.png"
+      "path": "/og/block/timeline-order-fulfillment.png"
     },
     {
       "id": "timeline-release-changelog",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/timeline-release-changelog.png"
+      "path": "/og/block/timeline-release-changelog.png"
     },
     {
       "id": "timeline-contract-lifecycle",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/timeline-contract-lifecycle.png"
+      "path": "/og/block/timeline-contract-lifecycle.png"
     },
     {
       "id": "timeline-pr-review-chain",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/timeline-pr-review-chain.png"
+      "path": "/og/block/timeline-pr-review-chain.png"
     },
     {
       "id": "form-incident-report",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/form-incident-report.png"
+      "path": "/og/block/form-incident-report.png"
     },
     {
       "id": "form-procurement-request",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/form-procurement-request.png"
+      "path": "/og/block/form-procurement-request.png"
     },
     {
       "id": "form-webhook-endpoint",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/form-webhook-endpoint.png"
+      "path": "/og/block/form-webhook-endpoint.png"
     },
     {
       "id": "form-database-connection",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/form-database-connection.png"
+      "path": "/og/block/form-database-connection.png"
     },
     {
       "id": "form-feature-flag-rule",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/form-feature-flag-rule.png"
+      "path": "/og/block/form-feature-flag-rule.png"
     },
     {
       "id": "profile-engineer-scorecard",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/profile-engineer-scorecard.png"
+      "path": "/og/block/profile-engineer-scorecard.png"
     },
     {
       "id": "profile-enterprise-account",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/profile-enterprise-account.png"
+      "path": "/og/block/profile-enterprise-account.png"
     },
     {
       "id": "profile-security-identity",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/profile-security-identity.png"
+      "path": "/og/block/profile-security-identity.png"
     },
     {
       "id": "profile-personal-preferences",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/profile-personal-preferences.png"
+      "path": "/og/block/profile-personal-preferences.png"
     },
     {
       "id": "profile-vendor-compliance",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/profile-vendor-compliance.png"
+      "path": "/og/block/profile-vendor-compliance.png"
     },
     {
       "id": "whiteboard-system-architecture",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/whiteboard-system-architecture.png"
+      "path": "/og/block/whiteboard-system-architecture.png"
     },
     {
       "id": "whiteboard-sprint-retro",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/whiteboard-sprint-retro.png"
+      "path": "/og/block/whiteboard-sprint-retro.png"
     },
     {
       "id": "whiteboard-user-journey-map",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/whiteboard-user-journey-map.png"
+      "path": "/og/block/whiteboard-user-journey-map.png"
     },
     {
       "id": "whiteboard-erd-schema",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/whiteboard-erd-schema.png"
+      "path": "/og/block/whiteboard-erd-schema.png"
     },
     {
       "id": "whiteboard-incident-warroom",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/whiteboard-incident-warroom.png"
+      "path": "/og/block/whiteboard-incident-warroom.png"
     },
     {
       "id": "funnel-flow",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/funnel-flow.png"
+      "path": "/og/block/funnel-flow.png"
     },
     {
       "id": "trial-flow",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/trial-flow.png"
+      "path": "/og/block/trial-flow.png"
     },
     {
       "id": "b2b-deals-flow",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/b2b-deals-flow.png"
+      "path": "/og/block/b2b-deals-flow.png"
     },
     {
       "id": "cloud-cost-sankey",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/cloud-cost-sankey.png"
+      "path": "/og/block/cloud-cost-sankey.png"
     },
     {
       "id": "traffic-attribution-sankey",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/traffic-attribution-sankey.png"
+      "path": "/og/block/traffic-attribution-sankey.png"
     },
     {
       "id": "error-budget-slope",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/error-budget-slope.png"
+      "path": "/og/block/error-budget-slope.png"
     },
     {
       "id": "arr-growth-slope",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/arr-growth-slope.png"
+      "path": "/og/block/arr-growth-slope.png"
     },
     {
       "id": "nps-cohort-slope",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/nps-cohort-slope.png"
+      "path": "/og/block/nps-cohort-slope.png"
     },
     {
       "id": "conversion-tier-slope",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/conversion-tier-slope.png"
+      "path": "/og/block/conversion-tier-slope.png"
     },
     {
       "id": "latency-region-slope",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/latency-region-slope.png"
+      "path": "/og/block/latency-region-slope.png"
     },
     {
       "id": "cash-inflows-radial",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/cash-inflows-radial.png"
+      "path": "/og/block/cash-inflows-radial.png"
     },
     {
       "id": "api-health-radial",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/api-health-radial.png"
+      "path": "/og/block/api-health-radial.png"
     },
     {
       "id": "quota-attainment-radial",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/quota-attainment-radial.png"
+      "path": "/og/block/quota-attainment-radial.png"
     },
     {
       "id": "cluster-cpu-radial",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/cluster-cpu-radial.png"
+      "path": "/og/block/cluster-cpu-radial.png"
     },
     {
       "id": "security-posture-radial",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/security-posture-radial.png"
+      "path": "/og/block/security-posture-radial.png"
     },
     {
       "id": "live-mrr-sparkline",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/live-mrr-sparkline.png"
+      "path": "/og/block/live-mrr-sparkline.png"
     },
     {
       "id": "kpi-mini-trend",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/kpi-mini-trend.png"
+      "path": "/og/block/kpi-mini-trend.png"
     },
     {
       "id": "latency-sparkline",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/latency-sparkline.png"
+      "path": "/og/block/latency-sparkline.png"
     },
     {
       "id": "error-rate-sparkline",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/error-rate-sparkline.png"
+      "path": "/og/block/error-rate-sparkline.png"
     },
     {
       "id": "active-session-sparkline",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/active-session-sparkline.png"
+      "path": "/og/block/active-session-sparkline.png"
     },
     {
       "id": "error-budget-burn",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/error-budget-burn.png"
+      "path": "/og/block/error-budget-burn.png"
     },
     {
       "id": "env-promotion-pipeline",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/env-promotion-pipeline.png"
+      "path": "/og/block/env-promotion-pipeline.png"
     },
     {
       "id": "cron-run-history-tracker",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/cron-run-history-tracker.png"
+      "path": "/og/block/cron-run-history-tracker.png"
     },
     {
       "id": "uptime-sla-tracker",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/uptime-sla-tracker.png"
+      "path": "/og/block/uptime-sla-tracker.png"
     },
     {
       "id": "incident-health-bars",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/incident-health-bars.png"
+      "path": "/og/block/incident-health-bars.png"
     },
     {
       "id": "capital-inflows-bar",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/capital-inflows-bar.png"
-    },
-    {
-      "id": "revenue-breakdown-bar",
-      "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/revenue-breakdown-bar.png"
-    },
-    {
-      "id": "headcount-cost-bar",
-      "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/headcount-cost-bar.png"
+      "path": "/og/block/capital-inflows-bar.png"
     },
     {
       "id": "cohort-retention-bar",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/cohort-retention-bar.png"
+      "path": "/og/block/cohort-retention-bar.png"
     },
     {
       "id": "cloud-spend-variance-bar",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/cloud-spend-variance-bar.png"
+      "path": "/og/block/cloud-spend-variance-bar.png"
     },
     {
       "id": "daily-active-users-area",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/daily-active-users-area.png"
+      "path": "/og/block/daily-active-users-area.png"
     },
     {
       "id": "latency-percentiles-line",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/latency-percentiles-line.png"
+      "path": "/og/block/latency-percentiles-line.png"
     },
     {
       "id": "net-revenue-retention-area",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/net-revenue-retention-area.png"
+      "path": "/og/block/net-revenue-retention-area.png"
     },
     {
       "id": "token-throughput-line",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/token-throughput-line.png"
+      "path": "/og/block/token-throughput-line.png"
     },
     {
       "id": "concurrent-connections-area",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/concurrent-connections-area.png"
+      "path": "/og/block/concurrent-connections-area.png"
     },
     {
       "id": "customer-segment-donut",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/customer-segment-donut.png"
+      "path": "/og/block/customer-segment-donut.png"
     },
     {
       "id": "expense-allocation-pie",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/expense-allocation-pie.png"
-    },
-    {
-      "id": "cloud-provider-share-donut",
-      "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/cloud-provider-share-donut.png"
+      "path": "/og/block/expense-allocation-pie.png"
     },
     {
       "id": "ticket-severity-pie",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/ticket-severity-pie.png"
-    },
-    {
-      "id": "license-seat-utilization-donut",
-      "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/license-seat-utilization-donut.png"
+      "path": "/og/block/ticket-severity-pie.png"
     },
     {
       "id": "self-serve-funnel",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/self-serve-funnel.png"
+      "path": "/og/block/self-serve-funnel.png"
     },
     {
       "id": "churn-retention-funnel",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/churn-retention-funnel.png"
+      "path": "/og/block/churn-retention-funnel.png"
     },
     {
       "id": "enterprise-poc-funnel",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/enterprise-poc-funnel.png"
-    },
-    {
-      "id": "checkout-drop-funnel",
-      "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/checkout-drop-funnel.png"
-    },
-    {
-      "id": "activation-milestone-funnel",
-      "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/activation-milestone-funnel.png"
+      "path": "/og/block/enterprise-poc-funnel.png"
     },
     {
       "id": "competitor-feature-radar",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/competitor-feature-radar.png"
+      "path": "/og/block/competitor-feature-radar.png"
     },
     {
       "id": "team-velocity-polar",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/team-velocity-polar.png"
+      "path": "/og/block/team-velocity-polar.png"
     },
     {
       "id": "dora-metrics-radar",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/dora-metrics-radar.png"
+      "path": "/og/block/dora-metrics-radar.png"
     },
     {
       "id": "incident-response-polar",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/incident-response-polar.png"
+      "path": "/og/block/incident-response-polar.png"
     },
     {
       "id": "system-resilience-radar",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/system-resilience-radar.png"
+      "path": "/og/block/system-resilience-radar.png"
     },
     {
       "id": "support-tickets",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/support-tickets.png"
+      "path": "/og/block/support-tickets.png"
     },
     {
       "id": "striped-rows",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/striped-rows.png"
+      "path": "/og/block/striped-rows.png"
     },
     {
       "id": "bordered-table",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/bordered-table.png"
+      "path": "/og/block/bordered-table.png"
     },
     {
       "id": "selectable-grid",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/selectable-grid.png"
+      "path": "/og/block/selectable-grid.png"
     },
     {
       "id": "sortable-headers",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/sortable-headers.png"
+      "path": "/og/block/sortable-headers.png"
     },
     {
       "id": "fixed-header",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/fixed-header.png"
+      "path": "/og/block/fixed-header.png"
     },
     {
       "id": "empty-states",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/empty-states.png"
+      "path": "/og/block/empty-states.png"
     },
     {
       "id": "loading-skeletons",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/loading-skeletons.png"
+      "path": "/og/block/loading-skeletons.png"
     },
     {
       "id": "sla-risk-index",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/sla-risk-index.png"
+      "path": "/og/block/sla-risk-index.png"
     },
     {
       "id": "faceted-filter-grid",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/faceted-filter-grid.png"
+      "path": "/og/block/faceted-filter-grid.png"
     },
     {
       "id": "inline-row-actions",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/inline-row-actions.png"
+      "path": "/og/block/inline-row-actions.png"
     },
     {
       "id": "cell-formula-eval",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/cell-formula-eval.png"
+      "path": "/og/block/cell-formula-eval.png"
     },
     {
       "id": "nested-subgrids",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/nested-subgrids.png"
+      "path": "/og/block/nested-subgrids.png"
     },
     {
       "id": "multi-level-headers",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/multi-level-headers.png"
+      "path": "/og/block/multi-level-headers.png"
     },
     {
       "id": "batch-bulk-update",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/batch-bulk-update.png"
+      "path": "/og/block/batch-bulk-update.png"
     },
     {
       "id": "export-csv-excel",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/export-csv-excel.png"
+      "path": "/og/block/export-csv-excel.png"
     },
     {
       "id": "dynamic-height-cells",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/dynamic-height-cells.png"
+      "path": "/og/block/dynamic-height-cells.png"
     },
     {
       "id": "undo-redo-history",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/undo-redo-history.png"
+      "path": "/og/block/undo-redo-history.png"
     },
     {
       "id": "course-catalog",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/course-catalog.png"
+      "path": "/og/block/course-catalog.png"
     },
     {
       "id": "product-catalog",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/product-catalog.png"
+      "path": "/og/block/product-catalog.png"
     },
     {
       "id": "access-permissions-matrix",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/access-permissions-matrix.png"
+      "path": "/og/block/access-permissions-matrix.png"
     },
     {
       "id": "column-visibility",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/column-visibility.png"
+      "path": "/og/block/column-visibility.png"
     },
     {
       "id": "column-reordering",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/column-reordering.png"
+      "path": "/og/block/column-reordering.png"
     },
     {
       "id": "column-pinning",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/column-pinning.png"
+      "path": "/og/block/column-pinning.png"
     },
     {
       "id": "resizable-headers",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/resizable-headers.png"
+      "path": "/og/block/resizable-headers.png"
     },
     {
       "id": "auto-fit-columns",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/auto-fit-columns.png"
+      "path": "/og/block/auto-fit-columns.png"
     },
     {
       "id": "shared-drive-folders",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/shared-drive-folders.png"
+      "path": "/og/block/shared-drive-folders.png"
     },
     {
       "id": "row-reorder-handle",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/row-reorder-handle.png"
+      "path": "/og/block/row-reorder-handle.png"
     },
     {
       "id": "kanban-interchange",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/kanban-interchange.png"
+      "path": "/og/block/kanban-interchange.png"
     },
     {
       "id": "cross-table-dnd",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/cross-table-dnd.png"
+      "path": "/og/block/cross-table-dnd.png"
     },
     {
       "id": "hierarchy-tree-reorder",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/hierarchy-tree-reorder.png"
+      "path": "/og/block/hierarchy-tree-reorder.png"
     },
     {
       "id": "release-approvals",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/release-approvals.png"
+      "path": "/og/block/release-approvals.png"
     },
     {
       "id": "subtask-tracker",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/subtask-tracker.png"
+      "path": "/og/block/subtask-tracker.png"
     },
     {
       "id": "detail-panel-row",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/detail-panel-row.png"
+      "path": "/og/block/detail-panel-row.png"
     },
     {
       "id": "lazy-child-loader",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/lazy-child-loader.png"
+      "path": "/og/block/lazy-child-loader.png"
     },
     {
       "id": "master-detail-split",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/master-detail-split.png"
+      "path": "/og/block/master-detail-split.png"
     },
     {
       "id": "billing-upgrade",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/billing-upgrade.png"
+      "path": "/og/block/billing-upgrade.png"
     },
     {
       "id": "integrations-hub",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/integrations-hub.png"
+      "path": "/og/block/integrations-hub.png"
     },
     {
       "id": "reports-schedule",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/reports-schedule.png"
+      "path": "/og/block/reports-schedule.png"
     },
     {
       "id": "billing-transactions",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/billing-transactions.png"
+      "path": "/og/block/billing-transactions.png"
     },
     {
       "id": "automation-library",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/automation-library.png"
+      "path": "/og/block/automation-library.png"
     },
     {
       "id": "renewal-reassignment",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/renewal-reassignment.png"
+      "path": "/og/block/renewal-reassignment.png"
     },
     {
       "id": "at-risk-renewals",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/at-risk-renewals.png"
+      "path": "/og/block/at-risk-renewals.png"
     },
     {
       "id": "workspace-overview",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/workspace-overview.png"
+      "path": "/og/block/workspace-overview.png"
     },
     {
       "id": "roadmap-stage",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/roadmap-stage.png"
+      "path": "/og/block/roadmap-stage.png"
     },
     {
       "id": "revenue-region",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/revenue-region.png"
+      "path": "/og/block/revenue-region.png"
     },
     {
       "id": "patient-access",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/patient-access.png"
+      "path": "/og/block/patient-access.png"
     },
     {
       "id": "bill-materials",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/bill-materials.png"
+      "path": "/og/block/bill-materials.png"
     },
     {
       "id": "reporting-hierarchy",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/reporting-hierarchy.png"
+      "path": "/og/block/reporting-hierarchy.png"
     },
     {
       "id": "editorial-pipeline",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/editorial-pipeline.png"
+      "path": "/og/block/editorial-pipeline.png"
     },
     {
       "id": "studio-delivery",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/studio-delivery.png"
+      "path": "/og/block/studio-delivery.png"
     },
     {
       "id": "card-payments-ledger",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/card-payments-ledger.png"
+      "path": "/og/block/card-payments-ledger.png"
     },
     {
       "id": "shipment-exceptions",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/shipment-exceptions.png"
+      "path": "/og/block/shipment-exceptions.png"
     },
     {
       "id": "audit-log-stream",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/audit-log-stream.png"
+      "path": "/og/block/audit-log-stream.png"
     },
     {
       "id": "iot-sensor-matrix",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/iot-sensor-matrix.png"
+      "path": "/og/block/iot-sensor-matrix.png"
     },
     {
       "id": "order-book-depth",
       "kind": "block",
-      "path": "/klic-interface-library-pages/og/block/order-book-depth.png"
+      "path": "/og/block/order-book-depth.png"
     },
     {
       "id": "diagrams",
       "kind": "guides",
-      "path": "/klic-interface-library-pages/og/guides/diagrams.png"
+      "path": "/og/guides/diagrams.png"
     },
     {
       "id": "tokens",
       "kind": "guides",
-      "path": "/klic-interface-library-pages/og/guides/tokens.png"
+      "path": "/og/guides/tokens.png"
     },
     {
       "id": "fonts",
       "kind": "guides",
-      "path": "/klic-interface-library-pages/og/guides/fonts.png"
+      "path": "/og/guides/fonts.png"
     },
     {
       "id": "mcp-cli",
       "kind": "guides",
-      "path": "/klic-interface-library-pages/og/guides/mcp-cli.png"
+      "path": "/og/guides/mcp-cli.png"
     },
     {
       "id": "mcp-recipes",
       "kind": "guides",
-      "path": "/klic-interface-library-pages/og/guides/mcp-recipes.png"
+      "path": "/og/guides/mcp-recipes.png"
     },
     {
       "id": "density",
       "kind": "guides",
-      "path": "/klic-interface-library-pages/og/guides/density.png"
+      "path": "/og/guides/density.png"
     },
     {
       "id": "starters",
       "kind": "guides",
-      "path": "/klic-interface-library-pages/og/guides/starters.png"
+      "path": "/og/guides/starters.png"
     },
     {
       "id": "accessibility",
       "kind": "guides",
-      "path": "/klic-interface-library-pages/og/guides/accessibility.png"
+      "path": "/og/guides/accessibility.png"
     },
     {
       "id": "home",
       "kind": "acquisition",
-      "path": "/klic-interface-library-pages/og/acquisition/home.png"
+      "path": "/og/acquisition/home.png"
     },
     {
       "id": "logo",
       "kind": "acquisition",
-      "path": "/klic-interface-library-pages/og/acquisition/logo.png"
+      "path": "/og/acquisition/logo.png"
     },
     {
       "id": "start",
       "kind": "acquisition",
-      "path": "/klic-interface-library-pages/og/acquisition/start.png"
+      "path": "/og/acquisition/start.png"
     },
     {
       "id": "dashboards",
       "kind": "acquisition",
-      "path": "/klic-interface-library-pages/og/acquisition/dashboards.png"
+      "path": "/og/acquisition/dashboards.png"
     },
     {
       "id": "admin",
       "kind": "acquisition",
-      "path": "/klic-interface-library-pages/og/acquisition/admin.png"
+      "path": "/og/acquisition/admin.png"
     },
     {
       "id": "diagrams",
       "kind": "acquisition",
-      "path": "/klic-interface-library-pages/og/acquisition/diagrams.png"
+      "path": "/og/acquisition/diagrams.png"
+    },
+    {
+      "id": "mcp-connect",
+      "kind": "acquisition",
+      "path": "/og/acquisition/mcp-connect.png"
     },
     {
       "id": "about",
       "kind": "acquisition",
-      "path": "/klic-interface-library-pages/og/acquisition/about.png"
+      "path": "/og/acquisition/about.png"
+    },
+    {
+      "id": "index",
+      "kind": "resources",
+      "path": "/og/resources/index.png"
+    },
+    {
+      "id": "mcp",
+      "kind": "resources",
+      "path": "/og/resources/mcp.png"
+    },
+    {
+      "id": "webmcp",
+      "kind": "resources",
+      "path": "/og/resources/webmcp.png"
+    },
+    {
+      "id": "cli",
+      "kind": "resources",
+      "path": "/og/resources/cli.png"
+    },
+    {
+      "id": "api",
+      "kind": "resources",
+      "path": "/og/resources/api.png"
     }
   ]
 }

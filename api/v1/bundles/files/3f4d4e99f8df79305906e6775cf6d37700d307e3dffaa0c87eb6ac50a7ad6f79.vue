@@ -1,0 +1,53 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="anchor" data-kv-variant="outline" data-klic-component="anchor" class="kn-anchor">
+    <nav aria-label="문서 목차" data-part="anchor">
+      <a href="#kv-export-anchor-anchor-outline-section-0" data-part="link">
+        소개
+      </a>
+      <a href="#kv-export-anchor-anchor-outline-section-1" data-part="link">
+        사용법
+      </a>
+      <a href="#kv-export-anchor-anchor-outline-section-2" data-part="link">
+        접근성
+      </a>
+    </nav>
+    <div tabindex="0" class="ku-scroll" data-part="scroll">
+      <section id="kv-export-anchor-anchor-outline-section-0" tabindex="-1">
+        <header data-part="heading">
+          <strong>
+            소개
+          </strong>
+        </header>
+        <p data-part="muted">
+          팀에서 일관된 경험을 만들기 위한 구성과 지침을 확인하세요.
+        </p>
+      </section>
+      <section id="kv-export-anchor-anchor-outline-section-1" tabindex="-1">
+        <header data-part="heading">
+          <strong>
+            사용법
+          </strong>
+        </header>
+        <p data-part="muted">
+          팀에서 일관된 경험을 만들기 위한 구성과 지침을 확인하세요.
+        </p>
+      </section>
+      <section id="kv-export-anchor-anchor-outline-section-2" tabindex="-1">
+        <header data-part="heading">
+          <strong>
+            접근성
+          </strong>
+        </header>
+        <p data-part="muted">
+          팀에서 일관된 경험을 만들기 위한 구성과 지침을 확인하세요.
+        </p>
+      </section>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,16 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="image" class="kn-image">
+    <figure data-part="figure">
+      <img src="./block-runtime/catalog/course-03.webp" alt="모바일 인터페이스 디자인" width="640" height="400" loading="lazy" >
+      <figcaption>
+        제품 디자인 프로젝트 · 원본 샘플 이미지
+      </figcaption>
+    </figure>
+  </div>
+</template>

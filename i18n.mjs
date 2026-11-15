@@ -1,3 +1,4 @@
+import {NPM_PACKAGE} from './npm-package-data.mjs';
 import {panelCrmSceneMessages} from './locales/panel-crm-scene-en.mjs';
 import {BLOCK_IDENTITIES} from './block-identities.mjs';
 import {panelTaskSceneMessages} from './locales/panel-task-scene-en.mjs';
@@ -13,6 +14,8 @@ import {catalogMessages,blockNames} from './locales/catalog-en.mjs';
 import {CHART_EXAMPLES,CHART_GROUPS} from './chart-examples.mjs';
 import {dashboardMessages} from './locales/dashboard-en.mjs';
 import {rightPanelMessages,rightPanelNames} from './locales/right-panel-en.mjs';
+import {interactionReferenceMessages} from './locales/interaction-reference-en.mjs';
+import {terminalMessages} from './locales/terminal-en.mjs';
 import {SITE_METADATA} from './site-metadata.mjs';
 export const LOCALE_STORAGE_KEY='klic-language-v1';
 export const SUPPORTED_LOCALES=Object.freeze([...SITE_METADATA.site.locales]);
@@ -22,11 +25,11 @@ const chartMessages=Object.fromEntries([
  ...CHART_EXAMPLES.flatMap(e=>[
   [e.title,e.enTitle],
   [e.description,e.enDescription],
-  [`Björk UI · MIT · KLIC 토큰 적용 · variant=${e.variant} · ${e.enTitle}`,`Björk UI · MIT · KLIC token adaptation · variant=${e.variant} · ${e.enTitle}`]
  ])
 ]);
 const panelSceneMessages=Object.fromEntries(Object.entries({...panelCrmSceneMessages,...panelTaskSceneMessages,...panelRiskSceneMessages,...panelTimelineSceneMessages}).filter(([key])=>!['님이','일','월','년','건'].includes(key)));
-const authoredEnglish={...panelSceneMessages,...chartUiMessages,...blockUiMessages,...sharedBlockUiMessages,...sourceUiMessages,...messages,...catalogMessages,...guideMessages,...chartMessages,...dashboardMessages,...rightPanelMessages};
+const publishedPackageMessages=Object.fromEntries((NPM_PACKAGE.publishedLimitations||[]).map(item=>[item.ko,item.en]));
+const authoredEnglish={...publishedPackageMessages,...panelSceneMessages,...chartUiMessages,...blockUiMessages,...sharedBlockUiMessages,...sourceUiMessages,...messages,...catalogMessages,...guideMessages,...chartMessages,...dashboardMessages,...rightPanelMessages,...interactionReferenceMessages,...terminalMessages};
 // Blank TSV rows must never turn spacer nodes into the string "undefined".
 export const ENGLISH_MESSAGES=Object.freeze(Object.fromEntries(Object.entries(authoredEnglish).filter(([source,target])=>source.trim().length>0&&typeof target==='string')));
 const own=(o,k)=>Object.prototype.hasOwnProperty.call(o,k);
@@ -35,7 +38,7 @@ export function initialLocale({search='',stored}={}){
  const query=new URLSearchParams(search).get('lang');
  return normalizeLocale(SUPPORTED_LOCALES.includes(query)?query:stored);
 }
-export function authoritativeLocale(pathname,search,stored){return initialLocale({search,stored:pathname.startsWith('https://design.klic.co.kr/share/')||pathname==='/klic-interface-library-pages/'||pathname==='https://design.klic.co.kr/index.html'?null:stored});}
+export function authoritativeLocale(pathname,search,stored){return initialLocale({search,stored:pathname.startsWith('/share/')||pathname==='/'||pathname==='/index.html'?null:stored});}
 const replaceKnown=value=>own(ENGLISH_MESSAGES,value)?ENGLISH_MESSAGES[value]:value;
 const patterns=[
  [/^실행 (\d+) · 준비 (\d+)$/,(_,ready,planned)=>`${ready} working · ${planned} planned`],
@@ -47,6 +50,11 @@ const patterns=[
  [/^(\d+)개 실패$/,(_,n)=>`${n} failed`],
  [/^5점 만점에 (\d+)점$/,(_,n)=>`${n} out of 5 stars`],
  [/^항목 (\d+)개$/,(_,n)=>`${n} items`],
+ [/^(\d+)명$/,(_,n)=>`${n} people`],
+ [/^(\d+)개 작업$/,(_,n)=>`${n} jobs`],
+ [/^(\d+)개$/,(_,n)=>`${n} items`],
+ [/^(\d+)건$/,(_,n)=>`${n} events`],
+ [/^(\d+) \/ (\d+)$/,(_,done,total)=>`${done} / ${total}`],
  [/^(.+) (실행 중|실행 완료|실행 실패)$/,(_,name,state)=>`${translateText(name)} ${({'실행 중':'running','실행 완료':'complete','실행 실패':'failed'})[state]}`],
  [/^(\d+)초$/,(_,n)=>`${n}s`],
  [/^(\d+)분 (\d+)초$/,(_,m,s)=>`${m}m ${s}s`],
@@ -173,8 +181,8 @@ export function initI18n({root=globalThis.document,switches=true}={}){
  function translateNodeTitle(node){const record=rememberText(node),next=translateText(record.source,locale);if(node.nodeValue!==next)node.nodeValue=next;record.last=next;}
  function schedule(){if(scheduled||destroyed)return;scheduled=true;win.queueMicrotask(refresh);}
  function broadcast(){for(const frame of doc.querySelectorAll('iframe')){try{if(new URL(frame.src,win.location.href).origin===win.location.origin)frame.contentWindow?.postMessage({type:'klic:locale',locale},win.location.origin);}catch{}}}
- function setLocale(value,{persist=true,broadcastChange=true}={}){locale=win.location.pathname.startsWith('https://design.klic.co.kr/share/')||win.location.pathname==='/klic-interface-library-pages/'||win.location.pathname==='https://design.klic.co.kr/index.html'?authoritativeLocale(win.location.pathname,win.location.search,null):normalizeLocale(value);if(persist)try{win.localStorage.setItem(LOCALE_STORAGE_KEY,locale);}catch{}refresh();if(broadcastChange)broadcast();doc.dispatchEvent(new win.CustomEvent('klic:locale-changed',{detail:{locale}}));}
- function change(e){if(e.target?.matches?.('[data-klic-language]')){if(win.location.pathname.startsWith('https://design.klic.co.kr/share/')||win.location.pathname==='/klic-interface-library-pages/'||win.location.pathname==='https://design.klic.co.kr/index.html'){win.location.assign(win.location.pathname+(e.target.value==='en'?'?lang=en':'')+win.location.hash);return;}setLocale(e.target.value);}}
+ function setLocale(value,{persist=true,broadcastChange=true}={}){locale=win.location.pathname.startsWith('/share/')||win.location.pathname==='/'||win.location.pathname==='/index.html'?authoritativeLocale(win.location.pathname,win.location.search,null):normalizeLocale(value);if(persist)try{win.localStorage.setItem(LOCALE_STORAGE_KEY,locale);}catch{}refresh();if(broadcastChange)broadcast();doc.dispatchEvent(new win.CustomEvent('klic:locale-changed',{detail:{locale}}));}
+ function change(e){if(e.target?.matches?.('[data-klic-language]')){if(win.location.pathname.startsWith('/share/')||win.location.pathname==='/'||win.location.pathname==='/index.html'){win.location.assign(win.location.pathname+(e.target.value==='en'?'?lang=en':'')+win.location.hash);return;}setLocale(e.target.value);}}
  function storage(e){if(e.key===LOCALE_STORAGE_KEY)setLocale(e.newValue,{persist:false,broadcastChange:false});}
  function message(e){if(e.origin!==win.location.origin||e.source!==win.parent||e.data?.type!=='klic:locale'||!SUPPORTED_LOCALES.includes(e.data.locale))return;setLocale(e.data.locale,{persist:false,broadcastChange:false});}
  function load(e){if(e.target?.tagName==='IFRAME')broadcast();}

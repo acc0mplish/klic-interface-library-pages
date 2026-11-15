@@ -1,0 +1,27 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="link" data-kv-variant="inline-reference" data-klic-component="link" class="kn-link">
+    <article>
+      <header data-part="heading">
+        <strong>
+          접근성부터 시작하기
+        </strong>
+      </header>
+      <p>
+        명확한 레이블과
+        <a href="https://www.w3.org/WAI/ARIA/apg/" target="_blank" rel="noopener noreferrer" data-part="text-link link">
+          키보드 상호작용 패턴
+        </a>
+        을 함께 설계하면 더 많은 사람이 편하게 사용할 수 있습니다.
+      </p>
+      <p data-part="muted">
+        W3C 참고 문서 · 새 탭에서 열립니다.
+      </p>
+    </article>
+  </div>
+</template>

@@ -1,0 +1,51 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from 'klic-design/components/vue/runtime';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-kv-root data-klic-material="surface" data-kv-component="timeline" data-kv-variant="activity" data-klic-component="timeline" class="kn-timeline">
+    <ol data-part="timeline">
+      <li>
+        <time>
+          09:30
+        </time>
+        <header data-part="heading">
+          <strong>
+            김하늘
+          </strong>
+          <p data-part="muted">
+            가이드 업데이트
+          </p>
+        </header>
+      </li>
+      <li>
+        <time>
+          11:00
+        </time>
+        <header data-part="heading">
+          <strong>
+            이도윤
+          </strong>
+          <p data-part="muted">
+            리뷰 요청
+          </p>
+        </header>
+      </li>
+      <li>
+        <time>
+          14:00
+        </time>
+        <header data-part="heading">
+          <strong>
+            박서연
+          </strong>
+          <p data-part="muted">
+            검토 완료
+          </p>
+        </header>
+      </li>
+    </ol>
+  </div>
+</template>

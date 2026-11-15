@@ -1,0 +1,44 @@
+<script setup>
+import * as KlicIcons from '@lucide/vue';
+import {useKlicNativeComponent} from '../../../vue-component-runtime.mjs';
+useKlicNativeComponent();
+</script>
+
+<template>
+  <div data-klic-component="menubar" class="kn-menubar">
+    <div role="group" aria-label="문서 메뉴" data-part="menu-bar">
+      <details>
+        <summary>
+          파일
+        </summary>
+        <div>
+          <button type="button" data-cmp-action="menu-choice" data-name="파일 옵션" data-part="btn" class="kv-neutral kv-sm">
+            파일 옵션 실행
+          </button>
+        </div>
+      </details>
+      <details>
+        <summary>
+          편집
+        </summary>
+        <div>
+          <button type="button" data-cmp-action="menu-choice" data-name="편집 옵션" data-part="btn" class="kv-neutral kv-sm">
+            편집 옵션 실행
+          </button>
+        </div>
+      </details>
+      <details>
+        <summary>
+          보기
+        </summary>
+        <div>
+          <button type="button" data-cmp-action="menu-choice" data-name="보기 옵션" data-part="btn" class="kv-neutral kv-sm">
+            보기 옵션 실행
+          </button>
+        </div>
+      </details>
+    </div>
+    <p data-cmp-status role="status" aria-live="polite" data-part="status">
+    </p>
+  </div>
+</template>
