@@ -1,5 +1,5 @@
 /* Family chrome consumes the same semantic roles as the examples. */
-.cf-collection{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:22px}
+.cf-collection{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:22px}
 .cf-family{min-width:0;scroll-margin-top:90px;padding:26px;border:1px solid var(--klic-semantic-color-border);border-radius:16px;background:var(--klic-semantic-color-panel);content-visibility:auto;contain-intrinsic-size:auto 420px}.cf-family[data-cf-density="roomy"]{contain-intrinsic-size:auto 600px}
 .cf-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:22px}
 .cf-kicker{display:flex;gap:12px;align-items:center;font-size:calc(.72rem * var(--klic-text-scale,1));color:var(--klic-semantic-color-muted)}
