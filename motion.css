@@ -15,7 +15,7 @@
 .motion-controls select{min-width:132px}
 .motion-controls :is(input,select):focus-visible,.motion-library a:focus-visible,.motion-library button:focus-visible,.motion-dialog button:focus-visible{outline:2px solid var(--klic-semantic-color-accent,#245FC2);outline-offset:2px}
 .motion-result-count{margin-left:auto;padding-bottom:9px;color:var(--klic-semantic-color-muted,#52657b);font-size:12px;font-variant-numeric:tabular-nums}
-.motion-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.motion-grid.is-compact{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.motion-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.motion-grid.is-compact{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
 .motion-card{min-width:0;overflow:hidden;padding:var(--klic-component-card-spacing-default,1rem);border:1px solid var(--klic-semantic-color-border,#dfe5ee);border-radius:var(--klic-component-card-radius-default,.5rem);background:var(--klic-semantic-color-panel,#fff);color:var(--klic-semantic-color-text,#132c46)}
 .motion-card-preview{height:132px;margin:-1px -1px 10px;overflow:hidden;border:1px solid var(--klic-semantic-color-border,#dfe5ee);border-radius:8px;background:var(--klic-semantic-color-surface,#fbfcfe);pointer-events:none}
 .motion-source-mount{position:relative;display:block;width:100%;height:100%;min-width:0;min-height:0;overflow:hidden;border:1px solid var(--klic-semantic-color-border,#dfe5ee);border-radius:var(--klic-component-card-radius-default,.5rem);background:var(--klic-semantic-color-surface,#fbfcfe);color:var(--klic-semantic-color-text,#132c46);contain:content}
