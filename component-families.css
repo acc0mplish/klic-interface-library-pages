@@ -70,6 +70,6 @@
 .component-comparison-scope .cf-heading{margin-bottom:18px}
 .component-comparison-scope .cf-heading h2,.component-comparison-scope .cf-heading p{display:none}
 .component-comparison-scope .cf-detail .cf-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.component-comparison-scope .cf-detail[data-cf-density=compact] .cf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.component-comparison-scope .cf-detail[data-cf-density=compact] .cf-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
 @container(max-width:1000px){.component-comparison-scope .cf-detail[data-cf-density=compact] .cf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @container(max-width:640px){.preview-scope.component-comparison-scope{padding:16px}.component-comparison-scope .cf-detail .cf-grid,.component-comparison-scope .cf-detail[data-cf-density=compact] .cf-grid{grid-template-columns:1fr}.component-comparison-scope .cf-canvas{padding:20px 14px}}
